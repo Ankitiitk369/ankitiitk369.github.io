@@ -7,189 +7,167 @@
 \usepackage{amsmath}
 \usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
 \usepackage{enumitem}
-\usepackage[left=0.85cm,top=0.65cm,right=0.85cm,bottom=0.6cm]{geometry}
+\usepackage[left=0.80cm,top=0.55cm,right=0.80cm,bottom=0.52cm]{geometry}
 \setlength{\parindent}{0pt}
+
+% Harvard Clean Underline Section Macro
+\newcommand{\resumesection}[1]{%
+  \vspace{4pt}%
+  {\large \textbf{\uppercase{#1}}}%
+  \vspace{1.5pt}%
+  \hrule height 0.65pt%
+  \vspace{3pt}%
+}
 
 \begin{document}
 
 % ==================== HEADER ====================
 \begin{center}
-    {\Large \textbf{ANKIT KUMAR}}\\ 
-    \vspace{1pt}
-    \hrulefill
-\end{center}
-\vspace{-10pt}
-\begin{center}
+    {\Huge \textbf{ANKIT KUMAR}}\\ 
+    \vspace{2pt}
+    \hrule height 1pt
+    \vspace{4pt}
     Department of Management Sciences (DoMS), Indian Institute of Technology Kanpur, UP -- 208016, India\\
     \href{mailto:ankitk25@iitk.ac.in}{ankitk25@iitk.ac.in} \ \textbullet \ 
     \href{https://linkedin.com/in/ankit-kumar}{LinkedIn: in/ankit-kumar} \ \textbullet \ 
     \href{https://github.com/Ankitiitk369}{GitHub: Ankitiitk369} \ \textbullet \ 
-    \href{https://sites.google.com/view/ankit369portfolio/home}{Portfolio: ankit369portfolio}
+    \href{https://ankitiitk369.github.io}{Portfolio: ankitiitk369.github.io}
 \end{center}
 
-\vspace{-6pt}
+\vspace{-4pt}
 
 % ==================== EDUCATION ====================
-\begin{center}
-    \textbf{Education}
-\end{center}
-\vspace{-8pt}
+\resumesection{Education}
 
-\textbf{Indian Institute of Technology, Kanpur} \hfill Kanpur, India\\
+\textbf{Indian Institute of Technology Kanpur} \hfill Kanpur, India\\
 \textit{Master of Technology (M.Tech), Department of Management Sciences (DoMS)} \hfill July 2025 -- Present\\
-Cumulative Performance Index (CPI): \textbf{7.18 / 10.0}
-
-\vspace{1.5pt}
-
+Cumulative Performance Index (CPI): \textbf{7.18 / 10.0} \hfill Expected Graduation: June 2027\\[3pt]
 \textbf{C.S.A. University of Agriculture and Technology} \hfill Kanpur, India\\
 \textit{Bachelor of Technology (B.Tech) in Agricultural Engineering} \hfill Aug 2021 -- June 2025\\
-Cumulative Performance Index (CPI): \textbf{8.25 / 10.0} \hfill \textit{Awarded \textbf{Chancellor's Silver Medal}}
-
-\vspace{1.5pt}
-
-\textbf{Government Inter College} \hfill Kadaura, Jalaun, UP, India\\
-\textit{UP State Board: Class XII -- 77.20\% (2021) \ \textbullet \ Class X -- 80.83\% (2019)} \hfill 2018 -- 2021
-
-\vspace{-4pt}
+Cumulative Performance Index (CPI): \textbf{8.25 / 10.0} \hfill Awarded \textbf{Chancellor's Silver Medal (Rank 1)}\\[3pt]
+\textbf{Government Inter College} \hfill Jalaun, UP, India\\
+\textit{UP State Board: Class XII -- \textbf{77.20\%} (2021) \ \textbullet \ Class X -- \textbf{80.83\%} (2019)} \hfill 2018 -- 2021
 
 % ==================== TECHNICAL SKILLS & COMPETENCIES ====================
-\begin{center}
-    \textbf{Technical Skills \& Competencies}
-\end{center}
-\vspace{-8pt}
+\resumesection{Technical Skills \& Competencies}
 
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item \textbf{Languages \& Core:} Python (Advanced), SQL (PostgreSQL, MySQL), C/C++, HTML, CSS, JavaScript, LaTeX
-    \item \textbf{Machine Learning \& Statistics:} Scikit-learn, XGBoost, LightGBM, CatBoost, Optuna, Feature Engineering, SMOTE, Hypothesis Testing (A/B Testing, ANOVA, Chi-Square), Statsmodels, Time Series (ARIMA, SARIMAX)
-    \item \textbf{Deep Learning \& Computer Vision:} PyTorch, TensorFlow, Keras, OpenCV, YOLOv8, EasyOCR, CNN, RNN, LSTM, Transfer Learning
-    \item \textbf{Generative AI \& Agentic Systems:} LangChain, LangGraph, LlamaIndex, CrewAI, Groq API, Pinecone, Qdrant, RAGAS, Multimodal RAG, ReAct Framework, Prompt Engineering, LLMOps
-    \item \textbf{Analytics, BI \& Tools:} Power BI (Advanced DAX), Tableau, Advanced Excel, FastAPI, Streamlit, Git, GitHub, Linux, Pytest, Docker
-    \item \textbf{Relevant Coursework (IIT Kanpur):} Applied Machine Learning, Statistical Modelling for Business Analytics, Data Mining \& Knowledge Discovery, Operations Research for Management, Computing, Supply Chain Management
+    \item \textbf{Languages \& Core:} Python (Advanced), SQL (PostgreSQL, MySQL), C/C++, HTML5, CSS3, JavaScript, LaTeX
+    \item \textbf{Machine Learning \& Statistics:} Scikit-learn, XGBoost, LightGBM, CatBoost, Optuna, Feature Engineering, SMOTE, Hypothesis Testing (A/B Testing, Two-Way ANOVA, Chi-Square), Statsmodels, Time Series (ARIMA, SARIMAX, Prophet)
+    \item \textbf{Deep Learning \& Computer Vision:} PyTorch, TensorFlow, Keras, OpenCV, YOLOv8, EasyOCR, Tesseract, CNN, RNN, Stacked LSTM, Transfer Learning (MobileNetV2, EfficientNetB0)
+    \item \textbf{Generative AI \& Agentic Systems:} LangChain, LangGraph, LlamaIndex, CrewAI, Groq LLaMA-3.3, Google Gemini 2.5, Pinecone Serverless, FAISS, Qdrant, RAGAS Benchmarks, ReAct Agents, Prompt Engineering, LLMOps
+    \item \textbf{Analytics, BI \& Cloud:} Power BI (Advanced DAX, Power Query), Tableau (LOD, Executive Dashboards), Advanced Excel, FastAPI, Streamlit, Docker, Git, GitHub, Linux, Pytest CI
+    \item \textbf{Relevant Coursework (IIT Kanpur):} Applied Machine Learning (AML), Statistical Modelling for Business Analytics (SMBA), Data Mining \& Knowledge Discovery, Operations Research for Management, Computing, Supply Chain Management
 \end{itemize}
-
-\vspace{-4pt}
 
 % ==================== PROFESSIONAL EXPERIENCE ====================
-\begin{center}
-    \textbf{Professional Experience}
-\end{center}
-\vspace{-8pt}
+\resumesection{Professional Experience}
 
 \textbf{Tata Consultancy Services (TCS)} \hfill Remote / India\\
-\textbf{Data Science \& AI Intern | Computer Vision \& Machine Learning} \hfill May 2026 -- July 2026
+\textit{Data Science \& AI Intern | Computer Vision, OCR \& Predictive Modeling} \hfill May 2026 -- July 2026
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item Engineered an automated vehicle $\text{CO}_2$ emission tracking pipeline from real-time CCTV feeds to monitor urban carbon footprints for enterprise ESG reporting.
-    \item Implemented \textbf{YOLOv8} object localization paired with \textbf{OpenCV} image preprocessing (Bilateral Filtering, CLAHE, Otsu) and \textbf{EasyOCR} with custom regex syntax correction.
-    \item Trained dual-stage ensemble estimators: \textbf{Gradient Boosting} ($\mathbf{R^2 = 0.996}$, $\mathbf{\text{RMSE} = 3.12\text{ g/km}}$) and \textbf{Random Forest} ($\mathbf{R^2 = 0.989}$); delivered interactive \textbf{Streamlit} dashboard with \textbf{17-test Pytest} test suite.
+    \item Engineered an automated end-to-end vehicle $\text{CO}_2$ emission tracking pipeline from traffic CCTV video feeds to monitor urban carbon footprints and support enterprise ESG compliance reporting.
+    \item Implemented \textbf{YOLOv8} object localization paired with an \textbf{OpenCV} preprocessing engine (Bilateral Filtering, CLAHE, Otsu Binarization) and \textbf{EasyOCR}, writing a custom regex corrector resolving character optical confusions (O vs 0, I vs 1, B vs 8).
+    \item Integrated Vahan / RTO registry APIs across 36 Indian States/UTs to dynamically extract vehicle metadata (Fuel Type, Engine CC, Vehicle Class) and compute dynamic Vehicle Age from Manufacturing Year.
+    \item Modeled multi-vehicle trip trajectories using Multi-Origin Convergence Routing with Haversine \& OSRM matrices for fleet-level carbon density.
+    \item Trained dual-stage ensemble models: \textbf{Gradient Boosting} ($\mathbf{R^2 = 0.996}$, $\mathbf{\text{RMSE} = 3.12\text{ g/km}}$) and \textbf{Random Forest} ($\mathbf{R^2 = 0.989}$); delivered interactive \textbf{Streamlit} dashboard with GIS maps and \textbf{17-test Pytest} suite (100\% pass rate).
 \end{itemize}
 
-\vspace{1.5pt}
+\vspace{3pt}
 
 \textbf{Global Procurement Web Application System} \hfill Enterprise IT Project\\
-\textbf{Frontend \& Asset Automation Contributor} \hfill Feb 2026 -- Apr 2026
+\textit{Frontend \& Asset Automation Contributor} \hfill Feb 2026 -- Apr 2026
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item Contributed to the Asset Receiving Automation module for an enterprise Global Procurement System, digitizing manual asset tracking workflows across 100+ inventory categories.
-    \item Engineered responsive \textbf{Angular} user interfaces for capturing asset metadata, PO numbers, quantities, and storage locations with real-time client-side validation.
+    \item Contributed to the Asset Receiving Automation module for an enterprise Global Procurement System, digitizing manual tracking across 100+ categories.
+    \item Engineered responsive \textbf{Angular 16} user interfaces for capturing asset metadata, PO numbers, quantities, and physical warehouse storage locations.
     \item Integrated dynamic form validation schemas, authentication workflows, and \textbf{Role-Based Access Control (RBAC)}, cutting asset ingestion latency by \textbf{40\%}.
 \end{itemize}
 
-\vspace{-4pt}
-
-% ==================== KEY PROJECTS (PAGE 1: FLAGSHIP GENAI) ====================
-\begin{center}
-    \textbf{Key Projects: Generative AI \& Autonomous Systems}
-\end{center}
-\vspace{-8pt}
+% ==================== KEY PROJECTS (PAGE 1) ====================
+\resumesection{Key Projects: Generative AI \& Autonomous Systems}
 
 \textbf{MediMind AI: Clinical Decision Support Platform} \hfill Nov 2025 -- Dec 2025\\
-\textit{Stack: LangChain, Groq API (Llama-3), Pinecone, MiniLM, Streamlit} \hfill \href{https://github.com/Ankitiitk369/-MediMind-AI-Generative-AI-RAG-Based-Clinical-Decision-Support-Healthcare-Platform}{\textit{[GitHub Repo]}}
+\textit{Technologies: LangChain, Groq API (LLaMA-3.3-70B), Pinecone Serverless, MiniLM-L6-v2, Streamlit} \hfill \href{https://github.com/Ankitiitk369/-MediMind-AI-Generative-AI-RAG-Based-Clinical-Decision-Support-Healthcare-Platform}{\textit{[GitHub Code]}}
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item Architected an end-to-end RAG clinical diagnostic platform using \textbf{LangChain}, \textbf{Groq API} (Llama-3), and \textbf{Pinecone} vector DB, slashing inference latency by \textbf{85\%}.
-    \item Integrated \textbf{MiniLM-L6-v2} embeddings with Cosine Similarity retrieval, securing \textbf{96.8\% RAG faithfulness} and zero hallucinations with verified clinical citations.
-    \item Engineered automated lab report ingestion via \textbf{PyPDF}, embedding 4 validated clinical risk calculators with sub-10ms emergency triage safety guardrails.
+    \item Architected an end-to-end RAG clinical diagnostic platform using \textbf{LangChain}, \textbf{Groq LLaMA-3.3}, and \textbf{Pinecone}, cutting inference latency by \textbf{85\%}.
+    \item Integrated \textbf{MiniLM-L6-v2} dense vector embeddings, achieving \textbf{96.8\% RAG faithfulness} and zero clinical hallucinations with verified citations.
+    \item Automated lab report ingestion via \textbf{PyPDF}, embedding 4 validated clinical risk calculators with sub-10ms emergency triage safety guardrails.
 \end{itemize}
 
 \newpage
 
 % ==================== PAGE 2: PROJECTS (PART 2), LEADERSHIP & ACHIEVEMENTS ====================
-\begin{center}
-    \textbf{Key Projects: Machine Learning, Vision \& Analytics (Continued)}
-\end{center}
-\vspace{-8pt}
+\resumesection{Key Projects: Agentic Systems, Machine Learning \& Analytics}
 
 \textbf{Text-to-SQL \& Agentic SQL Analytics System} \hfill Jan 2026 -- Feb 2026\\
-\textit{Stack: LangGraph, Gemini 2.0 Flash, ReAct, MySQL, RAGAS, Plotly} \hfill \href{https://github.com/Ankitiitk369/Text-to-SQL-Agentic-SQL-Analytics-System}{\textit{[GitHub Repo]}}
+\textit{Technologies: LangGraph, Google Gemini 2.5 Flash, ReAct Agents, MySQL, RAGAS, Plotly} \hfill \href{https://github.com/Ankitiitk369/Text-to-SQL-Agentic-SQL-Analytics-System}{\textit{[GitHub Code]}}
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item Developed an autonomous Text-to-SQL analytics system utilizing \textbf{Gemini 2.0 Flash}, \textbf{LangChain}, and \textbf{MySQL} across a 6-table enterprise dataset (64,000+ orders).
-    \item Architected an agentic \textbf{LangGraph ReAct} workflow with \textbf{SQLDatabaseToolkit} for autonomous schema inspection, query generation, and dynamic execution.
-    \item Implemented a self-correcting query loop resolving syntax anomalies iteratively, achieving \textbf{1.00 Context Precision} on standardized \textbf{RAGAS} benchmarks.
+    \item Developed an autonomous Text-to-SQL system utilizing \textbf{Google Gemini 2.5 Flash} and \textbf{MySQL} across a 6-table dataset (\textbf{64,000+ records}).
+    \item Architected an agentic \textbf{LangGraph ReAct} loop using \textbf{SQLDatabaseToolkit} with DDL/DML guardrails, attaining \textbf{1.00 Context Precision} on \textbf{RAGAS}.
 \end{itemize}
 
 \vspace{1.5pt}
 
 \textbf{Petrol Price Forecasting \& Analytics System} \hfill Aug 2025 -- Nov 2025\\
-\textit{Academic Project (Guide: Prof. Faiz Hamid, IIT Kanpur) | Stack: ARIMA, XGBoost, PyTorch LSTM, FastAPI} \hfill \href{https://github.com/Ankitiitk369/Petrol-Price-Forecasting-Analytics-System}{\textit{[GitHub Repo]}}
+\textit{Academic Project (Guide: Prof. Faiz Hamid, IIT Kanpur) | PyTorch Stacked LSTM, XGBoost, ARIMA} \hfill \href{https://github.com/Ankitiitk369/Petrol-Price-Forecasting-Analytics-System}{\textit{[GitHub Code]}}
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item Formulated a comparative time-series forecasting pipeline using \textbf{ARIMA(5,1,0)}, \textbf{XGBoost}, \textbf{PyTorch LSTM}, and Naive baselines for weekly commodity pricing.
-    \item Engineered \textbf{15+ domain-specific temporal features} including 1--12 lag terms, 4-wk and 12-wk SMA/EMA, rolling volatility, and outlier filtering.
-    \item Benchmarked models on 35\% unseen test data; tuned \textbf{XGBoost} delivered \textbf{1.12\% MAPE} and \textbf{67.99\% directional accuracy}; deployed as REST API via \textbf{FastAPI}.
+    \item Formulated a comparative forecasting pipeline using \textbf{ARIMA(5,1,0)}, \textbf{XGBoost}, and \textbf{PyTorch Stacked LSTM} for weekly pricing.
+    \item Engineered \textbf{15+ temporal features} (1--12 lags, SMA/EMA, rolling volatility); tuned XGBoost delivered \textbf{1.12\% MAPE} and \textbf{67.99\% directional accuracy} on 35\% unseen test data; deployed REST API via \textbf{FastAPI}.
 \end{itemize}
 
 \vspace{1.5pt}
 
 \textbf{Credit Risk Modelling: Loan Eligibility Prediction} \hfill Aug 2025 -- Nov 2025\\
-\textit{Academic Project (Guide: Prof. Faiz Hamid, IIT Kanpur) | Stack: Scikit-learn, XGBoost, SMOTE, GridSearchCV} \hfill \href{https://github.com/Ankitiitk369/Credit-Risk-Modelling-Loan-Eligibility-Prediction}{\textit{[GitHub Repo]}}
+\textit{Academic Project (Guide: Prof. Faiz Hamid, IIT Kanpur) | Scikit-learn, XGBoost, SMOTE, GridSearchCV} \hfill \href{https://github.com/Ankitiitk369/Credit-Risk-Modelling-Loan-Eligibility-Prediction}{\textit{[GitHub Code]}}
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item Constructed an enterprise credit scoring pipeline analyzing \textbf{51,336 customer records} with 79 financial attributes to predict loan default probabilities.
-    \item Executed rigorous feature selection via \textbf{Chi-Square}, \textbf{ANOVA}, \textbf{Variance Inflation Factor (VIF)}, and tackled severe class imbalance via \textbf{SMOTE}.
-    \item Evaluated Logistic Regression, Decision Trees, SVC, Random Forest, and \textbf{XGBoost}; optimized via \textbf{GridSearchCV}, achieving \textbf{78\% out-of-sample accuracy}.
+    \item Constructed an enterprise credit scoring pipeline analyzing \textbf{51,336 customer records} with 79 attributes to predict default risk.
+    \item Feature selection via \textbf{Chi-Square, ANOVA, and VIF}; handled severe class imbalance via \textbf{SMOTE}; achieved \textbf{78\% test accuracy} via \textbf{XGBoost}.
 \end{itemize}
 
 \vspace{1.5pt}
 
 \textbf{Solar Panel Defect Classification} \hfill Jan 2026 -- May 2026\\
-\textit{Academic Project (Guide: Prof. Veena Bansal, IIT Kanpur) | Stack: TensorFlow, MobileNetV2, EfficientNetB0} \hfill \href{https://github.com/Ankitiitk369/Solar-panel-image-classification-Using-CNN-And-Pretrained-model}{\textit{[GitHub Repo]}}
+\textit{Academic Project (Guide: Prof. Veena Bansal, IIT Kanpur) | TensorFlow, MobileNetV2, EfficientNetB0} \hfill \href{https://github.com/Ankitiitk369/Solar-panel-image-classification-Using-CNN-And-Pretrained-model}{\textit{[GitHub Code]}}
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item Trained a 6-class deep learning defect detection pipeline on \textbf{885 electroluminescence images} of photovoltaic cells using \textbf{TensorFlow} and transfer learning.
-    \item Implemented data augmentation, Batch Normalization, Dropout (0.3), and L2 weight decay to combat small-sample overfitting and boost feature generalization.
-    \item Benchmarked Custom CNN, \textbf{MobileNetV2}, and \textbf{Fine-tuned EfficientNetB0}, achieving \textbf{82.5\% validation accuracy}; deployed inspection app via \textbf{Streamlit}.
+    \item Trained a 6-class deep learning defect detection pipeline on \textbf{885 electroluminescence images} of photovoltaic cells using \textbf{TensorFlow}.
+    \item Applied Batch Normalization, Dropout (0.3), and L2 decay; fine-tuned \textbf{MobileNetV2}, attaining \textbf{82.5\% validation accuracy}; deployed via Streamlit.
 \end{itemize}
 
 \vspace{1.5pt}
 
-\textbf{Customer Shopping Behavior \& Business Intelligence} \hfill Sep 2025 -- Oct 2025\\
-\textit{Stack: PostgreSQL, Power BI, Advanced DAX, Pandas} \hfill \href{https://github.com/Ankitiitk369/Customer-Shoping-Behavior-Data-Analysis-Using-SQL-and-Power-BI}{\textit{[GitHub Repo]}}
+\textbf{Customer Shopping Behavior Analysis \& BI Platform} \hfill Sep 2025 -- Oct 2025\\
+\textit{Technologies: PostgreSQL, Power BI, Advanced DAX, Pandas, Relational Modeling} \hfill \href{https://github.com/Ankitiitk369/Customer-Shoping-Behavior-Data-Analysis-Using-SQL-and-Power-BI}{\textit{[GitHub Code]}}
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item Analyzed \textbf{3,900 consumer transactions} across 18 demographic and behavioral dimensions using \textbf{Pandas} and relational modeling.
-    \item Formulated complex \textbf{PostgreSQL} queries utilizing \textbf{CTEs}, window ranking functions (\texttt{ROW\_NUMBER}, \texttt{DENSE\_RANK}), and multi-table joins.
-    \item Engineered an executive \textbf{Power BI} dashboard with dynamic \textbf{DAX measures}, KPI cards, RFM segmentation, and drill-through cohort analysis.
+    \item Analyzed \textbf{3,900 consumer purchase records} across 18 demographic/transactional dimensions using Python and relational modeling.
+    \item Formulated complex \textbf{PostgreSQL} queries using \textbf{CTEs}, window ranking functions, and an executive \textbf{Power BI} dashboard with dynamic \textbf{DAX measures} and RFM cohorts.
 \end{itemize}
 
-\vspace{-4pt}
+% ==================== ADDITIONAL RELEVANT PROJECTS ====================
+\resumesection{Additional Selected Production \& Academic Systems}
+
+\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
+    \item \textbf{Generative AI \& Agents:} Multi-Agent Resume Matcher (CrewAI), Multilingual Blog RAG (LangGraph), Dental Clinic State Machine (LangGraph, MySQL), Air India Regulatory Assistant (FAISS, Streamlit), Multi-PDF RAG System, ESG Sustainability Compliance RAG.
+    \item \textbf{ML, Vision \& Forecasting:} Cancer Risk 3-Class Stratification (>98\% acc), Breast Cancer Biopsy FNA (PCA, ROC-AUC), AgriTech Crop Yield Pipeline, Invoice IDP OCR (Tesseract, OpenCV), NVIDIA Stock Forecasting (LSTM, SARIMA), Electricity Demand SARIMAX.
+    \item \textbf{Analytics \& Business Intelligence:} Loan Portfolio Risk (3 Tableau Dashboards), Zepto Quick-Commerce SQL Analytics, BigMart Sales Multivariate Regression, Multichannel Marketing A/B Testing \& Two-Way ANOVA, McDonald's Customer Segmentation (K-Means, PCA).
+\end{itemize}
 
 % ==================== POSITIONS OF RESPONSIBILITY ====================
-\begin{center}
-    \textbf{Positions of Responsibility}
-\end{center}
-\vspace{-8pt}
+\resumesection{Positions of Responsibility \& Leadership}
+
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
-    \item \textbf{Alumni and Corporate Relations Coordinator, IIT Kanpur} (July 2025 -- Present): Coordinate with corporate leadership and alumni network to drive campus engagement; organized 10+ departmental technical webinars and networking sessions.
-    \item \textbf{Campus Coordinator, Mimamsa 2025} (IISER Pune): Led institutional outreach across 15+ universities in northern India; supervised regional round operations.
-    \item \textbf{NSS Student Volunteer (2 Years)}: Spearheaded community education drives for girls' education advocacy and digital empowerment under \textit{`Ek Bharat Shreshtha Bharat''}.
+    \item \textbf{Alumni and Corporate Relations Coordinator, IIT Kanpur} (July 2025 -- Present): Coordinate with corporate leadership and alumni network to drive campus engagement; organized 10+ departmental technical webinars and industrial networking sessions.
+    \item \textbf{Campus Coordinator, Mimamsa 2025} (IISER Pune): Led institutional outreach across 15+ universities in northern India; supervised regional round execution.
+    \item \textbf{NSS Student Volunteer (2 Years)}: Spearheaded grassroots advocacy campaigns for girls' education and digital empowerment under \textit{`Ek Bharat Shreshtha Bharat''}.
 \end{itemize}
 
-\vspace{-4pt}
-
 % ==================== SCHOLASTIC ACHIEVEMENTS ====================
-\begin{center}
-    \textbf{Scholastic Achievements \& Honors}
-\end{center}
-\vspace{-8pt}
+\resumesection{Scholastic Achievements \& Professional Honors}
+
 \begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
     \item \textbf{GATE 2025}: Secured \textbf{98.48 percentile} in Agricultural Engineering, conducted by \textbf{Indian Institute of Technology, Roorkee}.
     \item \textbf{Chancellor's Silver Medal Award}: Awarded the prestigious \textbf{Silver Medal} for rank 1st academic performance in B.Tech by the University Chancellor.
-    \item \textbf{GCI World Tokyo 2026}: Global Data Science \& AI Program by \textbf{Matsuo-Iwasawa Laboratory, The University of Tokyo} (passed final evaluation).
-    \item \textbf{Certifications}: \textbf{Oracle Certified Data Science Professional} \textbullet \ \textbf{Oracle Certified AI Foundations} \textbullet \ \textbf{SEBI--Investor Certification} (NISM) \textbullet \ \textbf{British Airways} Data Science \textbullet \ \textbf{Deloitte Australia} Analytics.
+    \item \textbf{GCI World April 2026}: Global Data Science \& AI Program by \textbf{Matsuo-Iwasawa Laboratory, The University of Tokyo} (cleared comprehensive evaluation).
+    \item \textbf{Professional Certifications}: \textbf{Oracle Certified Data Science Professional} \textbullet \ \textbf{Oracle Certified AI Foundations} \textbullet \ \textbf{SEBI--Investor Certification} (NISM) \textbullet \ \textbf{Deloitte Australia} Data Analytics \textbullet \ \textbf{British Airways} Data Science.
 \end{itemize}
 
 \end{document}

@@ -7,98 +7,87 @@
 \usepackage{amsmath}
 \usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
 \usepackage{enumitem}
-\usepackage[left=0.75cm,top=0.52cm,right=0.75cm,bottom=0.50cm]{geometry}
+\usepackage[left=0.68cm,top=0.40cm,right=0.68cm,bottom=0.38cm]{geometry}
 \setlength{\parindent}{0pt}
+
+% Harvard Clean Underline Section Macro
+\newcommand{\resumesection}[1]{%
+  \vspace{2.5pt}%
+  {\large \textbf{\uppercase{#1}}}%
+  \vspace{1pt}%
+  \hrule height 0.65pt%
+  \vspace{2pt}%
+}
 
 \begin{document}
 
 % ==================== HEADER ====================
 \begin{center}
-    {\Large \textbf{ANKIT KUMAR}}\\ 
-    \vspace{1pt}
-    \hrulefill
-\end{center}
-\vspace{-11pt}
-\begin{center}
+    {\Huge \textbf{ANKIT KUMAR}}\\ 
+    \vspace{2pt}
+    \hrule height 1pt
+    \vspace{3pt}
     Department of Management Sciences (DoMS), Indian Institute of Technology Kanpur, India\\
     \href{mailto:ankitk25@iitk.ac.in}{ankitk25@iitk.ac.in} \ \textbullet \ 
     \href{https://linkedin.com/in/ankit-kumar}{LinkedIn: in/ankit-kumar} \ \textbullet \ 
     \href{https://github.com/Ankitiitk369}{GitHub: Ankitiitk369} \ \textbullet \ 
-    \href{https://sites.google.com/view/ankit369portfolio/home}{Portfolio: ankit369portfolio}
+    \href{https://ankitiitk369.github.io}{Portfolio: ankitiitk369.github.io}
 \end{center}
 
-\vspace{-8pt}
+\vspace{-3pt}
 
 % ==================== EDUCATION ====================
-\begin{center}
-    \textbf{Education}
-\end{center}
-\vspace{-9pt}
-\textbf{Indian Institute of Technology, Kanpur} \hfill Kanpur, India\\
-\textit{Master of Technology (M.Tech), Department of Management Sciences (DoMS)} \hfill July 2025 -- Present \ \textbullet \ CPI: \textbf{7.18 / 10.0}
+\resumesection{Education}
 
-\vspace{1pt}
+\textbf{Indian Institute of Technology Kanpur} \hfill Kanpur, India\\
+\textit{Master of Technology (M.Tech), Department of Management Sciences (DoMS)} \hfill July 2025 -- Present \ \textbullet \ CPI: \textbf{7.18 / 10.0}\\
 \textbf{C.S.A. University of Agriculture and Technology} \hfill Kanpur, India\\
 \textit{Bachelor of Technology (B.Tech) in Agricultural Engineering} \hfill Aug 2021 -- June 2025 \ \textbullet \ CPI: \textbf{8.25 / 10.0} (\textit{\textbf{Chancellor's Silver Medalist}})
 
-\vspace{-6pt}
-
 % ==================== PROFESSIONAL EXPERIENCE ====================
-\begin{center}
-    \textbf{Professional Experience}
-\end{center}
-\vspace{-9pt}
+\resumesection{Professional Experience}
 
 \textbf{Tata Consultancy Services (TCS)} \hfill Remote / India\\
-\textbf{Data Science \& AI Intern | Computer Vision \& Machine Learning} \hfill May 2026 -- July 2026
-\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
+\textit{Data Science \& AI Intern | Computer Vision \& Machine Learning} \hfill May 2026 -- July 2026
+\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0pt]
     \item Modeled multi-vehicle trip trajectories using Multi-Origin Convergence Routing with Haversine \& OSRM matrices for fleet carbon density.
     \item Built an automated multi-sheet Excel reporting pipeline and interactive \textbf{Streamlit BI Dashboard} with GIS maps and \textbf{17-test Pytest} suite.
-    \item Trained dual-stage ensemble estimators: Gradient Boosting ($\mathbf{R^2 = 0.996}$, $\mathbf{\text{RMSE} = 3.12\text{ g/km}}$) and Random Forest.
+    \item Trained dual-stage ensemble estimators: \textbf{Gradient Boosting} ($\mathbf{R^2 = 0.996}$, $\mathbf{\text{RMSE} = 3.12\text{ g/km}}$) and Random Forest.
 \end{itemize}
 
-\vspace{-6pt}
-
 % ==================== KEY FLAGSHIP BI & SQL PROJECTS ====================
-\begin{center}
-    \textbf{Key Flagship Projects: SQL Analytics, Power BI \& Business Intelligence}
-\end{center}
-\vspace{-9pt}
+\resumesection{Key Flagship Projects: SQL Analytics, Power BI \& Business Intelligence}
 
 \textbf{Customer Shopping Behavior Analysis \& BI Platform} \hfill Sep 2025 -- Oct 2025\\
 \textit{Stack: PostgreSQL, Power BI, Advanced DAX, Pandas, Relational Modeling} \hfill \href{https://github.com/Ankitiitk369/Customer-Shoping-Behavior-Data-Analysis-Using-SQL-and-Power-BI}{\textit{[GitHub Repo]}}
-\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
+\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0pt]
     \item Analyzed \textbf{3,900 consumer purchase records} across 18 demographic and transactional dimensions using Python and relational modeling.
     \item Formulated complex \textbf{PostgreSQL} queries using \textbf{CTEs}, window ranking functions (\texttt{ROW\_NUMBER}, \texttt{DENSE\_RANK}), and conditional joins.
     \item Engineered an executive \textbf{Power BI} dashboard with dynamic \textbf{DAX measures}, RFM segmentation, and drill-through cohort analysis.
 \end{itemize}
 
-\vspace{1.5pt}
+\vspace{1pt}
 
 \textbf{Loan Portfolio Risk Analysis \& Visualization (Tableau)} \hfill Sep 2025 -- Oct 2025\\
 \textit{Stack: Tableau Desktop, SQL, Financial KPIs, Risk Modeling} \hfill \href{https://github.com/Ankitiitk369/Loan-Portfolio-Risk-Analysis-Visualization-}{\textit{[GitHub Repo]}}
-\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
+\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0pt]
     \item Appraised \textbf{38,580 loan records} to examine funded capital, repayment schedules, interest distributions, and default risks.
     \item Built \textbf{3 production-grade Tableau executive dashboards} tracking DTI ratios, monthly delinquencies, and capital at risk.
 \end{itemize}
 
-\vspace{1.5pt}
+\vspace{1pt}
 
 \textbf{Zepto Quick-Commerce SQL Data Analysis} \hfill Aug 2025 -- Sep 2025\\
 \textit{Stack: PostgreSQL, Advanced SQL, EDA, Dark Store Logistics} \hfill \href{https://github.com/Ankitiitk369/Zepto-E-Commerce-SQL-Data-Analysis-}{\textit{[GitHub Repo]}}
-\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
+\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0pt]
     \item Evaluated 3,700+ product catalog records across 14 categories; computed category GMV, average order values (AOV), and stockout frequency.
     \item Formulated dark store inventory reorder thresholds to prevent high-velocity SKU stockouts during peak ordering hours via SQL CTEs.
 \end{itemize}
 
-\vspace{-6pt}
-
 % ==================== ALL RELEVANT ANALYTICS/BI PROJECTS ====================
-\begin{center}
-    \textbf{Additional Relevant Analytics, Econometrics \& BI Projects (Full Portfolio)}
-\end{center}
-\vspace{-9pt}
-\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
+\resumesection{Additional Relevant Analytics, Econometrics \& BI Systems}
+
+\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0pt]
     \item \textbf{BigMart Sales Multivariate Regression}: Econometric diagnostics (Breusch-Pagan, Jarque-Bera, VIF) for retail outlet revenue drivers.
     \item \textbf{Marketing Campaign Performance Analytics}: A/B hypothesis testing, Two-Way ANOVA, Chi-Square, and CAC acquisition modeling.
     \item \textbf{McDonald's Customer Perception Segmentation}: Unsupervised K-Means clustering and PCA perceptual mapping across QSR brand perception.
@@ -108,14 +97,10 @@
     \item \textbf{VitalSync AI Environmental \& Health IoT}: Correlating outdoor Air Quality Index (AQI) with aerobic athletic performance telemetry.
 \end{itemize}
 
-\vspace{-6pt}
-
 % ==================== TECHNICAL SKILLS & COURSEWORK ====================
-\begin{center}
-    \textbf{Technical Skills, Coursework \& Certifications}
-\end{center}
-\vspace{-9pt}
-\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0.5pt]
+\resumesection{Technical Skills, Coursework \& Certifications}
+
+\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=0pt]
     \item \textbf{BI \& Analytics Stack:} PostgreSQL, MySQL, Advanced SQL (CTEs, Window Functions), Power BI (DAX), Tableau, Advanced Excel, Python
     \item \textbf{Statistical Methods \& Tooling:} Pandas, NumPy, SciPy, Statsmodels, A/B Testing, ANOVA, OLS Regression, Time Series, Streamlit, Git
     \item \textbf{Relevant Courses (IIT Kanpur):} Statistical Modelling for Business Analytics, Operations Research, Data Mining, Probability \& Statistics
