@@ -1,0 +1,939 @@
+[
+  {
+    "title": "MediMind AI: Clinical Decision Support Platform",
+    "category": "genai",
+    "domain": "GenAI & RAG",
+    "badge": "Production Deployed",
+    "desc": [
+      "Production-ready RAG healthcare platform built with LangChain, Pinecone Serverless, and Groq LLaMA-3.3-70B.",
+      "Zero-hallucination medical literature grounding achieving 96.8% RAG faithfulness with verified citations.",
+      "Engineered automated lab report parsing via PyPDF, embedding 4 clinical risk calculators with <10ms emergency triage safety guardrails."
+    ],
+    "metrics": "\u26a1 Latency: ~450ms | Faithfulness: 96.8% | Triage: <10ms",
+    "tech": [
+      "LangChain",
+      "Groq LLaMA-3.3",
+      "Pinecone",
+      "MiniLM-L6-v2",
+      "Streamlit",
+      "PyPDF"
+    ],
+    "github": "https://github.com/Ankitiitk369/-MediMind-AI-Generative-AI-RAG-Based-Clinical-Decision-Support-Healthcare-Platform",
+    "demo": null
+  },
+  {
+    "title": "Text-to-SQL & Agentic SQL Analytics System",
+    "category": "genai",
+    "domain": "Agentic AI",
+    "badge": "Enterprise ReAct",
+    "desc": [
+      "Autonomous conversational database querying system powered by Google Gemini 2.5 Flash and LangGraph ReAct Agents.",
+      "Operates across a 6-table relational enterprise dataset with 64,000+ transactional sales orders.",
+      "Built-in SQL guardrails blocking destructive DDL/DML, attaining 1.00 Context Precision on RAGAS benchmarks."
+    ],
+    "metrics": "\ud83c\udfaf Precision: 1.00 | Dataset: 64,000+ Records | Dialect: MySQL",
+    "tech": [
+      "LangGraph",
+      "Google Gemini 2.5",
+      "ReAct",
+      "SQLDatabaseToolkit",
+      "Plotly",
+      "MySQL"
+    ],
+    "github": "https://github.com/Ankitiitk369/Text-to-SQL-Agentic-SQL-Analytics-System",
+    "demo": null
+  },
+  {
+    "title": "AI-Powered Gen Z Consumer Behavior Platform",
+    "category": "genai",
+    "domain": "GenAI & ML Platform",
+    "badge": "Live Streamlit App",
+    "desc": [
+      "Enterprise data science platform integrating Explainable AI (SHAP values), unsupervised persona clustering, and GenAI marketing copy generation.",
+      "Architected high-throughput FastAPI inference backend for real-time persona inference and brand sentiment scoring.",
+      "Deployed production interactive Web Platform on Streamlit Cloud for interactive CMO marketing intelligence."
+    ],
+    "metrics": "\ud83d\ude80 Live on Streamlit Cloud | Explainable AI: SHAP | Backend: FastAPI",
+    "tech": [
+      "FastAPI",
+      "SHAP (XAI)",
+      "GenAI",
+      "Streamlit",
+      "Scikit-learn",
+      "Clustering"
+    ],
+    "github": "https://github.com/Ankitiitk369/AI-Powered-Gen-Z-Consumer-Behavior-Marketing-Intelligence-Platform",
+    "demo": "https://ai-powered-gen-z-consumer-behavior-marketing-intelligence-plat.streamlit.app/"
+  },
+  {
+    "title": "Agentic AI Multilingual Blog Generation & Fact Retrieval",
+    "category": "genai",
+    "domain": "Multi-Agent RAG",
+    "badge": "LangGraph Pipeline",
+    "desc": [
+      "Enterprise-grade Multi-Agent RAG pipeline built with LangGraph, Groq LLaMA 3.1, and DuckDuckGo Live Search API.",
+      "Autonomous fact-checking agent cross-references retrieved citations before generating publication-ready multilingual articles.",
+      "FastAPI backend with streaming response generation and Streamlit frontend UI."
+    ],
+    "metrics": "\ud83c\udf10 Multi-Agent RAG | Live Web Search: DuckDuckGo | LLM: LLaMA 3.1",
+    "tech": [
+      "LangGraph",
+      "Groq LLaMA 3.1",
+      "DuckDuckGo API",
+      "FastAPI",
+      "Streamlit"
+    ],
+    "github": "https://github.com/Ankitiitk369/Agentic-AI-Multilingual-Blog-Generation-Fact-Retrieval-System",
+    "demo": null
+  },
+  {
+    "title": "Multi-Agent Resume Analyzer & Job Matcher",
+    "category": "genai",
+    "domain": "Autonomous Agents",
+    "badge": "CrewAI Framework",
+    "desc": [
+      "Multi-agent autonomous collaborative system using CrewAI and open LLMs to automate candidate screening.",
+      "Deploys 3 specialized agents: Parser Agent (PDF extraction), Profiler Agent (skill gaps), and Recruiter Matcher Agent (ATS scoring).",
+      "Generates structured candidate matching reports with cosine skill similarity, keyword density, and interview questions."
+    ],
+    "metrics": "\ud83e\udd16 3 Collaborative Agents | Framework: CrewAI | Inference: Groq",
+    "tech": [
+      "CrewAI",
+      "LangChain",
+      "Groq LLaMA-3",
+      "PyPDF",
+      "ATS Scoring"
+    ],
+    "github": "https://github.com/Ankitiitk369/Multi-Agent-Resume-Analyzer-using-CrewAI-LLM",
+    "demo": null
+  },
+  {
+    "title": "Generative AI Medical Information Assistant",
+    "category": "genai",
+    "domain": "Healthcare RAG",
+    "badge": "Sub-Second Latency",
+    "desc": [
+      "End-to-end Retrieval-Augmented Generation medical assistant designed to answer complex clinical inquiries with verified textbook citations.",
+      "Dense vector search architecture ensuring zero hallucination risk.",
+      "Interactive chat interface supporting multi-turn dialogue with clinical disclaimer guardrails."
+    ],
+    "metrics": "\ud83c\udfe5 Zero Hallucination | Dense Vector Search | Sub-Second Latency",
+    "tech": [
+      "LangChain",
+      "RAG",
+      "Python",
+      "Vector DB",
+      "LLMs"
+    ],
+    "github": "https://github.com/Ankitiitk369/Generative-AI-Medical-Information-Assistant-",
+    "demo": null
+  },
+  {
+    "title": "Dental Appointment System using LangGraph",
+    "category": "genai",
+    "domain": "Agentic Booking",
+    "badge": "Stateful State Machine",
+    "desc": [
+      "Conversational clinic booking system engineered using stateful LangGraph graphs and relational MySQL database.",
+      "Implements human-in-the-loop verification, conflict detection for booked calendar slots, and automated calendar scheduling.",
+      "Maintains checkpointed conversational state memory across customer interaction sessions."
+    ],
+    "metrics": "\ud83d\udcc5 State Machine: LangGraph | Database: MySQL | Memory: Checkpointed",
+    "tech": [
+      "LangGraph",
+      "MySQL",
+      "Python",
+      "State Machines",
+      "Streamlit"
+    ],
+    "github": "https://github.com/Ankitiitk369/Dental-Appointment-system-using-Langgraph",
+    "demo": null
+  },
+  {
+    "title": "Air India Domain-Specific GenAI Knowledge Assistant",
+    "category": "genai",
+    "domain": "Domain RAG",
+    "badge": "Aviation Support",
+    "desc": [
+      "Domain-specific RAG assistant engineered for commercial airline passengers to resolve flight baggage allowances and transit policies.",
+      "Indexed aviation regulatory policy documents into high-dimensional vector embeddings with semantic FAISS search.",
+      "Context-aware session history with hallucination guardrails deployed via Streamlit."
+    ],
+    "metrics": "\u2708\ufe0f Domain: Aviation Policies | Vector Search: FAISS | Framework: LangChain",
+    "tech": [
+      "LangChain",
+      "FAISS",
+      "Streamlit",
+      "RAG Architecture",
+      "Python"
+    ],
+    "github": "https://github.com/Ankitiitk369/Air-India-Domain-Specific-Generative-AI-Knowledge-Assistant",
+    "demo": null
+  },
+  {
+    "title": "Conversational RAG Chatbot for Multi-PDF Knowledge Base",
+    "category": "genai",
+    "domain": "Document RAG",
+    "badge": "FAISS & LangChain",
+    "desc": [
+      "Conversational GenAI chatbot combining web-scraped data and multi-PDF document repositories into a unified knowledge base.",
+      "Utilized semantic vector search with FAISS, LangChain text chunking strategies, and OpenAI LLMs.",
+      "Delivers context-aware synthesis with exact page-level source attribution."
+    ],
+    "metrics": "\ud83d\udcda Multi-PDF Ingestion | Vector Index: FAISS | Text Chunking: Recursive",
+    "tech": [
+      "LangChain",
+      "FAISS",
+      "OpenAI LLMs",
+      "Python",
+      "Streamlit"
+    ],
+    "github": "https://github.com/Ankitiitk369/Conversational-RAG-Chatbot-for-Web-Scraped-Multi-Pdf-Knowledge-Base",
+    "demo": null
+  },
+  {
+    "title": "AI-Powered Sustainability RAG Chatbot",
+    "category": "genai",
+    "domain": "ESG & Climate AI",
+    "badge": "Compliance Intelligence",
+    "desc": [
+      "Enterprise-grade RAG chatbot engineered to analyze, extract, and answer complex questions from sustainability guidelines and ESG environmental regulations.",
+      "Grounds responses in environmental corporate disclosure frameworks with semantic retrieval.",
+      "Facilitates fast compliance checks for corporate sustainability auditors."
+    ],
+    "metrics": "\ud83c\udf31 Domain: ESG & Regulations | RAG Architecture | Vector Search",
+    "tech": [
+      "LangChain",
+      "Pinecone/FAISS",
+      "Python",
+      "ESG Compliance",
+      "LLMs"
+    ],
+    "github": "https://github.com/Ankitiitk369/AI-Powered-Sustainability-RAG-Chatbot",
+    "demo": null
+  },
+  {
+    "title": "GenAI Research RAG Chatbot",
+    "category": "genai",
+    "domain": "Research AI",
+    "badge": "Academic Literature Search",
+    "desc": [
+      "Specialized academic literature assistant indexing arXiv research papers and technical preprints.",
+      "Supports dense mathematical and technical concept querying with semantic similarity ranking.",
+      "Generates concise literature reviews with citation chains."
+    ],
+    "metrics": "\ud83d\udd2c Academic Literature Ingestion | Semantic Similarity | RAG",
+    "tech": [
+      "LangChain",
+      "Vector Embeddings",
+      "Python",
+      "Streamlit"
+    ],
+    "github": "https://github.com/Ankitiitk369/GenAI-Research-Rag-Chatbot",
+    "demo": null
+  },
+  {
+    "title": "Credit Risk Modelling: Loan Eligibility Prediction",
+    "category": "ml",
+    "domain": "Financial ML",
+    "badge": "IIT Kanpur Academic (Prof. Faiz Hamid)",
+    "desc": [
+      "Constructed an enterprise credit scoring pipeline analyzing 51,336 customer records with 79 financial attributes to predict default risk.",
+      "Conducted statistical feature selection via Chi-Square, ANOVA, Variance Inflation Factor (VIF), and resolved severe imbalance with SMOTE.",
+      "Benchmarked Logistic Regression, SVC, Random Forest, and XGBoost with GridSearchCV, attaining 78% out-of-sample accuracy."
+    ],
+    "metrics": "\ud83d\udcc9 Accuracy: 78% | Records: 51,336 | Attributes: 79 | SMOTE Rebalanced",
+    "tech": [
+      "Scikit-learn",
+      "XGBoost",
+      "SMOTE",
+      "GridSearchCV",
+      "Chi-Square",
+      "ANOVA"
+    ],
+    "github": "https://github.com/Ankitiitk369/Credit-Risk-Modelling-Loan-Eligibility-Prediction",
+    "demo": null
+  },
+  {
+    "title": "Cancer Risk Level Prediction System",
+    "category": "ml",
+    "domain": "Clinical ML",
+    "badge": "3-Class Stratification",
+    "desc": [
+      "Clinical machine learning solution stratifying patient cancer risk (Low, Medium, High) based on lifestyle, diet, and genetics across 23 features.",
+      "Trained and benchmarked Decision Trees, Random Forest, and Gradient Boosting Classifiers.",
+      "Achieved >98% test set classification accuracy with cross-validation."
+    ],
+    "metrics": "\ud83c\udfe5 Task: 3-Class Risk Stratification | Accuracy: >98% | Features: 23",
+    "tech": [
+      "Scikit-learn",
+      "Random Forest",
+      "Gradient Boosting",
+      "Clinical Analytics",
+      "Pandas"
+    ],
+    "github": "https://github.com/Ankitiitk369/Cancer-Risk-Level-Prediction",
+    "demo": null
+  },
+  {
+    "title": "Breast Cancer Prediction Using Machine Learning",
+    "category": "ml",
+    "domain": "Medical Diagnosis",
+    "badge": "Diagnostic ML",
+    "desc": [
+      "Binary classification pipeline predicting whether breast tissue masses are malignant or benign using Wisconsin FNA clinical biopsy features.",
+      "Implemented feature correlation heatmaps, PCA dimensionality reduction, and ROC-AUC model benchmarking.",
+      "Deployed interactive clinical prediction dashboard on Streamlit Cloud."
+    ],
+    "metrics": "\ud83c\udf97\ufe0f Dataset: Wisconsin Breast Cancer FNA | Metrics: High Sensitivity & ROC-AUC",
+    "tech": [
+      "Scikit-learn",
+      "PCA",
+      "Streamlit",
+      "Python",
+      "ROC-AUC"
+    ],
+    "github": "https://github.com/Ankitiitk369/Breast-Cancer-Prediction-Using-Machine-Learning",
+    "demo": null
+  },
+  {
+    "title": "Crop Yield Prediction End-to-End ML Pipeline",
+    "category": "ml",
+    "domain": "AgriTech ML",
+    "badge": "B.Tech Honors Capstone",
+    "desc": [
+      "End-to-end Machine Learning pipeline predicting agricultural crop yields based on rainfall, average temperatures, pesticide usage, and crop type.",
+      "Engineered feature transformers, one-hot encoders across global crop types, and regression benchmarking.",
+      "Deployed interactive Streamlit Cloud app enabling farmers to simulate yields under varying climatic conditions."
+    ],
+    "metrics": "\ud83c\udf3e AgriTech Regression | Climate Simulation | Streamlit Cloud App",
+    "tech": [
+      "Scikit-learn",
+      "Streamlit",
+      "Regression",
+      "Feature Engineering",
+      "Pandas"
+    ],
+    "github": "https://github.com/Ankitiitk369/Crop-yield-prediction-End-To-End-ML-project",
+    "demo": null
+  },
+  {
+    "title": "Telecom Churn Prediction & Customer Analytics",
+    "category": "ml",
+    "domain": "Customer Analytics",
+    "badge": "Churn Prevention",
+    "desc": [
+      "Predictive customer retention system identifying high-risk subscribers before contract termination across telecom services.",
+      "Engineered tenure, monthly charges, contract type, and payment method interaction indicators.",
+      "Evaluated classification recall metrics to minimize costly false negatives in subscriber retention."
+    ],
+    "metrics": "\ud83d\udcde Objective: Subscriber Retention | High Recall Optimization | Python",
+    "tech": [
+      "Scikit-learn",
+      "Classification",
+      "EDA",
+      "Churn Modeling",
+      "Seaborn"
+    ],
+    "github": "https://github.com/Ankitiitk369/Telecom-churn-prediction-Analysis-of-customers",
+    "demo": null
+  },
+  {
+    "title": "Appliance Energy Consumption Prediction",
+    "category": "ml",
+    "domain": "Smart Energy ML",
+    "badge": "Energy Efficiency",
+    "desc": [
+      "Predictive regression model forecasting energy consumption of home appliances in low-energy buildings based on environmental sensor readings.",
+      "Preprocessed multi-room temperature/humidity sensors and weather forecast indicators.",
+      "Tuned ensemble regressors to optimize residential energy management systems."
+    ],
+    "metrics": "\ud83c\udfe0 Domain: Smart Home IoT | Target: Wh Appliance Energy | Regression",
+    "tech": [
+      "Python",
+      "Ensemble Regressors",
+      "Scikit-learn",
+      "Sensor Analytics"
+    ],
+    "github": "https://github.com/Ankitiitk369/APPLIANCE-ENERGY-PREDICTION-",
+    "demo": null
+  },
+  {
+    "title": "City Payroll Predictive Analytics with Hypothesis Testing",
+    "category": "ml",
+    "domain": "Statistical Analytics",
+    "badge": "IIT Kanpur Academic",
+    "desc": [
+      "Statistical analytics project examining municipal compensation structures, overtime pay trends, and departmental expenditures.",
+      "Conducted parametric and non-parametric hypothesis tests, ANOVA across civic departments, and regression forecasting.",
+      "Generated audit recommendations for fiscal municipal budgetary control."
+    ],
+    "metrics": "\ud83c\udfdb\ufe0f Hypothesis Testing | ANOVA | Fiscal Budget Modeling | Python",
+    "tech": [
+      "SciPy",
+      "Statsmodels",
+      "Hypothesis Testing",
+      "ANOVA",
+      "Pandas"
+    ],
+    "github": "https://github.com/Ankitiitk369/City-Payroll-Predictive-Analytics-using-Statistical-Hypothesis-Testing",
+    "demo": null
+  },
+  {
+    "title": "Champo Carpets Case Study using Machine Learning",
+    "category": "ml",
+    "domain": "Industrial ML",
+    "badge": "IIT Kanpur Academic",
+    "desc": [
+      "Applied machine learning case study predicting export manufacturing lead times and quality defect probabilities in handcrafted carpets.",
+      "Formulated feature sets combining material grading, artisan skill levels, and international shipping lead times.",
+      "Delivered operational decision-support models for production scheduling."
+    ],
+    "metrics": "\ud83c\udfed Industrial Case Study | Production Scheduling | Scikit-learn",
+    "tech": [
+      "Python",
+      "Machine Learning",
+      "Operations Research",
+      "Case Study"
+    ],
+    "github": "https://github.com/Ankitiitk369/Champo-Carpets-Case-Study-using-Machine-Learning",
+    "demo": null
+  },
+  {
+    "title": "Swiggy Delivery & Restaurant Analytics Case Study",
+    "category": "ml",
+    "domain": "FoodTech ML",
+    "badge": "Delivery Optimization",
+    "desc": [
+      "Comprehensive business analytics case study analyzing Swiggy order volumes, average delivery times, and partner restaurant performance.",
+      "Identified operational bottlenecks during peak demand hours across urban clusters.",
+      "Formulated dynamic delivery radius and incentive recommendations."
+    ],
+    "metrics": "\ud83d\udef5 Domain: Food Delivery | Order Turnaround Optimization | Case Study",
+    "tech": [
+      "Python",
+      "Data Analysis",
+      "EDA",
+      "Operations Analytics"
+    ],
+    "github": "https://github.com/Ankitiitk369/Swiggy-Case-study-",
+    "demo": null
+  },
+  {
+    "title": "Open-Source AI Profile Picture Maker",
+    "category": "ml",
+    "domain": "Generative Vision",
+    "badge": "Full-Stack AI App",
+    "desc": [
+      "Web application allowing users to upload a selfie and generate professional, stylized headshots using open-source AI models.",
+      "Zero account required; fully self-hosted open-source pipeline with image transformation filters.",
+      "Engineered with TypeScript frontend and Python AI inference endpoints."
+    ],
+    "metrics": "\ud83c\udfa8 Open-Source Generative AI | Zero Auth Required | Full-Stack",
+    "tech": [
+      "TypeScript",
+      "Python AI",
+      "Open-Source Models",
+      "Image Processing"
+    ],
+    "github": "https://github.com/Ankitiitk369/Open-Source-AI-Profile-Picture-Maker",
+    "demo": null
+  },
+  {
+    "title": "Petrol Price Forecasting & Analytics System",
+    "category": "timeseries",
+    "domain": "Time Series & ML",
+    "badge": "IIT Kanpur Academic (Prof. Faiz Hamid)",
+    "desc": [
+      "Multi-model time-series forecasting pipeline predicting weekly commodity prices using PyTorch Stacked LSTM, XGBoost Regressor, and ARIMA(5,1,0).",
+      "Engineered 15+ domain-specific temporal features (1-12 lags, 4-wk & 12-wk SMA/EMA, rolling volatility).",
+      "Tuned XGBoost delivered 1.12% MAPE and 67.99% directional accuracy on 35% unseen test data; deployed via FastAPI REST endpoints."
+    ],
+    "metrics": "\ud83d\udcca MAPE: 1.12% | Directional Acc: 67.99% | Out-of-Sample: 35%",
+    "tech": [
+      "PyTorch LSTM",
+      "XGBoost",
+      "ARIMA",
+      "FastAPI",
+      "Streamlit",
+      "Pandas"
+    ],
+    "github": "https://github.com/Ankitiitk369/Petrol-Price-Forecasting-Analytics-System",
+    "demo": null
+  },
+  {
+    "title": "NVIDIA Stock Price Prediction System",
+    "category": "timeseries",
+    "domain": "Quantitative Finance",
+    "badge": "NASDAQ: NVDA",
+    "desc": [
+      "Quantitative financial machine learning pipeline forecasting price trajectories and volatility swings for NVIDIA Corporation.",
+      "Engineered technical financial indicators: MACD, RSI, Bollinger Bands, Average True Range (ATR), and moving averages.",
+      "Benchmarked Random Forest and neural networks against persistence random walk baselines."
+    ],
+    "metrics": "\ud83d\udcc8 Asset: NVDA NASDAQ | Indicators: MACD, RSI, Bollinger Bands",
+    "tech": [
+      "Python",
+      "Technical Indicators",
+      "Quantitative ML",
+      "Scikit-learn"
+    ],
+    "github": "https://github.com/Ankitiitk369/NVIDIA-Stock-Price-Prediction-systerm",
+    "demo": null
+  },
+  {
+    "title": "Electricity Demand Forecasting System",
+    "category": "timeseries",
+    "domain": "Energy Time Series",
+    "badge": "Grid Capacity Planning",
+    "desc": [
+      "Machine learning and deep learning forecasting pipeline for monthly electricity demand to support energy dispatch and capacity planning.",
+      "Conducted stationarity tests (ADF, KPSS), seasonal differencing, and time-series decomposition into trend, seasonal, and residual components.",
+      "Evaluated classical SARIMAX against recurrent models for peak load planning."
+    ],
+    "metrics": "\u26a1 Objective: Peak Load Planning | Models: SARIMAX & Recurrent DL",
+    "tech": [
+      "Statsmodels",
+      "ARIMA",
+      "SARIMAX",
+      "Time Series",
+      "Python"
+    ],
+    "github": "https://github.com/Ankitiitk369/Electricity-Demand-Forecasting-System",
+    "demo": null
+  },
+  {
+    "title": "Tesla Stock Market Prediction Using Prophet",
+    "category": "timeseries",
+    "domain": "Meta Prophet",
+    "badge": "NASDAQ: TSLA",
+    "desc": [
+      "Decomposed additive time-series forecasting model for Tesla (TSLA) stock prices using Meta's Prophet library.",
+      "Modeled seasonal holiday impacts, quarterly earnings announcements, and macroeconomic regime shifts.",
+      "Delivered trend changepoint detection visualizations."
+    ],
+    "metrics": "\ud83d\ude97 Asset: TSLA NASDAQ | Framework: Meta Prophet | Seasonality Decomposition",
+    "tech": [
+      "Prophet",
+      "Python",
+      "Time Series",
+      "Financial Modeling"
+    ],
+    "github": "https://github.com/Ankitiitk369/-Tesla-Stock-Market-Prediction-Using-Prophet",
+    "demo": null
+  },
+  {
+    "title": "Demand Forecasting for E-Commerce",
+    "category": "timeseries",
+    "domain": "Supply Chain ML",
+    "badge": "Inventory Optimization",
+    "desc": [
+      "Time-series predictive pipeline estimating multi-SKU retail order demand across regional distribution warehouses.",
+      "Modeled promotional markdown lift, seasonal sales holidays, and lead-time constraints.",
+      "Generated safety stock benchmarks to minimize out-of-stock occurrences."
+    ],
+    "metrics": "\ud83d\udce6 Domain: E-Commerce Fulfillment | Multi-SKU Demand | Safety Stock",
+    "tech": [
+      "Python",
+      "Time Series",
+      "Supply Chain",
+      "Pandas",
+      "Scikit-learn"
+    ],
+    "github": "https://github.com/Ankitiitk369/Demand-Forecasting-for-E-commerce",
+    "demo": null
+  },
+  {
+    "title": "Univariate & Multivariate Time-Series Forecasting Suite",
+    "category": "timeseries",
+    "domain": "Comparative Suite",
+    "badge": "Comprehensive Benchmark",
+    "desc": [
+      "Comprehensive benchmarking suite comparing univariate methods (ARIMA, Exponential Smoothing) with multivariate regressors (VAR, XGBoost).",
+      "Evaluated walk-forward validation strategies without temporal data leakage across complex economic series."
+    ],
+    "metrics": "\ud83d\udcc9 Walk-Forward Validation | VAR & ARIMA | Error Diagnostics",
+    "tech": [
+      "Python",
+      "Statsmodels",
+      "VAR",
+      "ARIMA",
+      "Time Series Benchmark"
+    ],
+    "github": "https://github.com/Ankitiitk369/Uni-and-Multivariate-Forecasting-Analysis-",
+    "demo": null
+  },
+  {
+    "title": "Solar Panel Defect Classification",
+    "category": "cv",
+    "domain": "Computer Vision & DL",
+    "badge": "IIT Kanpur Academic (Prof. Veena Bansal)",
+    "desc": [
+      "Trained a 6-class deep learning defect detection pipeline on 885 electroluminescence images of photovoltaic cells using TensorFlow and transfer learning.",
+      "Applied data augmentation, Batch Normalization, Dropout (0.3), and L2 weight decay to combat small-sample overfitting.",
+      "Fine-tuned MobileNetV2 and EfficientNetB0 architectures, attaining 82.5% validation accuracy; deployed via Streamlit inspection UI."
+    ],
+    "metrics": "\u26a1 Val Accuracy: 82.5% | Defect Classes: 6 | Dataset: 885 EL Images",
+    "tech": [
+      "TensorFlow",
+      "MobileNetV2",
+      "EfficientNetB0",
+      "OpenCV",
+      "Transfer Learning"
+    ],
+    "github": "https://github.com/Ankitiitk369/Solar-panel-image-classification-Using-CNN-And-Pretrained-model",
+    "demo": null
+  },
+  {
+    "title": "Speech Sentiment Analysis using Stacked LSTM",
+    "category": "cv",
+    "domain": "Audio DSP & NLP",
+    "badge": "Deep Learning",
+    "desc": [
+      "Real-time speech sentiment classification pipeline converting acoustic signals to text via SpeechRecognition and predicting polarity.",
+      "Trained a stacked bidirectional LSTM (RNN) architecture utilizing pre-trained GloVe 100d word embeddings.",
+      "Implemented audio noise filtering and voice activity detection (VAD) for robust acoustic inference."
+    ],
+    "metrics": "\ud83c\udf99\ufe0f Architecture: Stacked LSTM | Embeddings: GloVe 100d | Audio DSP",
+    "tech": [
+      "PyTorch / Keras",
+      "Stacked LSTM",
+      "GloVe",
+      "SpeechRecognition",
+      "Python"
+    ],
+    "github": "https://github.com/Ankitiitk369/Speech-Sentiment-Analysis-using-RNN-LSTM",
+    "demo": null
+  },
+  {
+    "title": "Intelligent Document Processing (IDP) for Invoices",
+    "category": "cv",
+    "domain": "Document AI & OCR",
+    "badge": "Enterprise Automation",
+    "desc": [
+      "Automated financial document parsing system extracting key-value pairs (Invoice #, Date, Vendor Name, Tax, Line Items) from scanned invoices.",
+      "Utilized Tesseract OCR with bounding box spatial localization, table recognition, and rule-based regex parsing.",
+      "Outputs clean standardized JSON schemas for downstream ERP ingestion (SAP / Oracle NetSuite)."
+    ],
+    "metrics": "\ud83d\udcc4 Document Type: Multi-format Invoices | Output: Structured JSON Schema",
+    "tech": [
+      "Python",
+      "Tesseract OCR",
+      "OpenCV",
+      "Regex Parsers",
+      "JSON Export"
+    ],
+    "github": "https://github.com/Ankitiitk369/Intelligent-Document-Processing-IDP-for-Invoice-extraction",
+    "demo": null
+  },
+  {
+    "title": "Sentiment-Based Product Recommendation System",
+    "category": "cv",
+    "domain": "Hybrid Recommender",
+    "badge": "NLP + Collaborative",
+    "desc": [
+      "End-to-end recommendation engine combining collaborative filtering matrix factorization with user review sentiment analysis.",
+      "Extracts sentiment scores from customer review texts to dynamically weight product ratings.",
+      "Alleviates cold-start issues by recommending products with both high user affinity and positive sentiment polarity."
+    ],
+    "metrics": "\u2b50 Hybrid Recommender | Collaborative Filtering + NLP Sentiment",
+    "tech": [
+      "NLP",
+      "Collaborative Filtering",
+      "Scikit-learn",
+      "Python",
+      "Pandas"
+    ],
+    "github": "https://github.com/Ankitiitk369/Sentiment--Based-Product-Recommendation-System",
+    "demo": null
+  },
+  {
+    "title": "Sentiment Analysis of Amazon Reviews (Hybrid AI)",
+    "category": "cv",
+    "domain": "NLP & Transformers",
+    "badge": "Text Classification",
+    "desc": [
+      "Sentiment classification system analyzing fine-grained Amazon customer reviews using TF-IDF, VADER, and transformer architectures.",
+      "Conducted text normalization, lemmatization, and topic modeling on negative review cohorts to pinpoint product defects."
+    ],
+    "metrics": "\ud83d\udce6 Domain: E-Commerce Reviews | Text Mining & Sentiment Classification",
+    "tech": [
+      "Transformers",
+      "TF-IDF",
+      "NLTK",
+      "Scikit-learn",
+      "Python"
+    ],
+    "github": "https://github.com/Ankitiitk369/Sentiment-Analysis-of-Amazon-Product-Reviews-Using-Hybrid-AI-Techniques",
+    "demo": null
+  },
+  {
+    "title": "Predicting Research Article Topics through NLP Analysis",
+    "category": "cv",
+    "domain": "Topic Modeling",
+    "badge": "Academic Text Mining",
+    "desc": [
+      "Multi-label topic classification pipeline categorizing academic research papers based on abstracts and titles.",
+      "Utilized Latent Dirichlet Allocation (LDA) and supervised classifiers to assign disciplines across computer science and statistics."
+    ],
+    "metrics": "\ud83d\udcd1 Multi-Label Classification | LDA Topic Modeling | NLTK",
+    "tech": [
+      "NLP",
+      "LDA",
+      "Scikit-learn",
+      "NLTK",
+      "Text Mining"
+    ],
+    "github": "https://github.com/Ankitiitk369/Predicting-Research-Article-Topics-through-NLP-Analysis",
+    "demo": null
+  },
+  {
+    "title": "Customer Shopping Behavior & BI Analytics",
+    "category": "bi",
+    "domain": "BI & SQL Analytics",
+    "badge": "Portfolio Flagship",
+    "desc": [
+      "Analyzed 3,900 consumer purchase transactions across 18 demographic and purchasing dimensions using Python and relational modeling.",
+      "Queried PostgreSQL using Common Table Expressions (CTEs), window functions (ROW_NUMBER, DENSE_RANK), and multi-table joins.",
+      "Designed an interactive Power BI executive dashboard with dynamic DAX KPI measures, RFM segmentation, and drill-through cohort views."
+    ],
+    "metrics": "\ud83d\udcca Transactions: 3,900 | Stack: PostgreSQL + Power BI DAX | RFM Analysis",
+    "tech": [
+      "PostgreSQL",
+      "Power BI",
+      "DAX Formulas",
+      "Advanced SQL",
+      "RFM Segmentation"
+    ],
+    "github": "https://github.com/Ankitiitk369/Customer-Shoping-Behavior-Data-Analysis-Using-SQL-and-Power-BI",
+    "demo": null
+  },
+  {
+    "title": "Zepto E-Commerce SQL Data Analysis",
+    "category": "bi",
+    "domain": "Quick-Commerce Analytics",
+    "badge": "SQL Optimization",
+    "desc": [
+      "Exploratory data analysis on Zepto quick-commerce transactions evaluating order turnaround times and dark store capacity.",
+      "Engineered complex SQL scripts evaluating product category GMV, average order values (AOV), and customer repeat frequency.",
+      "Formulated dark store inventory reorder thresholds to prevent high-velocity SKU stockouts during peak ordering hours."
+    ],
+    "metrics": "\ud83d\uded2 Quick Commerce | Complex SQL Queries | Dark Store SLA Analytics",
+    "tech": [
+      "SQL",
+      "PostgreSQL",
+      "Python",
+      "EDA",
+      "Supply Chain Analytics"
+    ],
+    "github": "https://github.com/Ankitiitk369/Zepto-E-Commerce-SQL-Data-Analysis-",
+    "demo": null
+  },
+  {
+    "title": "Loan Portfolio Risk Analysis & Visualization (Tableau)",
+    "category": "bi",
+    "domain": "FinTech Analytics",
+    "badge": "3 Tableau Dashboards",
+    "desc": [
+      "Financial credit risk intelligence pipeline utilizing SQL for exploratory data analysis, default rate KPIs, and credit grade segmentation.",
+      "Built 3 production-grade Tableau executive dashboards visualizing Debt-to-Income (DTI) distributions and loan delinquency matrices.",
+      "Delivered risk heatmaps enabling portfolio managers to revise credit underwriting thresholds and mitigate non-performing loans."
+    ],
+    "metrics": "\ud83d\udcc8 3 Executive Dashboards | Tool: Tableau | Engine: SQL",
+    "tech": [
+      "Tableau",
+      "SQL",
+      "Financial KPIs",
+      "Risk Modeling",
+      "Executive Reporting"
+    ],
+    "github": "https://github.com/Ankitiitk369/Loan-Portfolio-Risk-Analysis-Visualization-",
+    "demo": null
+  },
+  {
+    "title": "BigMart Sales Analysis using Multivariate Regression",
+    "category": "bi",
+    "domain": "Econometrics & ML",
+    "badge": "Retail Analytics",
+    "desc": [
+      "Econometric and predictive modeling project analyzing retail sales across nationwide supermarket outlets and product categories.",
+      "Executed diagnostic statistical checks: heteroskedasticity (Breusch-Pagan), normality of residuals (Jarque-Bera), and collinearity (VIF).",
+      "Identified primary drivers of outlet sales with actionable merchandising recommendations."
+    ],
+    "metrics": "\ud83d\udcc8 Method: Multivariate OLS | Diagnostics: VIF, Jarque-Bera | Statsmodels",
+    "tech": [
+      "Statsmodels",
+      "Multivariate OLS",
+      "Hypothesis Testing",
+      "Python",
+      "Econometrics"
+    ],
+    "github": "https://github.com/Ankitiitk369/Bigmart-Sales-Analysis-using-multivariate-regression",
+    "demo": null
+  },
+  {
+    "title": "Marketing Campaign Analytics with Statistical Testing",
+    "category": "bi",
+    "domain": "Causal & A/B Testing",
+    "badge": "Marketing Science",
+    "desc": [
+      "Quantitative experimentation pipeline evaluating customer response rates across multichannel promotional campaigns.",
+      "Executed rigorous statistical hypothesis testing: two-sample t-tests for conversion uplift, Chi-Square test of independence, and Two-Way ANOVA.",
+      "Calculated customer acquisition cost (CAC) efficiencies and revenue uplift benchmarks."
+    ],
+    "metrics": "\ud83e\uddea A/B Testing & Two-Way ANOVA | Conversion Uplift | CAC Efficiency",
+    "tech": [
+      "A/B Testing",
+      "SciPy",
+      "Statsmodels",
+      "Two-Way ANOVA",
+      "Pandas"
+    ],
+    "github": "https://github.com/Ankitiitk369/Marketing-Campaign-Analytics-with-Statistical-Testing",
+    "demo": null
+  },
+  {
+    "title": "McDonald's Customer Segmentation & Marketing Analytics",
+    "category": "bi",
+    "domain": "Market Segmentation",
+    "badge": "K-Means & PCA",
+    "desc": [
+      "Applied unsupervised machine learning pipeline clustering McDonald's consumer perception survey responses across brand attributes.",
+      "Employed Principal Component Analysis (PCA) for perceptual mapping and K-Means clustering with Elbow evaluation.",
+      "Identified 4 distinct consumer target segments for tailored marketing positioning."
+    ],
+    "metrics": "\ud83c\udf54 Domain: QSR Fast Food | Unsupervised K-Means & PCA | Market Positioning",
+    "tech": [
+      "K-Means",
+      "PCA",
+      "Scikit-learn",
+      "Perceptual Mapping",
+      "Python"
+    ],
+    "github": "https://github.com/Ankitiitk369/McDonald-s-Customer-Segmentation-Marketing-Analytics-Using-Machine-Learning",
+    "demo": null
+  },
+  {
+    "title": "Mall Customers Clustering Analysis",
+    "category": "bi",
+    "domain": "Customer Segmentation",
+    "badge": "Unsupervised Learning",
+    "desc": [
+      "Unsupervised clustering project segmenting retail mall visitors based on annual income and spending score metrics.",
+      "Evaluated K-Means, Hierarchical/Agglomerative clustering, and DBSCAN with Silhouette analysis.",
+      "Formulated high-value shopper VIP loyalty strategies."
+    ],
+    "metrics": "\ud83d\udecd\ufe0f Algorithm: K-Means & DBSCAN | Silhouette Score Evaluation",
+    "tech": [
+      "Scikit-learn",
+      "K-Means",
+      "DBSCAN",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "github": "https://github.com/Ankitiitk369/MALL-CUSTOMERS-CLUSTERING-ANALYSIS",
+    "demo": null
+  },
+  {
+    "title": "Netflix Titles Dataset Exploratory Data Analysis",
+    "category": "bi",
+    "domain": "Media Analytics",
+    "badge": "Content Strategy",
+    "desc": [
+      "In-depth exploratory data analysis on the complete Netflix Titles catalog to uncover content release trends and global expansion patterns.",
+      "Visualized movie vs. TV show ratio transitions, top content-producing countries, and cast/director collaboration networks."
+    ],
+    "metrics": "\ud83c\udfac Dataset: Netflix Catalog | Visualizations: Seaborn & Plotly",
+    "tech": [
+      "Python",
+      "Pandas",
+      "Seaborn",
+      "Plotly",
+      "EDA"
+    ],
+    "github": "https://github.com/Ankitiitk369/-Netflix-Titles-Dataset-Exploratory-data-Analysis-",
+    "demo": null
+  },
+  {
+    "title": "Deloitte Australia Data Analytics Simulation",
+    "category": "bi",
+    "domain": "Consulting Analytics",
+    "badge": "Forage Job Simulation",
+    "desc": [
+      "Completed the Deloitte Australia Data Analytics virtual experience program on Forage.",
+      "Synthesized business client requirements, prepared raw data extracts, and designed forensic KPI analytics.",
+      "Formulated strategic executive dashboards for operational decision makers."
+    ],
+    "metrics": "\ud83d\udcbc Deloitte Australia Simulation | Business Analysis & Reporting",
+    "tech": [
+      "Data Analytics",
+      "Forensic Analysis",
+      "Executive Dashboarding",
+      "Excel"
+    ],
+    "github": "https://github.com/Ankitiitk369/Deloitte-Australia-Data-Analytics-Job-Simulation",
+    "demo": null
+  },
+  {
+    "title": "VitalSync AI: Intelligent Fitness & AQI Health Tracker",
+    "category": "bi",
+    "domain": "IoT & Health Analytics",
+    "badge": "Full-Stack Health",
+    "desc": [
+      "Intelligent environmental and fitness tracking dashboard correlating outdoor Air Quality Index (AQI) data with physical activity metrics.",
+      "Provides real-time aerobic training safety alerts based on hyperlocal particulate matter readings."
+    ],
+    "metrics": "\ud83c\udfc3 Health IoT | AQI Correlation Alerts | TypeScript & Analytics",
+    "tech": [
+      "TypeScript",
+      "Health Analytics",
+      "API Integration",
+      "IoT"
+    ],
+    "github": "https://github.com/Ankitiitk369/VitalSync-AI-Intelligent-",
+    "demo": null
+  },
+  {
+    "title": "Vehicle CO\u2082 Emission Tracking Pipeline (TCS)",
+    "category": "exp",
+    "domain": "Corporate AI Internship",
+    "badge": "Tata Consultancy Services",
+    "desc": [
+      "Engineered an automated vehicle CO2 emission tracking pipeline from real-time CCTV feeds to monitor urban carbon footprints for enterprise ESG reporting.",
+      "Implemented YOLOv8 vehicle localization paired with OpenCV image preprocessing (Bilateral Filtering, CLAHE, Otsu) and EasyOCR with regex syntax correction.",
+      "Trained dual-stage ensemble models: Gradient Boosting (R\u00b2 = 0.996, RMSE = 3.12 g/km) and Random Forest; delivered interactive Streamlit dashboard with 17-test Pytest test suite."
+    ],
+    "metrics": "\ud83d\udcc8 R\u00b2: 0.996 | RMSE: 3.12 g/km | Pytest: 17 Passed | TCS Remote",
+    "tech": [
+      "YOLOv8",
+      "OpenCV",
+      "EasyOCR",
+      "Gradient Boosting",
+      "Streamlit",
+      "Pytest CI"
+    ],
+    "github": null,
+    "demo": null
+  },
+  {
+    "title": "Global Procurement System: Asset Receiving Module",
+    "category": "exp",
+    "domain": "Enterprise Software",
+    "badge": "Software Engineering",
+    "desc": [
+      "Contributed to the Asset Receiving Automation module for an enterprise Global Procurement System, digitizing manual asset tracking across 100+ inventory categories.",
+      "Engineered responsive Angular user interfaces for capturing asset metadata, PO numbers, quantities, and locations with real-time validation schemas.",
+      "Integrated secure Role-Based Access Control (RBAC) and authentication, cutting asset ingestion latency by 40%."
+    ],
+    "metrics": "\u26a1 Latency Reduction: 40% | Framework: Angular 16 | Security: RBAC",
+    "tech": [
+      "Angular 16",
+      "TypeScript",
+      "REST APIs",
+      "RBAC Security",
+      "Asset Tracking"
+    ],
+    "github": null,
+    "demo": null
+  }
+]

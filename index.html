@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit Kumar | AI & Data Science Engineer | IIT Kanpur</title>
+  <meta name="description" content="Portfolio of Ankit Kumar — M.Tech DoMS, IIT Kanpur. AI, Machine Learning, Deep Learning, GenAI & Autonomous Agents, Time Series Forecasting, and Business Analytics Engineer.">
+  <meta name="keywords" content="Ankit Kumar, IIT Kanpur, Machine Learning, Generative AI, LangChain, LangGraph, PyTorch, Data Science, Portfolio">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Elements -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-badge">AK</span>
+        <span class="logo-text">Ankit Kumar</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#resumes" class="nav-link">Resumes</a>
+        <a href="#projects" class="nav-link">Projects <span class="nav-count">45</span></a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <span class="status-indicator" title="Open for Full-time Roles & Projects">
+          <span class="status-dot"></span> Available
+        </span>
+        <a href="main.pdf" target="_blank" class="btn btn-outline btn-sm">Resume (PDF) ↗</a>
+        <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Container -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section container" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">🎓</span>
+          <span>M.Tech, Department of Management Sciences (DoMS) &bull; IIT Kanpur</span>
+        </div>
+
+        <h1 class="hero-title">
+          Engineering Scalable <span class="gradient-text">AI Systems</span>, Autonomous Agents & <span class="gradient-text-alt">Predictive Intelligence</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          Data Science & Machine Learning Engineer with deep expertise in <strong>Generative AI & Multi-Agent RAG</strong>, <strong>Computer Vision</strong>, <strong>Time Series Forecasting</strong>, and <strong>Enterprise Decision Intelligence</strong>. Proven track record with a <strong>TCS AI Internship</strong>, <strong>GATE 98.48 percentile</strong>, and <strong>45+ end-to-end production & academic projects</strong>.
+        </p>
+
+        <!-- Quick Credentials Ticker -->
+        <div class="hero-credentials">
+          <div class="cred-chip"><span class="cred-icon">🏛️</span> <strong>IIT Kanpur</strong> (M.Tech)</div>
+          <div class="cred-chip"><span class="cred-icon">🥇</span> <strong>GATE 98.48 %ile</strong></div>
+          <div class="cred-chip"><span class="cred-icon">🥈</span> <strong>Chancellor's Silver Medal</strong></div>
+          <div class="cred-chip"><span class="cred-icon">💼</span> <strong>TCS AI Intern</strong> (CV & ML)</div>
+          <div class="cred-chip"><span class="cred-icon">🗼</span> <strong>Univ of Tokyo GCI</strong></div>
+          <div class="cred-chip"><span class="cred-icon">📜</span> <strong>Oracle Certified DS</strong></div>
+        </div>
+
+        <!-- Hero Call to Action Buttons -->
+        <div class="hero-cta-row">
+          <a href="#projects" class="btn btn-primary btn-lg">
+            Explore 45 Projects &darr;
+          </a>
+          <a href="main.pdf" target="_blank" class="btn btn-secondary btn-lg">
+            View Harvard Resume (PDF) ↗
+          </a>
+          <div class="hero-social-links">
+            <a href="https://github.com/Ankitiitk369" target="_blank" class="social-icon-btn" title="GitHub Profile">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/ankit-kumar" target="_blank" class="social-icon-btn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 1 0 0-2.9 1.45 1.45 0 0 0 0 2.9m1.4 9.74V9.93H5.06v8.57h2.8z"/></svg>
+            </a>
+            <a href="https://sites.google.com/view/ankit369portfolio/home" target="_blank" class="social-icon-btn" title="Google Sites Portfolio">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE STATS IMPACT SECTION -->
+    <section class="stats-overview-section container">
+      <div class="stats-overview-grid">
+        <div class="overview-stat-box">
+          <span class="overview-stat-number" data-target="45">45</span>
+          <span class="overview-stat-label">Unique AI/ML Projects</span>
+          <span class="overview-stat-sub">Zero repeated repositories</span>
+        </div>
+        <div class="overview-stat-box">
+          <span class="overview-stat-number" data-target="98.48">98.48%</span>
+          <span class="overview-stat-label">GATE 2025 Percentile</span>
+          <span class="overview-stat-sub">National Top 1.5% rank</span>
+        </div>
+        <div class="overview-stat-box">
+          <span class="overview-stat-number">0.996</span>
+          <span class="overview-stat-label">TCS Model R² Metric</span>
+          <span class="overview-stat-sub">RMSE: 3.12 g/km &bull; 17 Tests</span>
+        </div>
+        <div class="overview-stat-box">
+          <span class="overview-stat-number">96.8%</span>
+          <span class="overview-stat-label">RAG Faithfulness Score</span>
+          <span class="overview-stat-sub">Zero clinical hallucinations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & TRAJECTORY SECTION -->
+    <section class="section container" id="about">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Bridging Advanced Algorithms with Real-World Engineering</h2>
+        <p class="section-desc">From agricultural engineering optimization to advanced management sciences and generative AI systems at IIT Kanpur.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card narrative-card">
+          <h3>My Engineering Philosophy</h3>
+          <p>
+            I am currently pursuing my <strong>M.Tech in the Department of Management Sciences (DoMS) at the Indian Institute of Technology Kanpur (CPI: 7.18 / 10.0)</strong>, graduating in 2027. Previously, I earned my <strong>B.Tech in Agricultural Engineering (CPI: 8.25 / 10.0)</strong>, where I was honored with the prestigious <strong>Chancellor's Silver Medal</strong> for academic excellence.
+          </p>
+          <p>
+            My interdisciplinary journey combines rigorous quantitative optimization with high-performance software engineering. Whether designing <strong>autonomous agentic workflows with LangGraph and ReAct</strong>, fine-tuning deep convolutional networks for defect detection, or forecasting daily fuel prices with PyTorch LSTMs, I build systems that are <strong>verifiably accurate, latency-optimized, and production-ready</strong>.
+          </p>
+          <div class="about-highlights-row">
+            <div class="about-mini-tag">&bull; IIT Kanpur Postgraduate</div>
+            <div class="about-mini-tag">&bull; Systems & LLMOps Focus</div>
+            <div class="about-mini-tag">&bull; Quantitative Analytics</div>
+          </div>
+        </div>
+
+        <div class="about-card education-card">
+          <h3>Academic Foundations</h3>
+          <div class="edu-item">
+            <div class="edu-top">
+              <span class="edu-degree">M.Tech in Management Sciences (DoMS)</span>
+              <span class="edu-year">2025 &ndash; Present</span>
+            </div>
+            <span class="edu-school">Indian Institute of Technology, Kanpur</span>
+            <p class="edu-cpi">CPI: <strong>7.18 / 10.0</strong> &bull; Focus: Applied Machine Learning, SMBA, Data Mining, Operations Research</p>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-top">
+              <span class="edu-degree">B.Tech in Agricultural Engineering</span>
+              <span class="edu-year">2021 &ndash; 2025</span>
+            </div>
+            <span class="edu-school">C.S.A. University of Agriculture and Technology</span>
+            <p class="edu-cpi">CPI: <strong>8.25 / 10.0</strong> &bull; <strong class="highlight-text">Awarded Chancellor's Silver Medal</strong> (Rank 1st)</p>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-top">
+              <span class="edu-degree">UP State Board (Class XII & X)</span>
+              <span class="edu-year">2018 &ndash; 2021</span>
+            </div>
+            <span class="edu-school">Government Inter College, Kadaura, Jalaun</span>
+            <p class="edu-cpi">Class XII: 77.20% &bull; Class X: 80.83%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <section class="section container" id="experience">
+      <div class="section-header">
+        <span class="section-tag">Career History</span>
+        <h2 class="section-title">Professional & Engineering Experience</h2>
+        <p class="section-desc">Hands-on production machine learning, computer vision, and enterprise software engineering.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- TCS Experience Card -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-company">Tata Consultancy Services (TCS)</span>
+                <h3 class="timeline-role">Data Science & AI Intern &bull; Computer Vision & Machine Learning</h3>
+              </div>
+              <span class="timeline-date">May 2026 &ndash; July 2026 &bull; Remote / India</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Engineered an automated end-to-end vehicle CO₂ emission tracking pipeline from real-time CCTV feeds to monitor urban carbon footprints for enterprise ESG reporting.</li>
+              <li>Integrated <strong>YOLOv8</strong> object localization paired with <strong>OpenCV</strong> image preprocessing (Bilateral Filtering, CLAHE, Otsu thresholding) and <strong>EasyOCR</strong> with custom regex syntax correction.</li>
+              <li>Trained dual-stage ensemble estimators: <strong>Gradient Boosting</strong> (R² = 0.996, RMSE = 3.12 g/km) and <strong>Random Forest</strong> (R² = 0.989) for trip emission modeling.</li>
+              <li>Delivered an interactive <strong>Streamlit</strong> monitoring dashboard paired with an automated <strong>17-test Pytest</strong> CI/CD test suite.</li>
+            </ul>
+            <div class="timeline-tech-row">
+              <span class="tech-pill">YOLOv8</span>
+              <span class="tech-pill">OpenCV</span>
+              <span class="tech-pill">EasyOCR</span>
+              <span class="tech-pill">Gradient Boosting</span>
+              <span class="tech-pill">Streamlit</span>
+              <span class="tech-pill">Pytest CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Procurement Experience Card -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-company">Global Procurement Enterprise Web Application</span>
+                <h3 class="timeline-role">Frontend & Asset Automation Contributor</h3>
+              </div>
+              <span class="timeline-date">Feb 2026 &ndash; Apr 2026</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Contributed to the Asset Receiving Automation Module for an enterprise Global Procurement System, digitizing manual tracking across 100+ inventory categories.</li>
+              <li>Engineered responsive <strong>Angular</strong> interfaces for capturing asset metadata, PO numbers, quantities, and storage locations with real-time client-side validation schemas.</li>
+              <li>Implemented secure <strong>Role-Based Access Control (RBAC)</strong>, session authentication, and dynamic validation schemas, cutting manual asset ingestion latency by <strong>40%</strong>.</li>
+            </ul>
+            <div class="timeline-tech-row">
+              <span class="tech-pill">Angular 16</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">REST APIs</span>
+              <span class="tech-pill">RBAC</span>
+              <span class="tech-pill">Form Validation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leadership Experience Card -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-company">Positions of Responsibility & Leadership</span>
+                <h3 class="timeline-role">IIT Kanpur & Institutional Initiatives</h3>
+              </div>
+              <span class="timeline-date">2021 &ndash; Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li><strong>Alumni & Corporate Relations Coordinator, IIT Kanpur</strong> (July 2025 &ndash; Present): Driving corporate engagement, guest lectures, and alumni collaborations; organized 10+ departmental technical webinars.</li>
+              <li><strong>Campus Coordinator, Mimamsa 2025</strong> (IISER Pune): Directed institutional outreach across northern Indian universities; managed regional logistics.</li>
+              <li><strong>NSS Student Volunteer (2 Years)</strong>: Spearheaded advocacy campaigns for girls' education and digital literacy under <em>"Ek Bharat Shreshtha Bharat"</em>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section class="section container" id="skills">
+      <div class="section-header">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-title">Core Skills, Frameworks & Tooling</h2>
+        <p class="section-desc">Comprehensive technology stack used to build production AI and data-driven systems.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Skills Category 1 -->
+        <div class="skills-card">
+          <div class="skills-card-icon" style="background: rgba(139, 92, 246, 0.15); color: #c4b5fd;">🧠</div>
+          <h3 class="skills-card-title">Generative AI & LLMOps</h3>
+          <p class="skills-card-desc">Production RAG pipelines, agentic orchestration, and safety guardrails.</p>
+          <div class="skills-tags">
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">LangGraph</span>
+            <span class="skill-tag">LlamaIndex</span>
+            <span class="skill-tag">CrewAI</span>
+            <span class="skill-tag">Pinecone</span>
+            <span class="skill-tag">FAISS</span>
+            <span class="skill-tag">Groq API</span>
+            <span class="skill-tag">Gemini 2.5</span>
+            <span class="skill-tag">RAGAS</span>
+            <span class="skill-tag">Multimodal RAG</span>
+            <span class="skill-tag">ReAct Agents</span>
+            <span class="skill-tag">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <!-- Skills Category 2 -->
+        <div class="skills-card">
+          <div class="skills-card-icon" style="background: rgba(6, 182, 212, 0.15); color: #67e8f9;">📈</div>
+          <h3 class="skills-card-title">Machine Learning & Stats</h3>
+          <p class="skills-card-desc">Supervised classification, regression, clustering, and hypothesis testing.</p>
+          <div class="skills-tags">
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">XGBoost</span>
+            <span class="skill-tag">LightGBM</span>
+            <span class="skill-tag">CatBoost</span>
+            <span class="skill-tag">Optuna</span>
+            <span class="skill-tag">SMOTE</span>
+            <span class="skill-tag">A/B Testing</span>
+            <span class="skill-tag">Two-Way ANOVA</span>
+            <span class="skill-tag">Chi-Square</span>
+            <span class="skill-tag">VIF Multicollinearity</span>
+            <span class="skill-tag">SHAP (XAI)</span>
+            <span class="skill-tag">Feature Engineering</span>
+          </div>
+        </div>
+
+        <!-- Skills Category 3 -->
+        <div class="skills-card">
+          <div class="skills-card-icon" style="background: rgba(244, 63, 94, 0.15); color: #fda4af;">⏱️</div>
+          <h3 class="skills-card-title">Time Series & Deep Learning</h3>
+          <p class="skills-card-desc">Temporal modeling, commodity forecasting, and neural architectures.</p>
+          <div class="skills-tags">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Keras</span>
+            <span class="skill-tag">Stacked LSTM</span>
+            <span class="skill-tag">ARIMA / SARIMAX</span>
+            <span class="skill-tag">Meta Prophet</span>
+            <span class="skill-tag">Statsmodels</span>
+            <span class="skill-tag">CNNs</span>
+            <span class="skill-tag">MobileNetV2</span>
+            <span class="skill-tag">EfficientNetB0</span>
+            <span class="skill-tag">Transfer Learning</span>
+          </div>
+        </div>
+
+        <!-- Skills Category 4 -->
+        <div class="skills-card">
+          <div class="skills-card-icon" style="background: rgba(245, 158, 11, 0.15); color: #fcd34d;">👁️</div>
+          <h3 class="skills-card-title">Vision & Document AI</h3>
+          <p class="skills-card-desc">Real-time object localization, OCR extraction, and speech processing.</p>
+          <div class="skills-tags">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">YOLOv8</span>
+            <span class="skill-tag">EasyOCR</span>
+            <span class="skill-tag">Tesseract OCR</span>
+            <span class="skill-tag">Image Preprocessing</span>
+            <span class="skill-tag">Spatial Localization</span>
+            <span class="skill-tag">SpeechRecognition</span>
+            <span class="skill-tag">GloVe 100d</span>
+          </div>
+        </div>
+
+        <!-- Skills Category 5 -->
+        <div class="skills-card">
+          <div class="skills-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">📊</div>
+          <h3 class="skills-card-title">SQL, BI & Analytics</h3>
+          <p class="skills-card-desc">Relational querying, data modeling, and interactive dashboards.</p>
+          <div class="skills-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Advanced SQL (CTEs, Window)</span>
+            <span class="skill-tag">Power BI (Advanced DAX)</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Plotly</span>
+            <span class="skill-tag">Seaborn</span>
+            <span class="skill-tag">Advanced Excel</span>
+          </div>
+        </div>
+
+        <!-- Skills Category 6 -->
+        <div class="skills-card">
+          <div class="skills-card-icon" style="background: rgba(236, 72, 153, 0.15); color: #f472b6;">⚡</div>
+          <h3 class="skills-card-title">Software & Production Tooling</h3>
+          <p class="skills-card-desc">Backend deployment, testing frameworks, and version control.</p>
+          <div class="skills-tags">
+            <span class="skill-tag">Python (Advanced)</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Streamlit</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Pytest</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">LaTeX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED RESUMES & RECRUITER DOSSIER SECTION -->
+    <section class="section container" id="resumes">
+      <div class="section-header">
+        <span class="section-tag">Recruiter Dossier</span>
+        <h2 class="section-title">Curated Resumes & Verifiable Credentials</h2>
+        <p class="section-desc">Download the flagship 2-page Harvard-standard Master CV or select role-targeted single-page fast-track resumes for specific openings.</p>
+      </div>
+
+      <!-- Flagship 2-Page Master Resume Card -->
+      <div class="resumes-flagship-card">
+        <div class="flagship-header-row">
+          <div>
+            <div class="flagship-badge-pill">⭐ Top Recommended Flagship Resume &bull; 2 Pages</div>
+            <h3 class="flagship-title">Master Executive Resume (Harvard LaTeX Standard)</h3>
+            <p class="flagship-subtitle">
+              Engineered with Type-1 vector scalable fonts, bold quantitative metrics, and 100% ATS compliance. Features IIT Kanpur M.Tech credentials, GATE 98.48 percentile, TCS AI Internship, and the top 6 production & academic systems.
+            </p>
+          </div>
+          <div class="flagship-cta-group">
+            <a href="main.pdf" download="Ankit_Kumar_IITK_Master_Resume.pdf" class="btn btn-primary btn-lg">
+              📥 Download Master PDF
+            </a>
+            <a href="main.pdf" target="_blank" class="btn btn-secondary btn-lg">
+              ↗ View in New Tab
+            </a>
+          </div>
+        </div>
+
+        <!-- 2-Page Visual Showcase -->
+        <div class="resume-preview-container">
+          <!-- Page 1 Box -->
+          <div class="resume-preview-page-box">
+            <div class="resume-page-header">
+              <span class="page-indicator-badge">PAGE 1 OF 2</span>
+              <span class="page-zoom-hint" onclick="openResumeLightbox('preview_main-1.png', 'Master Resume — Page 1', 'main.pdf', 1)">
+                🔍 Click to Zoom Page 1
+              </span>
+            </div>
+            <div class="resume-thumbnail-wrapper" onclick="openResumeLightbox('preview_main-1.png', 'Master Resume — Page 1', 'main.pdf', 1)">
+              <img src="preview_main-1.png" alt="Ankit Kumar Master Resume Page 1" class="resume-thumbnail-img" loading="lazy">
+              <div class="resume-thumbnail-overlay">
+                <button class="overlay-zoom-btn">🔍 View Page 1 (High Res)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Page 2 Box -->
+          <div class="resume-preview-page-box">
+            <div class="resume-page-header">
+              <span class="page-indicator-badge">PAGE 2 OF 2</span>
+              <span class="page-zoom-hint" onclick="openResumeLightbox('preview_main-2.png', 'Master Resume — Page 2', 'main.pdf', 2)">
+                🔍 Click to Zoom Page 2
+              </span>
+            </div>
+            <div class="resume-thumbnail-wrapper" onclick="openResumeLightbox('preview_main-2.png', 'Master Resume — Page 2', 'main.pdf', 2)">
+              <img src="preview_main-2.png" alt="Ankit Kumar Master Resume Page 2" class="resume-thumbnail-img" loading="lazy">
+              <div class="resume-thumbnail-overlay">
+                <button class="overlay-zoom-btn">🔍 View Page 2 (High Res)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Master Resume Highlights Strip -->
+        <div class="resume-highlights-strip">
+          <div class="strip-item">
+            <span class="strip-item-label">Formatting Standard</span>
+            <span class="strip-item-val">Harvard LaTeX (Vector Fonts)</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-item-label">Academic Pedigree</span>
+            <span class="strip-item-val">M.Tech DoMS, IIT Kanpur</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-item-label">GATE 2025 Standing</span>
+            <span class="strip-item-val">98.48 Percentile (Top 1.5%)</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-item-label">Corporate Experience</span>
+            <span class="strip-item-val">TCS AI Intern (R² = 0.996)</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-item-label">Featured Projects</span>
+            <span class="strip-item-val">Top 6 Production Systems</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-item-label">ATS Compatibility</span>
+            <span class="strip-item-val">100% Machine-Readable</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Targeted 1-Page Fast-Track Resumes Sub-Section -->
+      <div class="targeted-resumes-heading">
+        <span>⚡ Role-Targeted 1-Page Fast-Track Resumes</span>
+      </div>
+      <p class="targeted-resumes-sub">
+        Recruiting for a specialized opening? Download a role-focused single-page CV tailored with exact domain keywords, frameworks, and projects.
+      </p>
+
+      <div class="resumes-grid-targeted">
+        <!-- Track 1: GenAI & LLMs -->
+        <div class="targeted-resume-card">
+          <div class="targeted-card-top">
+            <span class="targeted-badge genai">Generative AI & LLMOps</span>
+            <h4 class="targeted-title">GenAI & Autonomous Agents (1 Page)</h4>
+            <p class="targeted-desc">
+              Tailored for LLM Engineers and AI Agents developers. Spotlights LangGraph, CrewAI, Pinecone Serverless RAG, and Groq LLaMA 3.3.
+            </p>
+            <div class="targeted-thumb-container" onclick="openResumeLightbox('preview_genai-1.png', 'GenAI & LLM Engineer Resume (1 Page)', 'resume_genai_llm.pdf', 0)">
+              <img src="preview_genai-1.png" alt="GenAI & LLM Resume Preview" class="targeted-thumb-img" loading="lazy">
+              <div class="resume-thumbnail-overlay">
+                <button class="overlay-zoom-btn">🔍 Zoom Preview</button>
+              </div>
+            </div>
+            <ul class="targeted-bullets">
+              <li>MediMind AI: Clinical RAG (96.8% Faithfulness)</li>
+              <li>Text-to-SQL ReAct Agent (Google Gemini 2.5 Flash)</li>
+              <li>CrewAI Multi-Agent Resume Profiler & ATS Matcher</li>
+              <li>TCS Vehicle CCTV Localization & EasyOCR Pipeline</li>
+            </ul>
+          </div>
+          <div class="targeted-actions-row">
+            <a href="resume_genai_llm.pdf" download="Ankit_Kumar_GenAI_LLM_Resume.pdf" class="btn btn-primary btn-sm">
+              📥 Download PDF
+            </a>
+            <a href="resume_genai_llm.pdf" target="_blank" class="btn btn-secondary btn-sm">
+              ↗ Open
+            </a>
+            <button class="btn btn-outline btn-sm" onclick="openResumeLightbox('preview_genai-1.png', 'GenAI & LLM Engineer Resume (1 Page)', 'resume_genai_llm.pdf', 0)">
+              🔍 Preview
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 2: Data Science & ML -->
+        <div class="targeted-resume-card">
+          <div class="targeted-card-top">
+            <span class="targeted-badge ds">Machine Learning & Modeling</span>
+            <h4 class="targeted-title">Machine Learning & Data Scientist (1 Page)</h4>
+            <p class="targeted-desc">
+              Tailored for Data Scientists and ML Engineers. Spotlights PyTorch LSTM, XGBoost, Scikit-learn, hyperparameter tuning, and statistical testing.
+            </p>
+            <div class="targeted-thumb-container" onclick="openResumeLightbox('preview_ds-1.png', 'Machine Learning & Data Scientist Resume (1 Page)', 'resume_data_scientist.pdf', 0)">
+              <img src="preview_ds-1.png" alt="Data Scientist Resume Preview" class="targeted-thumb-img" loading="lazy">
+              <div class="resume-thumbnail-overlay">
+                <button class="overlay-zoom-btn">🔍 Zoom Preview</button>
+              </div>
+            </div>
+            <ul class="targeted-bullets">
+              <li>TCS AI Intern: Vehicle CO2 Tracking (R² = 0.996)</li>
+              <li>Petrol Price Forecasting (PyTorch LSTM, 1.12% MAPE)</li>
+              <li>Credit Risk Default Modeling (51,336 Records, SMOTE)</li>
+              <li>Solar Panel Defect Classification (MobileNetV2, 82.5% Acc)</li>
+            </ul>
+          </div>
+          <div class="targeted-actions-row">
+            <a href="resume_data_scientist.pdf" download="Ankit_Kumar_Data_Scientist_Resume.pdf" class="btn btn-primary btn-sm">
+              📥 Download PDF
+            </a>
+            <a href="resume_data_scientist.pdf" target="_blank" class="btn btn-secondary btn-sm">
+              ↗ Open
+            </a>
+            <button class="btn btn-outline btn-sm" onclick="openResumeLightbox('preview_ds-1.png', 'Machine Learning & Data Scientist Resume (1 Page)', 'resume_data_scientist.pdf', 0)">
+              🔍 Preview
+            </button>
+          </div>
+        </div>
+
+        <!-- Track 3: Data Analyst & BI -->
+        <div class="targeted-resume-card">
+          <div class="targeted-card-top">
+            <span class="targeted-badge da">SQL, Power BI & Tableau</span>
+            <h4 class="targeted-title">Data Analyst & BI Specialist (1 Page)</h4>
+            <p class="targeted-desc">
+              Tailored for Business Intelligence, SQL Developers, and Analytics Consultants. Spotlights PostgreSQL CTEs, Power BI DAX, and Tableau dashboards.
+            </p>
+            <div class="targeted-thumb-container" onclick="openResumeLightbox('preview_da-1.png', 'Data Analyst & BI Resume (1 Page)', 'resume_data_analyst.pdf', 0)">
+              <img src="preview_da-1.png" alt="Data Analyst Resume Preview" class="targeted-thumb-img" loading="lazy">
+              <div class="resume-thumbnail-overlay">
+                <button class="overlay-zoom-btn">🔍 Zoom Preview</button>
+              </div>
+            </div>
+            <ul class="targeted-bullets">
+              <li>Customer Shopping Analytics (PostgreSQL + Power BI DAX)</li>
+              <li>Loan Portfolio Risk Visualization (3 Tableau Dashboards)</li>
+              <li>Zepto Quick-Commerce SQL Turnaround Analytics</li>
+              <li>Marketing A/B Testing & Two-Way ANOVA Statistical Validation</li>
+            </ul>
+          </div>
+          <div class="targeted-actions-row">
+            <a href="resume_data_analyst.pdf" download="Ankit_Kumar_Data_Analyst_Resume.pdf" class="btn btn-primary btn-sm">
+              📥 Download PDF
+            </a>
+            <a href="resume_data_analyst.pdf" target="_blank" class="btn btn-secondary btn-sm">
+              ↗ Open
+            </a>
+            <button class="btn btn-outline btn-sm" onclick="openResumeLightbox('preview_da-1.png', 'Data Analyst & BI Resume (1 Page)', 'resume_data_analyst.pdf', 0)">
+              🔍 Preview
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETE PROJECTS SHOWCASE GALLERY (ALL 45 PROJECTS) -->
+    <section class="section container" id="projects">
+      <div class="section-header">
+        <span class="section-tag">Project Showcase</span>
+        <h2 class="section-title">Explore All 45 Production & Academic Systems</h2>
+        <p class="section-desc">Every single unique project from GitHub and master resume with live repositories, benchmarks, and architectural details.</p>
+      </div>
+
+      <!-- Controls & Filter Toolbar -->
+      <div class="projects-control-bar">
+        <!-- Top Search and Sort -->
+        <div class="search-sort-row">
+          <div class="search-field-container">
+            <svg class="search-svg-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <input type="text" id="projectSearchInput" placeholder="Filter by technology, keyword, model (e.g., PyTorch, LangChain, XGBoost, SQL, YOLO)..." oninput="applyFilters()">
+            <button class="clear-search" id="clearSearchBtn" onclick="resetSearch()">✕</button>
+          </div>
+          <div class="sort-field-container">
+            <select id="sortDropdown" onchange="applyFilters()">
+              <option value="featured">Sort: Flagship / Recommended</option>
+              <option value="alpha">Sort: Alphabetical (A-Z)</option>
+              <option value="domain">Sort: By Domain</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Domain Filter Tabs -->
+        <div class="filter-tabs-row" id="filterTabs">
+          <button class="domain-tab active" data-category="all" onclick="setCategoryFilter('all')">All Projects <span class="tab-badge">45</span></button>
+          <button class="domain-tab" data-category="genai" onclick="setCategoryFilter('genai')">GenAI & Agents <span class="tab-badge">11</span></button>
+          <button class="domain-tab" data-category="ml" onclick="setCategoryFilter('ml')">Machine Learning <span class="tab-badge">10</span></button>
+          <button class="domain-tab" data-category="timeseries" onclick="setCategoryFilter('timeseries')">Time Series <span class="tab-badge">6</span></button>
+          <button class="domain-tab" data-category="cv" onclick="setCategoryFilter('cv')">Vision & NLP <span class="tab-badge">6</span></button>
+          <button class="domain-tab" data-category="bi" onclick="setCategoryFilter('bi')">SQL & BI Analytics <span class="tab-badge">10</span></button>
+          <button class="domain-tab" data-category="exp" onclick="setCategoryFilter('exp')">Enterprise <span class="tab-badge">2</span></button>
+        </div>
+
+        <!-- Quick Tech Filter Chips -->
+        <div class="tech-chips-row">
+          <span class="chips-label">Popular Filters:</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('PyTorch', this)">PyTorch</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('LangChain', this)">LangChain</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('LangGraph', this)">LangGraph</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('XGBoost', this)">XGBoost</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('FastAPI', this)">FastAPI</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('Streamlit', this)">Streamlit</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('PostgreSQL', this)">PostgreSQL</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('Power BI', this)">Power BI</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('Tableau', this)">Tableau</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('OpenCV', this)">OpenCV</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('SMOTE', this)">SMOTE</span>
+          <span class="tech-chip" onclick="toggleTechChipFilter('ARIMA', this)">ARIMA</span>
+        </div>
+      </div>
+
+      <!-- Active Filter Status Message -->
+      <div class="filter-status-banner" id="filterStatusBanner">
+        <span id="filterStatusText">Showing all projects</span>
+        <button class="reset-link-btn" onclick="clearAllFilters()">Reset All Filters</button>
+      </div>
+
+      <!-- Projects Grid Output -->
+      <div class="projects-gallery-grid" id="projectsGalleryGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </section>
+
+    <!-- SCHOLASTIC ACHIEVEMENTS & CERTIFICATIONS -->
+    <section class="section container" id="achievements">
+      <div class="section-header">
+        <span class="section-tag">Honors & Credentials</span>
+        <h2 class="section-title">Scholastic Achievements & Global Certifications</h2>
+        <p class="section-desc">Demonstrated academic excellence and validated industry credentials.</p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="ach-icon-box">🏆</div>
+          <div class="ach-content">
+            <span class="ach-badge">National Exam</span>
+            <h3 class="ach-title">GATE 2025: 98.48 Percentile</h3>
+            <p class="ach-org">Conducted by Indian Institute of Technology, Roorkee</p>
+            <p class="ach-desc">Secured a nationwide top 1.5% percentile rank in Agricultural Engineering, demonstrating elite technical problem-solving capabilities.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="ach-icon-box">🥈</div>
+          <div class="ach-content">
+            <span class="ach-badge">Academic Honor</span>
+            <h3 class="ach-title">Chancellor's Silver Medal Award</h3>
+            <p class="ach-org">Awarded by University Chancellor, C.S.A. University</p>
+            <p class="ach-desc">Bestowed the Silver Medal for Rank 1st academic performance across the B.Tech program (CPI: 8.25 / 10.0).</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="ach-icon-box">🌐</div>
+          <div class="ach-content">
+            <span class="ach-badge">Global AI Program</span>
+            <h3 class="ach-title">GCI World April 2026 (Tokyo, Japan)</h3>
+            <p class="ach-org">Matsuo-Iwasawa Laboratory, The University of Tokyo</p>
+            <p class="ach-desc">Selected and successfully cleared the comprehensive Data Science and AI evaluation organized by University of Tokyo's premier AI lab.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="ach-icon-box">📜</div>
+          <div class="ach-content">
+            <span class="ach-badge">Professional Certification</span>
+            <h3 class="ach-title">Oracle Certified Data Science Professional</h3>
+            <p class="ach-org">Oracle University</p>
+            <p class="ach-desc">Demonstrated proficiency in enterprise machine learning pipelines, model monitoring, MLOps, and scalable cloud deployments.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="ach-icon-box">🤖</div>
+          <div class="ach-content">
+            <span class="ach-badge">AI Foundations</span>
+            <h3 class="ach-title">Oracle Certified AI Foundations Associate</h3>
+            <p class="ach-org">Oracle University</p>
+            <p class="ach-desc">Validated core competencies in generative AI, deep neural networks, natural language processing, and ethical AI practices.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="ach-icon-box">📈</div>
+          <div class="ach-content">
+            <span class="ach-badge">Financial Markets</span>
+            <h3 class="ach-title">SEBI &ndash; Investor Certification</h3>
+            <p class="ach-org">National Institute of Securities Markets (NISM)</p>
+            <p class="ach-desc">Qualified the national regulatory examination in securities markets, portfolio management principles, and risk management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & HIRE ME SECTION -->
+    <section class="section container" id="contact">
+      <div class="contact-box">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="contact-title">Interested in building transformative AI systems together?</h2>
+        <p class="contact-subtitle">
+          I am actively exploring Full-Time roles in <strong>Machine Learning Engineering</strong>, <strong>Generative AI / LLMOps</strong>, and <strong>Data Science</strong>. Feel free to reach out directly!
+        </p>
+
+        <div class="contact-details-row">
+          <div class="contact-detail-item" onclick="copyEmail()">
+            <span class="detail-label">Institute Email</span>
+            <span class="detail-value">ankitk25@iitk.ac.in <span class="copy-hint">(Click to Copy)</span></span>
+          </div>
+
+          <a href="https://linkedin.com/in/ankit-kumar" target="_blank" class="contact-detail-item">
+            <span class="detail-label">LinkedIn</span>
+            <span class="detail-value">linkedin.com/in/ankit-kumar ↗</span>
+          </a>
+
+          <a href="https://github.com/Ankitiitk369" target="_blank" class="contact-detail-item">
+            <span class="detail-label">GitHub</span>
+            <span class="detail-value">github.com/Ankitiitk369 ↗</span>
+          </a>
+        </div>
+
+        <div class="contact-btn-group">
+          <a href="mailto:ankitk25@iitk.ac.in" class="btn btn-primary btn-lg">Send an Email &rarr;</a>
+          <a href="main.pdf" target="_blank" class="btn btn-secondary btn-lg">Download Harvard Resume (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-wrapper">
+    <div class="footer container">
+      <div class="footer-left">
+        <p>&copy; 2026 Ankit Kumar. All rights reserved.</p>
+        <p class="footer-sub">M.Tech, Department of Management Sciences (DoMS), Indian Institute of Technology Kanpur.</p>
+      </div>
+      <div class="footer-right">
+        <span class="footer-badge">Built with Vanilla HTML5, CSS3 & Modern JS</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Executive Deep-Dive Modal Window -->
+  <div class="modal-backdrop" id="projectModal" onclick="handleModalBackdropClick(event)">
+    <div class="modal-dialog">
+      <button class="modal-close-icon" onclick="closeProjectModal()" aria-label="Close modal">✕</button>
+      
+      <div class="modal-badges-row" id="modalCategoryBadges"></div>
+      <h2 class="modal-project-title" id="modalProjectTitle"></h2>
+      
+      <div class="modal-metrics-callout" id="modalProjectMetrics"></div>
+
+      <h4 class="modal-subheading">Architectural Overview & Engineering Highlights</h4>
+      <ul class="modal-bullets-list" id="modalProjectBullets"></ul>
+
+      <h4 class="modal-subheading">Tech Stack & Dependencies</h4>
+      <div class="modal-tech-pills-row" id="modalProjectTech"></div>
+
+      <div class="modal-actions-bar">
+        <button class="btn btn-secondary btn-sm" onclick="copyProjectCardInfo()">📋 Copy Project Summary</button>
+        <div class="modal-right-actions" id="modalActionButtons"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Interactive Lightbox Modal -->
+  <div class="modal-backdrop" id="resumeLightboxModal" onclick="handleResumeBackdropClick(event)">
+    <div class="lightbox-modal-content">
+      <div class="lightbox-header">
+        <div class="lightbox-title">
+          <span>📄</span> <span id="lightboxResumeTitle">Master Resume Preview</span>
+        </div>
+        <div class="lightbox-controls">
+          <div id="lightboxPageControls" style="display: none; gap: 6px;">
+            <button class="btn btn-secondary btn-sm" id="btnPage1" onclick="switchResumeLightboxPage(1)">Page 1</button>
+            <button class="btn btn-secondary btn-sm" id="btnPage2" onclick="switchResumeLightboxPage(2)">Page 2</button>
+          </div>
+          <a href="main.pdf" id="lightboxDownloadBtn" download class="btn btn-primary btn-sm">📥 Download PDF</a>
+          <button class="modal-close-icon" style="position: static; transform: none; width: 34px; height: 34px; display: inline-flex;" onclick="closeResumeModal()" aria-label="Close modal">✕</button>
+        </div>
+      </div>
+      <div class="lightbox-img-wrapper">
+        <img src="preview_main-1.png" alt="Resume High Resolution Preview" id="lightboxResumeImg" class="lightbox-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Alert -->
+  <div class="toast-popup" id="toast">
+    <span id="toastText">✓ Copied to clipboard!</span>
+  </div>
+
+  <!-- Embed Master Projects Data -->
+  <script>
+    const MASTER_PROJECTS_DATA = [{"title": "MediMind AI: Clinical Decision Support Platform", "category": "genai", "domain": "GenAI & RAG", "badge": "Production Deployed", "desc": ["Production-ready RAG healthcare platform built with LangChain, Pinecone Serverless, and Groq LLaMA-3.3-70B.", "Zero-hallucination medical literature grounding achieving 96.8% RAG faithfulness with verified citations.", "Engineered automated lab report parsing via PyPDF, embedding 4 clinical risk calculators with <10ms emergency triage safety guardrails."], "metrics": "⚡ Latency: ~450ms | Faithfulness: 96.8% | Triage: <10ms", "tech": ["LangChain", "Groq LLaMA-3.3", "Pinecone", "MiniLM-L6-v2", "Streamlit", "PyPDF"], "github": "https://github.com/Ankitiitk369/-MediMind-AI-Generative-AI-RAG-Based-Clinical-Decision-Support-Healthcare-Platform", "demo": null}, {"title": "Text-to-SQL & Agentic SQL Analytics System", "category": "genai", "domain": "Agentic AI", "badge": "Enterprise ReAct", "desc": ["Autonomous conversational database querying system powered by Google Gemini 2.5 Flash and LangGraph ReAct Agents.", "Operates across a 6-table relational enterprise dataset with 64,000+ transactional sales orders.", "Built-in SQL guardrails blocking destructive DDL/DML, attaining 1.00 Context Precision on RAGAS benchmarks."], "metrics": "🎯 Precision: 1.00 | Dataset: 64,000+ Records | Dialect: MySQL", "tech": ["LangGraph", "Google Gemini 2.5", "ReAct", "SQLDatabaseToolkit", "Plotly", "MySQL"], "github": "https://github.com/Ankitiitk369/Text-to-SQL-Agentic-SQL-Analytics-System", "demo": null}, {"title": "AI-Powered Gen Z Consumer Behavior Platform", "category": "genai", "domain": "GenAI & ML Platform", "badge": "Live Streamlit App", "desc": ["Enterprise data science platform integrating Explainable AI (SHAP values), unsupervised persona clustering, and GenAI marketing copy generation.", "Architected high-throughput FastAPI inference backend for real-time persona inference and brand sentiment scoring.", "Deployed production interactive Web Platform on Streamlit Cloud for interactive CMO marketing intelligence."], "metrics": "🚀 Live on Streamlit Cloud | Explainable AI: SHAP | Backend: FastAPI", "tech": ["FastAPI", "SHAP (XAI)", "GenAI", "Streamlit", "Scikit-learn", "Clustering"], "github": "https://github.com/Ankitiitk369/AI-Powered-Gen-Z-Consumer-Behavior-Marketing-Intelligence-Platform", "demo": "https://ai-powered-gen-z-consumer-behavior-marketing-intelligence-plat.streamlit.app/"}, {"title": "Agentic AI Multilingual Blog Generation & Fact Retrieval", "category": "genai", "domain": "Multi-Agent RAG", "badge": "LangGraph Pipeline", "desc": ["Enterprise-grade Multi-Agent RAG pipeline built with LangGraph, Groq LLaMA 3.1, and DuckDuckGo Live Search API.", "Autonomous fact-checking agent cross-references retrieved citations before generating publication-ready multilingual articles.", "FastAPI backend with streaming response generation and Streamlit frontend UI."], "metrics": "🌐 Multi-Agent RAG | Live Web Search: DuckDuckGo | LLM: LLaMA 3.1", "tech": ["LangGraph", "Groq LLaMA 3.1", "DuckDuckGo API", "FastAPI", "Streamlit"], "github": "https://github.com/Ankitiitk369/Agentic-AI-Multilingual-Blog-Generation-Fact-Retrieval-System", "demo": null}, {"title": "Multi-Agent Resume Analyzer & Job Matcher", "category": "genai", "domain": "Autonomous Agents", "badge": "CrewAI Framework", "desc": ["Multi-agent autonomous collaborative system using CrewAI and open LLMs to automate candidate screening.", "Deploys 3 specialized agents: Parser Agent (PDF extraction), Profiler Agent (skill gaps), and Recruiter Matcher Agent (ATS scoring).", "Generates structured candidate matching reports with cosine skill similarity, keyword density, and interview questions."], "metrics": "🤖 3 Collaborative Agents | Framework: CrewAI | Inference: Groq", "tech": ["CrewAI", "LangChain", "Groq LLaMA-3", "PyPDF", "ATS Scoring"], "github": "https://github.com/Ankitiitk369/Multi-Agent-Resume-Analyzer-using-CrewAI-LLM", "demo": null}, {"title": "Generative AI Medical Information Assistant", "category": "genai", "domain": "Healthcare RAG", "badge": "Sub-Second Latency", "desc": ["End-to-end Retrieval-Augmented Generation medical assistant designed to answer complex clinical inquiries with verified textbook citations.", "Dense vector search architecture ensuring zero hallucination risk.", "Interactive chat interface supporting multi-turn dialogue with clinical disclaimer guardrails."], "metrics": "🏥 Zero Hallucination | Dense Vector Search | Sub-Second Latency", "tech": ["LangChain", "RAG", "Python", "Vector DB", "LLMs"], "github": "https://github.com/Ankitiitk369/Generative-AI-Medical-Information-Assistant-", "demo": null}, {"title": "Dental Appointment System using LangGraph", "category": "genai", "domain": "Agentic Booking", "badge": "Stateful State Machine", "desc": ["Conversational clinic booking system engineered using stateful LangGraph graphs and relational MySQL database.", "Implements human-in-the-loop verification, conflict detection for booked calendar slots, and automated calendar scheduling.", "Maintains checkpointed conversational state memory across customer interaction sessions."], "metrics": "📅 State Machine: LangGraph | Database: MySQL | Memory: Checkpointed", "tech": ["LangGraph", "MySQL", "Python", "State Machines", "Streamlit"], "github": "https://github.com/Ankitiitk369/Dental-Appointment-system-using-Langgraph", "demo": null}, {"title": "Air India Domain-Specific GenAI Knowledge Assistant", "category": "genai", "domain": "Domain RAG", "badge": "Aviation Support", "desc": ["Domain-specific RAG assistant engineered for commercial airline passengers to resolve flight baggage allowances and transit policies.", "Indexed aviation regulatory policy documents into high-dimensional vector embeddings with semantic FAISS search.", "Context-aware session history with hallucination guardrails deployed via Streamlit."], "metrics": "✈️ Domain: Aviation Policies | Vector Search: FAISS | Framework: LangChain", "tech": ["LangChain", "FAISS", "Streamlit", "RAG Architecture", "Python"], "github": "https://github.com/Ankitiitk369/Air-India-Domain-Specific-Generative-AI-Knowledge-Assistant", "demo": null}, {"title": "Conversational RAG Chatbot for Multi-PDF Knowledge Base", "category": "genai", "domain": "Document RAG", "badge": "FAISS & LangChain", "desc": ["Conversational GenAI chatbot combining web-scraped data and multi-PDF document repositories into a unified knowledge base.", "Utilized semantic vector search with FAISS, LangChain text chunking strategies, and OpenAI LLMs.", "Delivers context-aware synthesis with exact page-level source attribution."], "metrics": "📚 Multi-PDF Ingestion | Vector Index: FAISS | Text Chunking: Recursive", "tech": ["LangChain", "FAISS", "OpenAI LLMs", "Python", "Streamlit"], "github": "https://github.com/Ankitiitk369/Conversational-RAG-Chatbot-for-Web-Scraped-Multi-Pdf-Knowledge-Base", "demo": null}, {"title": "AI-Powered Sustainability RAG Chatbot", "category": "genai", "domain": "ESG & Climate AI", "badge": "Compliance Intelligence", "desc": ["Enterprise-grade RAG chatbot engineered to analyze, extract, and answer complex questions from sustainability guidelines and ESG environmental regulations.", "Grounds responses in environmental corporate disclosure frameworks with semantic retrieval.", "Facilitates fast compliance checks for corporate sustainability auditors."], "metrics": "🌱 Domain: ESG & Regulations | RAG Architecture | Vector Search", "tech": ["LangChain", "Pinecone/FAISS", "Python", "ESG Compliance", "LLMs"], "github": "https://github.com/Ankitiitk369/AI-Powered-Sustainability-RAG-Chatbot", "demo": null}, {"title": "GenAI Research RAG Chatbot", "category": "genai", "domain": "Research AI", "badge": "Academic Literature Search", "desc": ["Specialized academic literature assistant indexing arXiv research papers and technical preprints.", "Supports dense mathematical and technical concept querying with semantic similarity ranking.", "Generates concise literature reviews with citation chains."], "metrics": "🔬 Academic Literature Ingestion | Semantic Similarity | RAG", "tech": ["LangChain", "Vector Embeddings", "Python", "Streamlit"], "github": "https://github.com/Ankitiitk369/GenAI-Research-Rag-Chatbot", "demo": null}, {"title": "Credit Risk Modelling: Loan Eligibility Prediction", "category": "ml", "domain": "Financial ML", "badge": "IIT Kanpur Academic (Prof. Faiz Hamid)", "desc": ["Constructed an enterprise credit scoring pipeline analyzing 51,336 customer records with 79 financial attributes to predict default risk.", "Conducted statistical feature selection via Chi-Square, ANOVA, Variance Inflation Factor (VIF), and resolved severe imbalance with SMOTE.", "Benchmarked Logistic Regression, SVC, Random Forest, and XGBoost with GridSearchCV, attaining 78% out-of-sample accuracy."], "metrics": "📉 Accuracy: 78% | Records: 51,336 | Attributes: 79 | SMOTE Rebalanced", "tech": ["Scikit-learn", "XGBoost", "SMOTE", "GridSearchCV", "Chi-Square", "ANOVA"], "github": "https://github.com/Ankitiitk369/Credit-Risk-Modelling-Loan-Eligibility-Prediction", "demo": null}, {"title": "Cancer Risk Level Prediction System", "category": "ml", "domain": "Clinical ML", "badge": "3-Class Stratification", "desc": ["Clinical machine learning solution stratifying patient cancer risk (Low, Medium, High) based on lifestyle, diet, and genetics across 23 features.", "Trained and benchmarked Decision Trees, Random Forest, and Gradient Boosting Classifiers.", "Achieved >98% test set classification accuracy with cross-validation."], "metrics": "🏥 Task: 3-Class Risk Stratification | Accuracy: >98% | Features: 23", "tech": ["Scikit-learn", "Random Forest", "Gradient Boosting", "Clinical Analytics", "Pandas"], "github": "https://github.com/Ankitiitk369/Cancer-Risk-Level-Prediction", "demo": null}, {"title": "Breast Cancer Prediction Using Machine Learning", "category": "ml", "domain": "Medical Diagnosis", "badge": "Diagnostic ML", "desc": ["Binary classification pipeline predicting whether breast tissue masses are malignant or benign using Wisconsin FNA clinical biopsy features.", "Implemented feature correlation heatmaps, PCA dimensionality reduction, and ROC-AUC model benchmarking.", "Deployed interactive clinical prediction dashboard on Streamlit Cloud."], "metrics": "🎗️ Dataset: Wisconsin Breast Cancer FNA | Metrics: High Sensitivity & ROC-AUC", "tech": ["Scikit-learn", "PCA", "Streamlit", "Python", "ROC-AUC"], "github": "https://github.com/Ankitiitk369/Breast-Cancer-Prediction-Using-Machine-Learning", "demo": null}, {"title": "Crop Yield Prediction End-to-End ML Pipeline", "category": "ml", "domain": "AgriTech ML", "badge": "B.Tech Honors Capstone", "desc": ["End-to-end Machine Learning pipeline predicting agricultural crop yields based on rainfall, average temperatures, pesticide usage, and crop type.", "Engineered feature transformers, one-hot encoders across global crop types, and regression benchmarking.", "Deployed interactive Streamlit Cloud app enabling farmers to simulate yields under varying climatic conditions."], "metrics": "🌾 AgriTech Regression | Climate Simulation | Streamlit Cloud App", "tech": ["Scikit-learn", "Streamlit", "Regression", "Feature Engineering", "Pandas"], "github": "https://github.com/Ankitiitk369/Crop-yield-prediction-End-To-End-ML-project", "demo": null}, {"title": "Telecom Churn Prediction & Customer Analytics", "category": "ml", "domain": "Customer Analytics", "badge": "Churn Prevention", "desc": ["Predictive customer retention system identifying high-risk subscribers before contract termination across telecom services.", "Engineered tenure, monthly charges, contract type, and payment method interaction indicators.", "Evaluated classification recall metrics to minimize costly false negatives in subscriber retention."], "metrics": "📞 Objective: Subscriber Retention | High Recall Optimization | Python", "tech": ["Scikit-learn", "Classification", "EDA", "Churn Modeling", "Seaborn"], "github": "https://github.com/Ankitiitk369/Telecom-churn-prediction-Analysis-of-customers", "demo": null}, {"title": "Appliance Energy Consumption Prediction", "category": "ml", "domain": "Smart Energy ML", "badge": "Energy Efficiency", "desc": ["Predictive regression model forecasting energy consumption of home appliances in low-energy buildings based on environmental sensor readings.", "Preprocessed multi-room temperature/humidity sensors and weather forecast indicators.", "Tuned ensemble regressors to optimize residential energy management systems."], "metrics": "🏠 Domain: Smart Home IoT | Target: Wh Appliance Energy | Regression", "tech": ["Python", "Ensemble Regressors", "Scikit-learn", "Sensor Analytics"], "github": "https://github.com/Ankitiitk369/APPLIANCE-ENERGY-PREDICTION-", "demo": null}, {"title": "City Payroll Predictive Analytics with Hypothesis Testing", "category": "ml", "domain": "Statistical Analytics", "badge": "IIT Kanpur Academic", "desc": ["Statistical analytics project examining municipal compensation structures, overtime pay trends, and departmental expenditures.", "Conducted parametric and non-parametric hypothesis tests, ANOVA across civic departments, and regression forecasting.", "Generated audit recommendations for fiscal municipal budgetary control."], "metrics": "🏛️ Hypothesis Testing | ANOVA | Fiscal Budget Modeling | Python", "tech": ["SciPy", "Statsmodels", "Hypothesis Testing", "ANOVA", "Pandas"], "github": "https://github.com/Ankitiitk369/City-Payroll-Predictive-Analytics-using-Statistical-Hypothesis-Testing", "demo": null}, {"title": "Champo Carpets Case Study using Machine Learning", "category": "ml", "domain": "Industrial ML", "badge": "IIT Kanpur Academic", "desc": ["Applied machine learning case study predicting export manufacturing lead times and quality defect probabilities in handcrafted carpets.", "Formulated feature sets combining material grading, artisan skill levels, and international shipping lead times.", "Delivered operational decision-support models for production scheduling."], "metrics": "🏭 Industrial Case Study | Production Scheduling | Scikit-learn", "tech": ["Python", "Machine Learning", "Operations Research", "Case Study"], "github": "https://github.com/Ankitiitk369/Champo-Carpets-Case-Study-using-Machine-Learning", "demo": null}, {"title": "Swiggy Delivery & Restaurant Analytics Case Study", "category": "ml", "domain": "FoodTech ML", "badge": "Delivery Optimization", "desc": ["Comprehensive business analytics case study analyzing Swiggy order volumes, average delivery times, and partner restaurant performance.", "Identified operational bottlenecks during peak demand hours across urban clusters.", "Formulated dynamic delivery radius and incentive recommendations."], "metrics": "🛵 Domain: Food Delivery | Order Turnaround Optimization | Case Study", "tech": ["Python", "Data Analysis", "EDA", "Operations Analytics"], "github": "https://github.com/Ankitiitk369/Swiggy-Case-study-", "demo": null}, {"title": "Open-Source AI Profile Picture Maker", "category": "ml", "domain": "Generative Vision", "badge": "Full-Stack AI App", "desc": ["Web application allowing users to upload a selfie and generate professional, stylized headshots using open-source AI models.", "Zero account required; fully self-hosted open-source pipeline with image transformation filters.", "Engineered with TypeScript frontend and Python AI inference endpoints."], "metrics": "🎨 Open-Source Generative AI | Zero Auth Required | Full-Stack", "tech": ["TypeScript", "Python AI", "Open-Source Models", "Image Processing"], "github": "https://github.com/Ankitiitk369/Open-Source-AI-Profile-Picture-Maker", "demo": null}, {"title": "Petrol Price Forecasting & Analytics System", "category": "timeseries", "domain": "Time Series & ML", "badge": "IIT Kanpur Academic (Prof. Faiz Hamid)", "desc": ["Multi-model time-series forecasting pipeline predicting weekly commodity prices using PyTorch Stacked LSTM, XGBoost Regressor, and ARIMA(5,1,0).", "Engineered 15+ domain-specific temporal features (1-12 lags, 4-wk & 12-wk SMA/EMA, rolling volatility).", "Tuned XGBoost delivered 1.12% MAPE and 67.99% directional accuracy on 35% unseen test data; deployed via FastAPI REST endpoints."], "metrics": "📊 MAPE: 1.12% | Directional Acc: 67.99% | Out-of-Sample: 35%", "tech": ["PyTorch LSTM", "XGBoost", "ARIMA", "FastAPI", "Streamlit", "Pandas"], "github": "https://github.com/Ankitiitk369/Petrol-Price-Forecasting-Analytics-System", "demo": null}, {"title": "NVIDIA Stock Price Prediction System", "category": "timeseries", "domain": "Quantitative Finance", "badge": "NASDAQ: NVDA", "desc": ["Quantitative financial machine learning pipeline forecasting price trajectories and volatility swings for NVIDIA Corporation.", "Engineered technical financial indicators: MACD, RSI, Bollinger Bands, Average True Range (ATR), and moving averages.", "Benchmarked Random Forest and neural networks against persistence random walk baselines."], "metrics": "📈 Asset: NVDA NASDAQ | Indicators: MACD, RSI, Bollinger Bands", "tech": ["Python", "Technical Indicators", "Quantitative ML", "Scikit-learn"], "github": "https://github.com/Ankitiitk369/NVIDIA-Stock-Price-Prediction-systerm", "demo": null}, {"title": "Electricity Demand Forecasting System", "category": "timeseries", "domain": "Energy Time Series", "badge": "Grid Capacity Planning", "desc": ["Machine learning and deep learning forecasting pipeline for monthly electricity demand to support energy dispatch and capacity planning.", "Conducted stationarity tests (ADF, KPSS), seasonal differencing, and time-series decomposition into trend, seasonal, and residual components.", "Evaluated classical SARIMAX against recurrent models for peak load planning."], "metrics": "⚡ Objective: Peak Load Planning | Models: SARIMAX & Recurrent DL", "tech": ["Statsmodels", "ARIMA", "SARIMAX", "Time Series", "Python"], "github": "https://github.com/Ankitiitk369/Electricity-Demand-Forecasting-System", "demo": null}, {"title": "Tesla Stock Market Prediction Using Prophet", "category": "timeseries", "domain": "Meta Prophet", "badge": "NASDAQ: TSLA", "desc": ["Decomposed additive time-series forecasting model for Tesla (TSLA) stock prices using Meta's Prophet library.", "Modeled seasonal holiday impacts, quarterly earnings announcements, and macroeconomic regime shifts.", "Delivered trend changepoint detection visualizations."], "metrics": "🚗 Asset: TSLA NASDAQ | Framework: Meta Prophet | Seasonality Decomposition", "tech": ["Prophet", "Python", "Time Series", "Financial Modeling"], "github": "https://github.com/Ankitiitk369/-Tesla-Stock-Market-Prediction-Using-Prophet", "demo": null}, {"title": "Demand Forecasting for E-Commerce", "category": "timeseries", "domain": "Supply Chain ML", "badge": "Inventory Optimization", "desc": ["Time-series predictive pipeline estimating multi-SKU retail order demand across regional distribution warehouses.", "Modeled promotional markdown lift, seasonal sales holidays, and lead-time constraints.", "Generated safety stock benchmarks to minimize out-of-stock occurrences."], "metrics": "📦 Domain: E-Commerce Fulfillment | Multi-SKU Demand | Safety Stock", "tech": ["Python", "Time Series", "Supply Chain", "Pandas", "Scikit-learn"], "github": "https://github.com/Ankitiitk369/Demand-Forecasting-for-E-commerce", "demo": null}, {"title": "Univariate & Multivariate Time-Series Forecasting Suite", "category": "timeseries", "domain": "Comparative Suite", "badge": "Comprehensive Benchmark", "desc": ["Comprehensive benchmarking suite comparing univariate methods (ARIMA, Exponential Smoothing) with multivariate regressors (VAR, XGBoost).", "Evaluated walk-forward validation strategies without temporal data leakage across complex economic series."], "metrics": "📉 Walk-Forward Validation | VAR & ARIMA | Error Diagnostics", "tech": ["Python", "Statsmodels", "VAR", "ARIMA", "Time Series Benchmark"], "github": "https://github.com/Ankitiitk369/Uni-and-Multivariate-Forecasting-Analysis-", "demo": null}, {"title": "Solar Panel Defect Classification", "category": "cv", "domain": "Computer Vision & DL", "badge": "IIT Kanpur Academic (Prof. Veena Bansal)", "desc": ["Trained a 6-class deep learning defect detection pipeline on 885 electroluminescence images of photovoltaic cells using TensorFlow and transfer learning.", "Applied data augmentation, Batch Normalization, Dropout (0.3), and L2 weight decay to combat small-sample overfitting.", "Fine-tuned MobileNetV2 and EfficientNetB0 architectures, attaining 82.5% validation accuracy; deployed via Streamlit inspection UI."], "metrics": "⚡ Val Accuracy: 82.5% | Defect Classes: 6 | Dataset: 885 EL Images", "tech": ["TensorFlow", "MobileNetV2", "EfficientNetB0", "OpenCV", "Transfer Learning"], "github": "https://github.com/Ankitiitk369/Solar-panel-image-classification-Using-CNN-And-Pretrained-model", "demo": null}, {"title": "Speech Sentiment Analysis using Stacked LSTM", "category": "cv", "domain": "Audio DSP & NLP", "badge": "Deep Learning", "desc": ["Real-time speech sentiment classification pipeline converting acoustic signals to text via SpeechRecognition and predicting polarity.", "Trained a stacked bidirectional LSTM (RNN) architecture utilizing pre-trained GloVe 100d word embeddings.", "Implemented audio noise filtering and voice activity detection (VAD) for robust acoustic inference."], "metrics": "🎙️ Architecture: Stacked LSTM | Embeddings: GloVe 100d | Audio DSP", "tech": ["PyTorch / Keras", "Stacked LSTM", "GloVe", "SpeechRecognition", "Python"], "github": "https://github.com/Ankitiitk369/Speech-Sentiment-Analysis-using-RNN-LSTM", "demo": null}, {"title": "Intelligent Document Processing (IDP) for Invoices", "category": "cv", "domain": "Document AI & OCR", "badge": "Enterprise Automation", "desc": ["Automated financial document parsing system extracting key-value pairs (Invoice #, Date, Vendor Name, Tax, Line Items) from scanned invoices.", "Utilized Tesseract OCR with bounding box spatial localization, table recognition, and rule-based regex parsing.", "Outputs clean standardized JSON schemas for downstream ERP ingestion (SAP / Oracle NetSuite)."], "metrics": "📄 Document Type: Multi-format Invoices | Output: Structured JSON Schema", "tech": ["Python", "Tesseract OCR", "OpenCV", "Regex Parsers", "JSON Export"], "github": "https://github.com/Ankitiitk369/Intelligent-Document-Processing-IDP-for-Invoice-extraction", "demo": null}, {"title": "Sentiment-Based Product Recommendation System", "category": "cv", "domain": "Hybrid Recommender", "badge": "NLP + Collaborative", "desc": ["End-to-end recommendation engine combining collaborative filtering matrix factorization with user review sentiment analysis.", "Extracts sentiment scores from customer review texts to dynamically weight product ratings.", "Alleviates cold-start issues by recommending products with both high user affinity and positive sentiment polarity."], "metrics": "⭐ Hybrid Recommender | Collaborative Filtering + NLP Sentiment", "tech": ["NLP", "Collaborative Filtering", "Scikit-learn", "Python", "Pandas"], "github": "https://github.com/Ankitiitk369/Sentiment--Based-Product-Recommendation-System", "demo": null}, {"title": "Sentiment Analysis of Amazon Reviews (Hybrid AI)", "category": "cv", "domain": "NLP & Transformers", "badge": "Text Classification", "desc": ["Sentiment classification system analyzing fine-grained Amazon customer reviews using TF-IDF, VADER, and transformer architectures.", "Conducted text normalization, lemmatization, and topic modeling on negative review cohorts to pinpoint product defects."], "metrics": "📦 Domain: E-Commerce Reviews | Text Mining & Sentiment Classification", "tech": ["Transformers", "TF-IDF", "NLTK", "Scikit-learn", "Python"], "github": "https://github.com/Ankitiitk369/Sentiment-Analysis-of-Amazon-Product-Reviews-Using-Hybrid-AI-Techniques", "demo": null}, {"title": "Predicting Research Article Topics through NLP Analysis", "category": "cv", "domain": "Topic Modeling", "badge": "Academic Text Mining", "desc": ["Multi-label topic classification pipeline categorizing academic research papers based on abstracts and titles.", "Utilized Latent Dirichlet Allocation (LDA) and supervised classifiers to assign disciplines across computer science and statistics."], "metrics": "📑 Multi-Label Classification | LDA Topic Modeling | NLTK", "tech": ["NLP", "LDA", "Scikit-learn", "NLTK", "Text Mining"], "github": "https://github.com/Ankitiitk369/Predicting-Research-Article-Topics-through-NLP-Analysis", "demo": null}, {"title": "Customer Shopping Behavior & BI Analytics", "category": "bi", "domain": "BI & SQL Analytics", "badge": "Portfolio Flagship", "desc": ["Analyzed 3,900 consumer purchase transactions across 18 demographic and purchasing dimensions using Python and relational modeling.", "Queried PostgreSQL using Common Table Expressions (CTEs), window functions (ROW_NUMBER, DENSE_RANK), and multi-table joins.", "Designed an interactive Power BI executive dashboard with dynamic DAX KPI measures, RFM segmentation, and drill-through cohort views."], "metrics": "📊 Transactions: 3,900 | Stack: PostgreSQL + Power BI DAX | RFM Analysis", "tech": ["PostgreSQL", "Power BI", "DAX Formulas", "Advanced SQL", "RFM Segmentation"], "github": "https://github.com/Ankitiitk369/Customer-Shoping-Behavior-Data-Analysis-Using-SQL-and-Power-BI", "demo": null}, {"title": "Zepto E-Commerce SQL Data Analysis", "category": "bi", "domain": "Quick-Commerce Analytics", "badge": "SQL Optimization", "desc": ["Exploratory data analysis on Zepto quick-commerce transactions evaluating order turnaround times and dark store capacity.", "Engineered complex SQL scripts evaluating product category GMV, average order values (AOV), and customer repeat frequency.", "Formulated dark store inventory reorder thresholds to prevent high-velocity SKU stockouts during peak ordering hours."], "metrics": "🛒 Quick Commerce | Complex SQL Queries | Dark Store SLA Analytics", "tech": ["SQL", "PostgreSQL", "Python", "EDA", "Supply Chain Analytics"], "github": "https://github.com/Ankitiitk369/Zepto-E-Commerce-SQL-Data-Analysis-", "demo": null}, {"title": "Loan Portfolio Risk Analysis & Visualization (Tableau)", "category": "bi", "domain": "FinTech Analytics", "badge": "3 Tableau Dashboards", "desc": ["Financial credit risk intelligence pipeline utilizing SQL for exploratory data analysis, default rate KPIs, and credit grade segmentation.", "Built 3 production-grade Tableau executive dashboards visualizing Debt-to-Income (DTI) distributions and loan delinquency matrices.", "Delivered risk heatmaps enabling portfolio managers to revise credit underwriting thresholds and mitigate non-performing loans."], "metrics": "📈 3 Executive Dashboards | Tool: Tableau | Engine: SQL", "tech": ["Tableau", "SQL", "Financial KPIs", "Risk Modeling", "Executive Reporting"], "github": "https://github.com/Ankitiitk369/Loan-Portfolio-Risk-Analysis-Visualization-", "demo": null}, {"title": "BigMart Sales Analysis using Multivariate Regression", "category": "bi", "domain": "Econometrics & ML", "badge": "Retail Analytics", "desc": ["Econometric and predictive modeling project analyzing retail sales across nationwide supermarket outlets and product categories.", "Executed diagnostic statistical checks: heteroskedasticity (Breusch-Pagan), normality of residuals (Jarque-Bera), and collinearity (VIF).", "Identified primary drivers of outlet sales with actionable merchandising recommendations."], "metrics": "📈 Method: Multivariate OLS | Diagnostics: VIF, Jarque-Bera | Statsmodels", "tech": ["Statsmodels", "Multivariate OLS", "Hypothesis Testing", "Python", "Econometrics"], "github": "https://github.com/Ankitiitk369/Bigmart-Sales-Analysis-using-multivariate-regression", "demo": null}, {"title": "Marketing Campaign Analytics with Statistical Testing", "category": "bi", "domain": "Causal & A/B Testing", "badge": "Marketing Science", "desc": ["Quantitative experimentation pipeline evaluating customer response rates across multichannel promotional campaigns.", "Executed rigorous statistical hypothesis testing: two-sample t-tests for conversion uplift, Chi-Square test of independence, and Two-Way ANOVA.", "Calculated customer acquisition cost (CAC) efficiencies and revenue uplift benchmarks."], "metrics": "🧪 A/B Testing & Two-Way ANOVA | Conversion Uplift | CAC Efficiency", "tech": ["A/B Testing", "SciPy", "Statsmodels", "Two-Way ANOVA", "Pandas"], "github": "https://github.com/Ankitiitk369/Marketing-Campaign-Analytics-with-Statistical-Testing", "demo": null}, {"title": "McDonald's Customer Segmentation & Marketing Analytics", "category": "bi", "domain": "Market Segmentation", "badge": "K-Means & PCA", "desc": ["Applied unsupervised machine learning pipeline clustering McDonald's consumer perception survey responses across brand attributes.", "Employed Principal Component Analysis (PCA) for perceptual mapping and K-Means clustering with Elbow evaluation.", "Identified 4 distinct consumer target segments for tailored marketing positioning."], "metrics": "🍔 Domain: QSR Fast Food | Unsupervised K-Means & PCA | Market Positioning", "tech": ["K-Means", "PCA", "Scikit-learn", "Perceptual Mapping", "Python"], "github": "https://github.com/Ankitiitk369/McDonald-s-Customer-Segmentation-Marketing-Analytics-Using-Machine-Learning", "demo": null}, {"title": "Mall Customers Clustering Analysis", "category": "bi", "domain": "Customer Segmentation", "badge": "Unsupervised Learning", "desc": ["Unsupervised clustering project segmenting retail mall visitors based on annual income and spending score metrics.", "Evaluated K-Means, Hierarchical/Agglomerative clustering, and DBSCAN with Silhouette analysis.", "Formulated high-value shopper VIP loyalty strategies."], "metrics": "🛍️ Algorithm: K-Means & DBSCAN | Silhouette Score Evaluation", "tech": ["Scikit-learn", "K-Means", "DBSCAN", "Matplotlib", "Seaborn"], "github": "https://github.com/Ankitiitk369/MALL-CUSTOMERS-CLUSTERING-ANALYSIS", "demo": null}, {"title": "Netflix Titles Dataset Exploratory Data Analysis", "category": "bi", "domain": "Media Analytics", "badge": "Content Strategy", "desc": ["In-depth exploratory data analysis on the complete Netflix Titles catalog to uncover content release trends and global expansion patterns.", "Visualized movie vs. TV show ratio transitions, top content-producing countries, and cast/director collaboration networks."], "metrics": "🎬 Dataset: Netflix Catalog | Visualizations: Seaborn & Plotly", "tech": ["Python", "Pandas", "Seaborn", "Plotly", "EDA"], "github": "https://github.com/Ankitiitk369/-Netflix-Titles-Dataset-Exploratory-data-Analysis-", "demo": null}, {"title": "Deloitte Australia Data Analytics Simulation", "category": "bi", "domain": "Consulting Analytics", "badge": "Forage Job Simulation", "desc": ["Completed the Deloitte Australia Data Analytics virtual experience program on Forage.", "Synthesized business client requirements, prepared raw data extracts, and designed forensic KPI analytics.", "Formulated strategic executive dashboards for operational decision makers."], "metrics": "💼 Deloitte Australia Simulation | Business Analysis & Reporting", "tech": ["Data Analytics", "Forensic Analysis", "Executive Dashboarding", "Excel"], "github": "https://github.com/Ankitiitk369/Deloitte-Australia-Data-Analytics-Job-Simulation", "demo": null}, {"title": "VitalSync AI: Intelligent Fitness & AQI Health Tracker", "category": "bi", "domain": "IoT & Health Analytics", "badge": "Full-Stack Health", "desc": ["Intelligent environmental and fitness tracking dashboard correlating outdoor Air Quality Index (AQI) data with physical activity metrics.", "Provides real-time aerobic training safety alerts based on hyperlocal particulate matter readings."], "metrics": "🏃 Health IoT | AQI Correlation Alerts | TypeScript & Analytics", "tech": ["TypeScript", "Health Analytics", "API Integration", "IoT"], "github": "https://github.com/Ankitiitk369/VitalSync-AI-Intelligent-", "demo": null}, {"title": "Vehicle CO₂ Emission Tracking Pipeline (TCS)", "category": "exp", "domain": "Corporate AI Internship", "badge": "Tata Consultancy Services", "desc": ["Engineered an automated vehicle CO2 emission tracking pipeline from real-time CCTV feeds to monitor urban carbon footprints for enterprise ESG reporting.", "Implemented YOLOv8 vehicle localization paired with OpenCV image preprocessing (Bilateral Filtering, CLAHE, Otsu) and EasyOCR with regex syntax correction.", "Trained dual-stage ensemble models: Gradient Boosting (R² = 0.996, RMSE = 3.12 g/km) and Random Forest; delivered interactive Streamlit dashboard with 17-test Pytest test suite."], "metrics": "📈 R²: 0.996 | RMSE: 3.12 g/km | Pytest: 17 Passed | TCS Remote", "tech": ["YOLOv8", "OpenCV", "EasyOCR", "Gradient Boosting", "Streamlit", "Pytest CI"], "github": null, "demo": null}, {"title": "Global Procurement System: Asset Receiving Module", "category": "exp", "domain": "Enterprise Software", "badge": "Software Engineering", "desc": ["Contributed to the Asset Receiving Automation module for an enterprise Global Procurement System, digitizing manual asset tracking across 100+ inventory categories.", "Engineered responsive Angular user interfaces for capturing asset metadata, PO numbers, quantities, and locations with real-time validation schemas.", "Integrated secure Role-Based Access Control (RBAC) and authentication, cutting asset ingestion latency by 40%."], "metrics": "⚡ Latency Reduction: 40% | Framework: Angular 16 | Security: RBAC", "tech": ["Angular 16", "TypeScript", "REST APIs", "RBAC Security", "Asset Tracking"], "github": null, "demo": null}];
+  </script>
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

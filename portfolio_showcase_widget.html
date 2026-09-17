@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankit Kumar - AI & Data Science Engineering Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-base: #090d16;
+    --bg-surface: #111827;
+    --bg-card: rgba(17, 24, 39, 0.75);
+    --bg-card-hover: rgba(30, 41, 59, 0.9);
+    --border: rgba(51, 65, 85, 0.6);
+    --border-hover: rgba(96, 165, 250, 0.6);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-sub: #64748b;
+    --accent: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.35);
+    --pill-bg: rgba(15, 23, 42, 0.8);
+    --modal-bg: rgba(15, 23, 42, 0.95);
+    --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  [data-theme="light"] {
+    --bg-base: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --bg-card-hover: #ffffff;
+    --border: #e2e8f0;
+    --border-hover: #3b82f6;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --text-sub: #94a3b8;
+    --accent: #2563eb;
+    --accent-glow: rgba(37, 99, 235, 0.2);
+    --pill-bg: #f1f5f9;
+    --modal-bg: rgba(255, 255, 255, 0.98);
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    padding: 24px 16px;
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  /* Ambient glowing backdrop */
+  .bg-glow-1 {
+    position: fixed;
+    top: -100px;
+    left: 20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .bg-glow-2 {
+    position: fixed;
+    top: 400px;
+    right: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(0,0,0,0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header & Navigation Bar */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .header-left h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+  }
+  .header-left p {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .theme-toggle-btn {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .theme-toggle-btn:hover {
+    border-color: var(--accent);
+    transform: scale(1.05);
+  }
+
+  /* Interactive Stats Counter Bar */
+  .stats-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px var(--accent-glow);
+  }
+  .stat-num {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  /* Filter & Control Toolbar */
+  .control-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .search-and-sort {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .search-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+  }
+  .search-wrapper input {
+    width: 100%;
+    padding: 12px 42px 12px 44px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-main);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s;
+  }
+  .search-wrapper input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: var(--text-muted);
+  }
+  .clear-search-btn {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+  }
+
+  .sort-select {
+    padding: 10px 16px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-main);
+    font-size: 13.5px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+  }
+
+  /* Category Tabs */
+  .category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tab-btn {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 8px 14px;
+    border-radius: 9px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tab-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-muted);
+  }
+  .tab-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 2px 10px var(--accent-glow);
+  }
+  .tab-count {
+    font-size: 11px;
+    padding: 2px 6px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 6px;
+  }
+
+  /* Quick Tech Filter Pills */
+  .tech-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding-top: 4px;
+    border-top: 1px dashed var(--border);
+  }
+  .tech-filter-title {
+    font-weight: 700;
+    color: var(--text-sub);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .tech-chip {
+    background: var(--pill-bg);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 4px 9px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .tech-chip:hover {
+    border-color: var(--accent);
+    color: var(--text-main);
+  }
+  .tech-chip.active {
+    background: #0284c7;
+    border-color: #0284c7;
+    color: white;
+  }
+
+  /* Active Filter Notification Bar */
+  .active-filter-banner {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 10px;
+    padding: 8px 14px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #60a5fa;
+  }
+  .reset-filters-btn {
+    background: none;
+    border: none;
+    color: #93c5fd;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+  }
+
+  /* Project Card */
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    position: relative;
+    backdrop-filter: blur(10px);
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-hover);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  .card-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+  }
+  .domain-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+  .tag-genai { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.4); }
+  .tag-ml { background: rgba(6, 182, 212, 0.2); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.4); }
+  .tag-timeseries { background: rgba(244, 63, 94, 0.2); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.4); }
+  .tag-cv { background: rgba(245, 158, 11, 0.2); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.4); }
+  .tag-bi { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+  .tag-exp { background: rgba(236, 72, 153, 0.2); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.4); }
+
+  .academic-badge {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+  }
+
+  .project-title {
+    font-size: 16.5px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+
+  .project-summary {
+    font-size: 13.2px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .metrics-box {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 7px 11px;
+    font-size: 11.5px;
+    color: #38bdf8;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 14px;
+  }
+
+  .tech-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 16px;
+  }
+  .card-tech-pill {
+    background: var(--pill-bg);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 5px;
+    transition: all 0.15s;
+  }
+  .card-tech-pill:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .card-actions-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    gap: 8px;
+  }
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-gh {
+    background: #334155;
+    color: #ffffff;
+  }
+  .btn-gh:hover {
+    background: #475569;
+  }
+  .btn-live {
+    background: #2563eb;
+    color: #ffffff;
+  }
+  .btn-live:hover {
+    background: #1d4ed8;
+  }
+  .view-modal-link {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .view-modal-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Modal Dialog */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .modal-overlay.active {
+    display: flex;
+  }
+  .modal-window {
+    background: var(--modal-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    width: 100%;
+    max-width: 720px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    position: relative;
+    animation: modalIn 0.2s ease-out;
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .modal-close-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-main);
+  }
+
+  .modal-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    padding-right: 40px;
+  }
+  .modal-badges {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  .modal-section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-sub);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 18px 0 8px 0;
+  }
+  .modal-bullets {
+    padding-left: 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .modal-bullets li {
+    margin-bottom: 6px;
+  }
+  .modal-metrics-banner {
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: #38bdf8;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Toast Notification */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #10b981;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 10000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .toast.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="bg-glow-1"></div>
+<div class="bg-glow-2"></div>
+
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Ankit Kumar — AI & Engineering Portfolio</h1>
+      <p>Interactive catalog of 45 real-world Generative AI, Machine Learning, Deep Learning, Time Series, and Business Analytics systems.</p>
+    </div>
+    <div class="header-actions">
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        🌙
+      </button>
+    </div>
+  </div>
+
+  <!-- Interactive Stats Strip -->
+  <div class="stats-strip">
+    <div class="stat-card" onclick="filterByCategory('all')">
+      <span class="stat-num">45</span>
+      <span class="stat-label">Unique Projects</span>
+    </div>
+    <div class="stat-card" onclick="filterByCategory('genai')">
+      <span class="stat-num">11</span>
+      <span class="stat-label">GenAI & LLM Agents</span>
+    </div>
+    <div class="stat-card" onclick="filterByCategory('ml')">
+      <span class="stat-num">10</span>
+      <span class="stat-label">Machine Learning</span>
+    </div>
+    <div class="stat-card" onclick="filterByCategory('timeseries')">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Time Series Forecasting</span>
+    </div>
+    <div class="stat-card" onclick="filterByCategory('cv')">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Computer Vision & DL</span>
+    </div>
+    <div class="stat-card" onclick="filterByCategory('bi')">
+      <span class="stat-num">10</span>
+      <span class="stat-label">SQL & Business Analytics</span>
+    </div>
+  </div>
+
+  <!-- Interactive Controls -->
+  <div class="control-panel">
+    <div class="search-and-sort">
+      <div class="search-wrapper">
+        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        <input type="text" id="projectSearch" placeholder="Search by model, framework, keyword (e.g. PyTorch, LangChain, XGBoost, SQL, RAG)..." oninput="handleSearch(this.value)">
+        <button class="clear-search-btn" id="clearSearchBtn" onclick="clearSearch()">✕</button>
+      </div>
+      <select class="sort-select" id="sortSelect" onchange="handleSort(this.value)">
+        <option value="default">Sort: Flagship / Recommended</option>
+        <option value="alpha">Sort: Alphabetical (A-Z)</option>
+        <option value="domain">Sort: By Domain</option>
+      </select>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs" id="categoryTabs">
+      <button class="tab-btn active" data-cat="all" onclick="filterByCategory('all')">All Projects <span class="tab-count">45</span></button>
+      <button class="tab-btn" data-cat="genai" onclick="filterByCategory('genai')">GenAI & Agents <span class="tab-count">11</span></button>
+      <button class="tab-btn" data-cat="ml" onclick="filterByCategory('ml')">Machine Learning <span class="tab-count">10</span></button>
+      <button class="tab-btn" data-cat="timeseries" onclick="filterByCategory('timeseries')">Time Series <span class="tab-count">6</span></button>
+      <button class="tab-btn" data-cat="cv" onclick="filterByCategory('cv')">Vision & NLP <span class="tab-count">6</span></button>
+      <button class="tab-btn" data-cat="bi" onclick="filterByCategory('bi')">SQL & BI Analytics <span class="tab-count">10</span></button>
+      <button class="tab-btn" data-cat="exp" onclick="filterByCategory('exp')">Enterprise Experience <span class="tab-count">2</span></button>
+    </div>
+
+    <!-- Quick Tech Filter Chips -->
+    <div class="tech-filter-bar">
+      <span class="tech-filter-title">Filter by Tech:</span>
+      <span class="tech-chip" onclick="toggleTechChip('PyTorch', this)">PyTorch</span>
+      <span class="tech-chip" onclick="toggleTechChip('LangChain', this)">LangChain</span>
+      <span class="tech-chip" onclick="toggleTechChip('LangGraph', this)">LangGraph</span>
+      <span class="tech-chip" onclick="toggleTechChip('XGBoost', this)">XGBoost</span>
+      <span class="tech-chip" onclick="toggleTechChip('FastAPI', this)">FastAPI</span>
+      <span class="tech-chip" onclick="toggleTechChip('Streamlit', this)">Streamlit</span>
+      <span class="tech-chip" onclick="toggleTechChip('PostgreSQL', this)">PostgreSQL</span>
+      <span class="tech-chip" onclick="toggleTechChip('Power BI', this)">Power BI</span>
+      <span class="tech-chip" onclick="toggleTechChip('Tableau', this)">Tableau</span>
+      <span class="tech-chip" onclick="toggleTechChip('OpenCV', this)">OpenCV</span>
+      <span class="tech-chip" onclick="toggleTechChip('SMOTE', this)">SMOTE</span>
+      <span class="tech-chip" onclick="toggleTechChip('ARIMA', this)">ARIMA</span>
+    </div>
+  </div>
+
+  <!-- Active Filter Indicator Banner -->
+  <div class="active-filter-banner" id="activeFilterBanner">
+    <span id="activeFilterText">Filtered view</span>
+    <button class="reset-filters-btn" onclick="resetAllFilters()">Reset Filters (Show All 45)</button>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="projects-grid" id="projectsGrid"></div>
+</div>
+
+<!-- Executive Detail Modal -->
+<div class="modal-overlay" id="detailModal" onclick="handleModalOverlayClick(event)">
+  <div class="modal-window">
+    <button class="modal-close-btn" onclick="closeModal()">✕</button>
+    <div class="modal-badges" id="modalBadges"></div>
+    <h2 class="modal-title" id="modalTitle"></h2>
+    
+    <div class="modal-metrics-banner" id="modalMetrics"></div>
+
+    <div class="modal-section-title">Key Architectural Highlights & Results</div>
+    <ul class="modal-bullets" id="modalBullets"></ul>
+
+    <div class="modal-section-title">Technology Stack & Libraries</div>
+    <div class="tech-pills-row" id="modalTech"></div>
+
+    <div class="modal-footer">
+      <button class="action-btn btn-gh" onclick="copyProjectShareInfo()">📋 Copy Project Info</button>
+      <div style="display:flex; gap:10px;" id="modalActionLinks"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toastBox">
+  <span id="toastMsg">✓ Copied to clipboard!</span>
+</div>
+
+<script>
+// Master Project Dataset
+const masterProjects = [{"title": "MediMind AI: Clinical Decision Support Platform", "category": "genai", "domain": "GenAI & RAG", "badge": "Production Deployed", "desc": ["Production-ready RAG healthcare platform built with LangChain, Pinecone Serverless, and Groq LLaMA-3.3-70B.", "Zero-hallucination medical literature grounding achieving 96.8% RAG faithfulness with verified citations.", "Engineered automated lab report parsing via PyPDF, embedding 4 clinical risk calculators with <10ms emergency triage safety guardrails."], "metrics": "⚡ Latency: ~450ms | Faithfulness: 96.8% | Triage: <10ms", "tech": ["LangChain", "Groq LLaMA-3.3", "Pinecone", "MiniLM-L6-v2", "Streamlit", "PyPDF"], "github": "https://github.com/Ankitiitk369/-MediMind-AI-Generative-AI-RAG-Based-Clinical-Decision-Support-Healthcare-Platform", "demo": null}, {"title": "Text-to-SQL & Agentic SQL Analytics System", "category": "genai", "domain": "Agentic AI", "badge": "Enterprise ReAct", "desc": ["Autonomous conversational database querying system powered by Google Gemini 2.5 Flash and LangGraph ReAct Agents.", "Operates across a 6-table relational enterprise dataset with 64,000+ transactional sales orders.", "Built-in SQL guardrails blocking destructive DDL/DML, attaining 1.00 Context Precision on RAGAS benchmarks."], "metrics": "🎯 Precision: 1.00 | Dataset: 64,000+ Records | Dialect: MySQL", "tech": ["LangGraph", "Google Gemini 2.5", "ReAct", "SQLDatabaseToolkit", "Plotly", "MySQL"], "github": "https://github.com/Ankitiitk369/Text-to-SQL-Agentic-SQL-Analytics-System", "demo": null}, {"title": "AI-Powered Gen Z Consumer Behavior Platform", "category": "genai", "domain": "GenAI & ML Platform", "badge": "Live Streamlit App", "desc": ["Enterprise data science platform integrating Explainable AI (SHAP values), unsupervised persona clustering, and GenAI marketing copy generation.", "Architected high-throughput FastAPI inference backend for real-time persona inference and brand sentiment scoring.", "Deployed production interactive Web Platform on Streamlit Cloud for interactive CMO marketing intelligence."], "metrics": "🚀 Live on Streamlit Cloud | Explainable AI: SHAP | Backend: FastAPI", "tech": ["FastAPI", "SHAP (XAI)", "GenAI", "Streamlit", "Scikit-learn", "Clustering"], "github": "https://github.com/Ankitiitk369/AI-Powered-Gen-Z-Consumer-Behavior-Marketing-Intelligence-Platform", "demo": "https://ai-powered-gen-z-consumer-behavior-marketing-intelligence-plat.streamlit.app/"}, {"title": "Agentic AI Multilingual Blog Generation & Fact Retrieval", "category": "genai", "domain": "Multi-Agent RAG", "badge": "LangGraph Pipeline", "desc": ["Enterprise-grade Multi-Agent RAG pipeline built with LangGraph, Groq LLaMA 3.1, and DuckDuckGo Live Search API.", "Autonomous fact-checking agent cross-references retrieved citations before generating publication-ready multilingual articles.", "FastAPI backend with streaming response generation and Streamlit frontend UI."], "metrics": "🌐 Multi-Agent RAG | Live Web Search: DuckDuckGo | LLM: LLaMA 3.1", "tech": ["LangGraph", "Groq LLaMA 3.1", "DuckDuckGo API", "FastAPI", "Streamlit"], "github": "https://github.com/Ankitiitk369/Agentic-AI-Multilingual-Blog-Generation-Fact-Retrieval-System", "demo": null}, {"title": "Multi-Agent Resume Analyzer & Job Matcher", "category": "genai", "domain": "Autonomous Agents", "badge": "CrewAI Framework", "desc": ["Multi-agent autonomous collaborative system using CrewAI and open LLMs to automate candidate screening.", "Deploys 3 specialized agents: Parser Agent (PDF extraction), Profiler Agent (skill gaps), and Recruiter Matcher Agent (ATS scoring).", "Generates structured candidate matching reports with cosine skill similarity, keyword density, and interview questions."], "metrics": "🤖 3 Collaborative Agents | Framework: CrewAI | Inference: Groq", "tech": ["CrewAI", "LangChain", "Groq LLaMA-3", "PyPDF", "ATS Scoring"], "github": "https://github.com/Ankitiitk369/Multi-Agent-Resume-Analyzer-using-CrewAI-LLM", "demo": null}, {"title": "Generative AI Medical Information Assistant", "category": "genai", "domain": "Healthcare RAG", "badge": "Sub-Second Latency", "desc": ["End-to-end Retrieval-Augmented Generation medical assistant designed to answer complex clinical inquiries with verified textbook citations.", "Dense vector search architecture ensuring zero hallucination risk.", "Interactive chat interface supporting multi-turn dialogue with clinical disclaimer guardrails."], "metrics": "🏥 Zero Hallucination | Dense Vector Search | Sub-Second Latency", "tech": ["LangChain", "RAG", "Python", "Vector DB", "LLMs"], "github": "https://github.com/Ankitiitk369/Generative-AI-Medical-Information-Assistant-", "demo": null}, {"title": "Dental Appointment System using LangGraph", "category": "genai", "domain": "Agentic Booking", "badge": "Stateful State Machine", "desc": ["Conversational clinic booking system engineered using stateful LangGraph graphs and relational MySQL database.", "Implements human-in-the-loop verification, conflict detection for booked calendar slots, and automated calendar scheduling.", "Maintains checkpointed conversational state memory across customer interaction sessions."], "metrics": "📅 State Machine: LangGraph | Database: MySQL | Memory: Checkpointed", "tech": ["LangGraph", "MySQL", "Python", "State Machines", "Streamlit"], "github": "https://github.com/Ankitiitk369/Dental-Appointment-system-using-Langgraph", "demo": null}, {"title": "Air India Domain-Specific GenAI Knowledge Assistant", "category": "genai", "domain": "Domain RAG", "badge": "Aviation Support", "desc": ["Domain-specific RAG assistant engineered for commercial airline passengers to resolve flight baggage allowances and transit policies.", "Indexed aviation regulatory policy documents into high-dimensional vector embeddings with semantic FAISS search.", "Context-aware session history with hallucination guardrails deployed via Streamlit."], "metrics": "✈️ Domain: Aviation Policies | Vector Search: FAISS | Framework: LangChain", "tech": ["LangChain", "FAISS", "Streamlit", "RAG Architecture", "Python"], "github": "https://github.com/Ankitiitk369/Air-India-Domain-Specific-Generative-AI-Knowledge-Assistant", "demo": null}, {"title": "Conversational RAG Chatbot for Multi-PDF Knowledge Base", "category": "genai", "domain": "Document RAG", "badge": "FAISS & LangChain", "desc": ["Conversational GenAI chatbot combining web-scraped data and multi-PDF document repositories into a unified knowledge base.", "Utilized semantic vector search with FAISS, LangChain text chunking strategies, and OpenAI LLMs.", "Delivers context-aware synthesis with exact page-level source attribution."], "metrics": "📚 Multi-PDF Ingestion | Vector Index: FAISS | Text Chunking: Recursive", "tech": ["LangChain", "FAISS", "OpenAI LLMs", "Python", "Streamlit"], "github": "https://github.com/Ankitiitk369/Conversational-RAG-Chatbot-for-Web-Scraped-Multi-Pdf-Knowledge-Base", "demo": null}, {"title": "AI-Powered Sustainability RAG Chatbot", "category": "genai", "domain": "ESG & Climate AI", "badge": "Compliance Intelligence", "desc": ["Enterprise-grade RAG chatbot engineered to analyze, extract, and answer complex questions from sustainability guidelines and ESG environmental regulations.", "Grounds responses in environmental corporate disclosure frameworks with semantic retrieval.", "Facilitates fast compliance checks for corporate sustainability auditors."], "metrics": "🌱 Domain: ESG & Regulations | RAG Architecture | Vector Search", "tech": ["LangChain", "Pinecone/FAISS", "Python", "ESG Compliance", "LLMs"], "github": "https://github.com/Ankitiitk369/AI-Powered-Sustainability-RAG-Chatbot", "demo": null}, {"title": "GenAI Research RAG Chatbot", "category": "genai", "domain": "Research AI", "badge": "Academic Literature Search", "desc": ["Specialized academic literature assistant indexing arXiv research papers and technical preprints.", "Supports dense mathematical and technical concept querying with semantic similarity ranking.", "Generates concise literature reviews with citation chains."], "metrics": "🔬 Academic Literature Ingestion | Semantic Similarity | RAG", "tech": ["LangChain", "Vector Embeddings", "Python", "Streamlit"], "github": "https://github.com/Ankitiitk369/GenAI-Research-Rag-Chatbot", "demo": null}, {"title": "Credit Risk Modelling: Loan Eligibility Prediction", "category": "ml", "domain": "Financial ML", "badge": "IIT Kanpur Academic (Prof. Faiz Hamid)", "desc": ["Constructed an enterprise credit scoring pipeline analyzing 51,336 customer records with 79 financial attributes to predict default risk.", "Conducted statistical feature selection via Chi-Square, ANOVA, Variance Inflation Factor (VIF), and resolved severe imbalance with SMOTE.", "Benchmarked Logistic Regression, SVC, Random Forest, and XGBoost with GridSearchCV, attaining 78% out-of-sample accuracy."], "metrics": "📉 Accuracy: 78% | Records: 51,336 | Attributes: 79 | SMOTE Rebalanced", "tech": ["Scikit-learn", "XGBoost", "SMOTE", "GridSearchCV", "Chi-Square", "ANOVA"], "github": "https://github.com/Ankitiitk369/Credit-Risk-Modelling-Loan-Eligibility-Prediction", "demo": null}, {"title": "Cancer Risk Level Prediction System", "category": "ml", "domain": "Clinical ML", "badge": "3-Class Stratification", "desc": ["Clinical machine learning solution stratifying patient cancer risk (Low, Medium, High) based on lifestyle, diet, and genetics across 23 features.", "Trained and benchmarked Decision Trees, Random Forest, and Gradient Boosting Classifiers.", "Achieved >98% test set classification accuracy with cross-validation."], "metrics": "🏥 Task: 3-Class Risk Stratification | Accuracy: >98% | Features: 23", "tech": ["Scikit-learn", "Random Forest", "Gradient Boosting", "Clinical Analytics", "Pandas"], "github": "https://github.com/Ankitiitk369/Cancer-Risk-Level-Prediction", "demo": null}, {"title": "Breast Cancer Prediction Using Machine Learning", "category": "ml", "domain": "Medical Diagnosis", "badge": "Diagnostic ML", "desc": ["Binary classification pipeline predicting whether breast tissue masses are malignant or benign using Wisconsin FNA clinical biopsy features.", "Implemented feature correlation heatmaps, PCA dimensionality reduction, and ROC-AUC model benchmarking.", "Deployed interactive clinical prediction dashboard on Streamlit Cloud."], "metrics": "🎗️ Dataset: Wisconsin Breast Cancer FNA | Metrics: High Sensitivity & ROC-AUC", "tech": ["Scikit-learn", "PCA", "Streamlit", "Python", "ROC-AUC"], "github": "https://github.com/Ankitiitk369/Breast-Cancer-Prediction-Using-Machine-Learning", "demo": null}, {"title": "Crop Yield Prediction End-to-End ML Pipeline", "category": "ml", "domain": "AgriTech ML", "badge": "B.Tech Honors Capstone", "desc": ["End-to-end Machine Learning pipeline predicting agricultural crop yields based on rainfall, average temperatures, pesticide usage, and crop type.", "Engineered feature transformers, one-hot encoders across global crop types, and regression benchmarking.", "Deployed interactive Streamlit Cloud app enabling farmers to simulate yields under varying climatic conditions."], "metrics": "🌾 AgriTech Regression | Climate Simulation | Streamlit Cloud App", "tech": ["Scikit-learn", "Streamlit", "Regression", "Feature Engineering", "Pandas"], "github": "https://github.com/Ankitiitk369/Crop-yield-prediction-End-To-End-ML-project", "demo": null}, {"title": "Telecom Churn Prediction & Customer Analytics", "category": "ml", "domain": "Customer Analytics", "badge": "Churn Prevention", "desc": ["Predictive customer retention system identifying high-risk subscribers before contract termination across telecom services.", "Engineered tenure, monthly charges, contract type, and payment method interaction indicators.", "Evaluated classification recall metrics to minimize costly false negatives in subscriber retention."], "metrics": "📞 Objective: Subscriber Retention | High Recall Optimization | Python", "tech": ["Scikit-learn", "Classification", "EDA", "Churn Modeling", "Seaborn"], "github": "https://github.com/Ankitiitk369/Telecom-churn-prediction-Analysis-of-customers", "demo": null}, {"title": "Appliance Energy Consumption Prediction", "category": "ml", "domain": "Smart Energy ML", "badge": "Energy Efficiency", "desc": ["Predictive regression model forecasting energy consumption of home appliances in low-energy buildings based on environmental sensor readings.", "Preprocessed multi-room temperature/humidity sensors and weather forecast indicators.", "Tuned ensemble regressors to optimize residential energy management systems."], "metrics": "🏠 Domain: Smart Home IoT | Target: Wh Appliance Energy | Regression", "tech": ["Python", "Ensemble Regressors", "Scikit-learn", "Sensor Analytics"], "github": "https://github.com/Ankitiitk369/APPLIANCE-ENERGY-PREDICTION-", "demo": null}, {"title": "City Payroll Predictive Analytics with Hypothesis Testing", "category": "ml", "domain": "Statistical Analytics", "badge": "IIT Kanpur Academic", "desc": ["Statistical analytics project examining municipal compensation structures, overtime pay trends, and departmental expenditures.", "Conducted parametric and non-parametric hypothesis tests, ANOVA across civic departments, and regression forecasting.", "Generated audit recommendations for fiscal municipal budgetary control."], "metrics": "🏛️ Hypothesis Testing | ANOVA | Fiscal Budget Modeling | Python", "tech": ["SciPy", "Statsmodels", "Hypothesis Testing", "ANOVA", "Pandas"], "github": "https://github.com/Ankitiitk369/City-Payroll-Predictive-Analytics-using-Statistical-Hypothesis-Testing", "demo": null}, {"title": "Champo Carpets Case Study using Machine Learning", "category": "ml", "domain": "Industrial ML", "badge": "IIT Kanpur Academic", "desc": ["Applied machine learning case study predicting export manufacturing lead times and quality defect probabilities in handcrafted carpets.", "Formulated feature sets combining material grading, artisan skill levels, and international shipping lead times.", "Delivered operational decision-support models for production scheduling."], "metrics": "🏭 Industrial Case Study | Production Scheduling | Scikit-learn", "tech": ["Python", "Machine Learning", "Operations Research", "Case Study"], "github": "https://github.com/Ankitiitk369/Champo-Carpets-Case-Study-using-Machine-Learning", "demo": null}, {"title": "Swiggy Delivery & Restaurant Analytics Case Study", "category": "ml", "domain": "FoodTech ML", "badge": "Delivery Optimization", "desc": ["Comprehensive business analytics case study analyzing Swiggy order volumes, average delivery times, and partner restaurant performance.", "Identified operational bottlenecks during peak demand hours across urban clusters.", "Formulated dynamic delivery radius and incentive recommendations."], "metrics": "🛵 Domain: Food Delivery | Order Turnaround Optimization | Case Study", "tech": ["Python", "Data Analysis", "EDA", "Operations Analytics"], "github": "https://github.com/Ankitiitk369/Swiggy-Case-study-", "demo": null}, {"title": "Open-Source AI Profile Picture Maker", "category": "ml", "domain": "Generative Vision", "badge": "Full-Stack AI App", "desc": ["Web application allowing users to upload a selfie and generate professional, stylized headshots using open-source AI models.", "Zero account required; fully self-hosted open-source pipeline with image transformation filters.", "Engineered with TypeScript frontend and Python AI inference endpoints."], "metrics": "🎨 Open-Source Generative AI | Zero Auth Required | Full-Stack", "tech": ["TypeScript", "Python AI", "Open-Source Models", "Image Processing"], "github": "https://github.com/Ankitiitk369/Open-Source-AI-Profile-Picture-Maker", "demo": null}, {"title": "Petrol Price Forecasting & Analytics System", "category": "timeseries", "domain": "Time Series & ML", "badge": "IIT Kanpur Academic (Prof. Faiz Hamid)", "desc": ["Multi-model time-series forecasting pipeline predicting weekly commodity prices using PyTorch Stacked LSTM, XGBoost Regressor, and ARIMA(5,1,0).", "Engineered 15+ domain-specific temporal features (1-12 lags, 4-wk & 12-wk SMA/EMA, rolling volatility).", "Tuned XGBoost delivered 1.12% MAPE and 67.99% directional accuracy on 35% unseen test data; deployed via FastAPI REST endpoints."], "metrics": "📊 MAPE: 1.12% | Directional Acc: 67.99% | Out-of-Sample: 35%", "tech": ["PyTorch LSTM", "XGBoost", "ARIMA", "FastAPI", "Streamlit", "Pandas"], "github": "https://github.com/Ankitiitk369/Petrol-Price-Forecasting-Analytics-System", "demo": null}, {"title": "NVIDIA Stock Price Prediction System", "category": "timeseries", "domain": "Quantitative Finance", "badge": "NASDAQ: NVDA", "desc": ["Quantitative financial machine learning pipeline forecasting price trajectories and volatility swings for NVIDIA Corporation.", "Engineered technical financial indicators: MACD, RSI, Bollinger Bands, Average True Range (ATR), and moving averages.", "Benchmarked Random Forest and neural networks against persistence random walk baselines."], "metrics": "📈 Asset: NVDA NASDAQ | Indicators: MACD, RSI, Bollinger Bands", "tech": ["Python", "Technical Indicators", "Quantitative ML", "Scikit-learn"], "github": "https://github.com/Ankitiitk369/NVIDIA-Stock-Price-Prediction-systerm", "demo": null}, {"title": "Electricity Demand Forecasting System", "category": "timeseries", "domain": "Energy Time Series", "badge": "Grid Capacity Planning", "desc": ["Machine learning and deep learning forecasting pipeline for monthly electricity demand to support energy dispatch and capacity planning.", "Conducted stationarity tests (ADF, KPSS), seasonal differencing, and time-series decomposition into trend, seasonal, and residual components.", "Evaluated classical SARIMAX against recurrent models for peak load planning."], "metrics": "⚡ Objective: Peak Load Planning | Models: SARIMAX & Recurrent DL", "tech": ["Statsmodels", "ARIMA", "SARIMAX", "Time Series", "Python"], "github": "https://github.com/Ankitiitk369/Electricity-Demand-Forecasting-System", "demo": null}, {"title": "Tesla Stock Market Prediction Using Prophet", "category": "timeseries", "domain": "Meta Prophet", "badge": "NASDAQ: TSLA", "desc": ["Decomposed additive time-series forecasting model for Tesla (TSLA) stock prices using Meta's Prophet library.", "Modeled seasonal holiday impacts, quarterly earnings announcements, and macroeconomic regime shifts.", "Delivered trend changepoint detection visualizations."], "metrics": "🚗 Asset: TSLA NASDAQ | Framework: Meta Prophet | Seasonality Decomposition", "tech": ["Prophet", "Python", "Time Series", "Financial Modeling"], "github": "https://github.com/Ankitiitk369/-Tesla-Stock-Market-Prediction-Using-Prophet", "demo": null}, {"title": "Demand Forecasting for E-Commerce", "category": "timeseries", "domain": "Supply Chain ML", "badge": "Inventory Optimization", "desc": ["Time-series predictive pipeline estimating multi-SKU retail order demand across regional distribution warehouses.", "Modeled promotional markdown lift, seasonal sales holidays, and lead-time constraints.", "Generated safety stock benchmarks to minimize out-of-stock occurrences."], "metrics": "📦 Domain: E-Commerce Fulfillment | Multi-SKU Demand | Safety Stock", "tech": ["Python", "Time Series", "Supply Chain", "Pandas", "Scikit-learn"], "github": "https://github.com/Ankitiitk369/Demand-Forecasting-for-E-commerce", "demo": null}, {"title": "Univariate & Multivariate Time-Series Forecasting Suite", "category": "timeseries", "domain": "Comparative Suite", "badge": "Comprehensive Benchmark", "desc": ["Comprehensive benchmarking suite comparing univariate methods (ARIMA, Exponential Smoothing) with multivariate regressors (VAR, XGBoost).", "Evaluated walk-forward validation strategies without temporal data leakage across complex economic series."], "metrics": "📉 Walk-Forward Validation | VAR & ARIMA | Error Diagnostics", "tech": ["Python", "Statsmodels", "VAR", "ARIMA", "Time Series Benchmark"], "github": "https://github.com/Ankitiitk369/Uni-and-Multivariate-Forecasting-Analysis-", "demo": null}, {"title": "Solar Panel Defect Classification", "category": "cv", "domain": "Computer Vision & DL", "badge": "IIT Kanpur Academic (Prof. Veena Bansal)", "desc": ["Trained a 6-class deep learning defect detection pipeline on 885 electroluminescence images of photovoltaic cells using TensorFlow and transfer learning.", "Applied data augmentation, Batch Normalization, Dropout (0.3), and L2 weight decay to combat small-sample overfitting.", "Fine-tuned MobileNetV2 and EfficientNetB0 architectures, attaining 82.5% validation accuracy; deployed via Streamlit inspection UI."], "metrics": "⚡ Val Accuracy: 82.5% | Defect Classes: 6 | Dataset: 885 EL Images", "tech": ["TensorFlow", "MobileNetV2", "EfficientNetB0", "OpenCV", "Transfer Learning"], "github": "https://github.com/Ankitiitk369/Solar-panel-image-classification-Using-CNN-And-Pretrained-model", "demo": null}, {"title": "Speech Sentiment Analysis using Stacked LSTM", "category": "cv", "domain": "Audio DSP & NLP", "badge": "Deep Learning", "desc": ["Real-time speech sentiment classification pipeline converting acoustic signals to text via SpeechRecognition and predicting polarity.", "Trained a stacked bidirectional LSTM (RNN) architecture utilizing pre-trained GloVe 100d word embeddings.", "Implemented audio noise filtering and voice activity detection (VAD) for robust acoustic inference."], "metrics": "🎙️ Architecture: Stacked LSTM | Embeddings: GloVe 100d | Audio DSP", "tech": ["PyTorch / Keras", "Stacked LSTM", "GloVe", "SpeechRecognition", "Python"], "github": "https://github.com/Ankitiitk369/Speech-Sentiment-Analysis-using-RNN-LSTM", "demo": null}, {"title": "Intelligent Document Processing (IDP) for Invoices", "category": "cv", "domain": "Document AI & OCR", "badge": "Enterprise Automation", "desc": ["Automated financial document parsing system extracting key-value pairs (Invoice #, Date, Vendor Name, Tax, Line Items) from scanned invoices.", "Utilized Tesseract OCR with bounding box spatial localization, table recognition, and rule-based regex parsing.", "Outputs clean standardized JSON schemas for downstream ERP ingestion (SAP / Oracle NetSuite)."], "metrics": "📄 Document Type: Multi-format Invoices | Output: Structured JSON Schema", "tech": ["Python", "Tesseract OCR", "OpenCV", "Regex Parsers", "JSON Export"], "github": "https://github.com/Ankitiitk369/Intelligent-Document-Processing-IDP-for-Invoice-extraction", "demo": null}, {"title": "Sentiment-Based Product Recommendation System", "category": "cv", "domain": "Hybrid Recommender", "badge": "NLP + Collaborative", "desc": ["End-to-end recommendation engine combining collaborative filtering matrix factorization with user review sentiment analysis.", "Extracts sentiment scores from customer review texts to dynamically weight product ratings.", "Alleviates cold-start issues by recommending products with both high user affinity and positive sentiment polarity."], "metrics": "⭐ Hybrid Recommender | Collaborative Filtering + NLP Sentiment", "tech": ["NLP", "Collaborative Filtering", "Scikit-learn", "Python", "Pandas"], "github": "https://github.com/Ankitiitk369/Sentiment--Based-Product-Recommendation-System", "demo": null}, {"title": "Sentiment Analysis of Amazon Reviews (Hybrid AI)", "category": "cv", "domain": "NLP & Transformers", "badge": "Text Classification", "desc": ["Sentiment classification system analyzing fine-grained Amazon customer reviews using TF-IDF, VADER, and transformer architectures.", "Conducted text normalization, lemmatization, and topic modeling on negative review cohorts to pinpoint product defects."], "metrics": "📦 Domain: E-Commerce Reviews | Text Mining & Sentiment Classification", "tech": ["Transformers", "TF-IDF", "NLTK", "Scikit-learn", "Python"], "github": "https://github.com/Ankitiitk369/Sentiment-Analysis-of-Amazon-Product-Reviews-Using-Hybrid-AI-Techniques", "demo": null}, {"title": "Predicting Research Article Topics through NLP Analysis", "category": "cv", "domain": "Topic Modeling", "badge": "Academic Text Mining", "desc": ["Multi-label topic classification pipeline categorizing academic research papers based on abstracts and titles.", "Utilized Latent Dirichlet Allocation (LDA) and supervised classifiers to assign disciplines across computer science and statistics."], "metrics": "📑 Multi-Label Classification | LDA Topic Modeling | NLTK", "tech": ["NLP", "LDA", "Scikit-learn", "NLTK", "Text Mining"], "github": "https://github.com/Ankitiitk369/Predicting-Research-Article-Topics-through-NLP-Analysis", "demo": null}, {"title": "Customer Shopping Behavior & BI Analytics", "category": "bi", "domain": "BI & SQL Analytics", "badge": "Portfolio Flagship", "desc": ["Analyzed 3,900 consumer purchase transactions across 18 demographic and purchasing dimensions using Python and relational modeling.", "Queried PostgreSQL using Common Table Expressions (CTEs), window functions (ROW_NUMBER, DENSE_RANK), and multi-table joins.", "Designed an interactive Power BI executive dashboard with dynamic DAX KPI measures, RFM segmentation, and drill-through cohort views."], "metrics": "📊 Transactions: 3,900 | Stack: PostgreSQL + Power BI DAX | RFM Analysis", "tech": ["PostgreSQL", "Power BI", "DAX Formulas", "Advanced SQL", "RFM Segmentation"], "github": "https://github.com/Ankitiitk369/Customer-Shoping-Behavior-Data-Analysis-Using-SQL-and-Power-BI", "demo": null}, {"title": "Zepto E-Commerce SQL Data Analysis", "category": "bi", "domain": "Quick-Commerce Analytics", "badge": "SQL Optimization", "desc": ["Exploratory data analysis on Zepto quick-commerce transactions evaluating order turnaround times and dark store capacity.", "Engineered complex SQL scripts evaluating product category GMV, average order values (AOV), and customer repeat frequency.", "Formulated dark store inventory reorder thresholds to prevent high-velocity SKU stockouts during peak ordering hours."], "metrics": "🛒 Quick Commerce | Complex SQL Queries | Dark Store SLA Analytics", "tech": ["SQL", "PostgreSQL", "Python", "EDA", "Supply Chain Analytics"], "github": "https://github.com/Ankitiitk369/Zepto-E-Commerce-SQL-Data-Analysis-", "demo": null}, {"title": "Loan Portfolio Risk Analysis & Visualization (Tableau)", "category": "bi", "domain": "FinTech Analytics", "badge": "3 Tableau Dashboards", "desc": ["Financial credit risk intelligence pipeline utilizing SQL for exploratory data analysis, default rate KPIs, and credit grade segmentation.", "Built 3 production-grade Tableau executive dashboards visualizing Debt-to-Income (DTI) distributions and loan delinquency matrices.", "Delivered risk heatmaps enabling portfolio managers to revise credit underwriting thresholds and mitigate non-performing loans."], "metrics": "📈 3 Executive Dashboards | Tool: Tableau | Engine: SQL", "tech": ["Tableau", "SQL", "Financial KPIs", "Risk Modeling", "Executive Reporting"], "github": "https://github.com/Ankitiitk369/Loan-Portfolio-Risk-Analysis-Visualization-", "demo": null}, {"title": "BigMart Sales Analysis using Multivariate Regression", "category": "bi", "domain": "Econometrics & ML", "badge": "Retail Analytics", "desc": ["Econometric and predictive modeling project analyzing retail sales across nationwide supermarket outlets and product categories.", "Executed diagnostic statistical checks: heteroskedasticity (Breusch-Pagan), normality of residuals (Jarque-Bera), and collinearity (VIF).", "Identified primary drivers of outlet sales with actionable merchandising recommendations."], "metrics": "📈 Method: Multivariate OLS | Diagnostics: VIF, Jarque-Bera | Statsmodels", "tech": ["Statsmodels", "Multivariate OLS", "Hypothesis Testing", "Python", "Econometrics"], "github": "https://github.com/Ankitiitk369/Bigmart-Sales-Analysis-using-multivariate-regression", "demo": null}, {"title": "Marketing Campaign Analytics with Statistical Testing", "category": "bi", "domain": "Causal & A/B Testing", "badge": "Marketing Science", "desc": ["Quantitative experimentation pipeline evaluating customer response rates across multichannel promotional campaigns.", "Executed rigorous statistical hypothesis testing: two-sample t-tests for conversion uplift, Chi-Square test of independence, and Two-Way ANOVA.", "Calculated customer acquisition cost (CAC) efficiencies and revenue uplift benchmarks."], "metrics": "🧪 A/B Testing & Two-Way ANOVA | Conversion Uplift | CAC Efficiency", "tech": ["A/B Testing", "SciPy", "Statsmodels", "Two-Way ANOVA", "Pandas"], "github": "https://github.com/Ankitiitk369/Marketing-Campaign-Analytics-with-Statistical-Testing", "demo": null}, {"title": "McDonald's Customer Segmentation & Marketing Analytics", "category": "bi", "domain": "Market Segmentation", "badge": "K-Means & PCA", "desc": ["Applied unsupervised machine learning pipeline clustering McDonald's consumer perception survey responses across brand attributes.", "Employed Principal Component Analysis (PCA) for perceptual mapping and K-Means clustering with Elbow evaluation.", "Identified 4 distinct consumer target segments for tailored marketing positioning."], "metrics": "🍔 Domain: QSR Fast Food | Unsupervised K-Means & PCA | Market Positioning", "tech": ["K-Means", "PCA", "Scikit-learn", "Perceptual Mapping", "Python"], "github": "https://github.com/Ankitiitk369/McDonald-s-Customer-Segmentation-Marketing-Analytics-Using-Machine-Learning", "demo": null}, {"title": "Mall Customers Clustering Analysis", "category": "bi", "domain": "Customer Segmentation", "badge": "Unsupervised Learning", "desc": ["Unsupervised clustering project segmenting retail mall visitors based on annual income and spending score metrics.", "Evaluated K-Means, Hierarchical/Agglomerative clustering, and DBSCAN with Silhouette analysis.", "Formulated high-value shopper VIP loyalty strategies."], "metrics": "🛍️ Algorithm: K-Means & DBSCAN | Silhouette Score Evaluation", "tech": ["Scikit-learn", "K-Means", "DBSCAN", "Matplotlib", "Seaborn"], "github": "https://github.com/Ankitiitk369/MALL-CUSTOMERS-CLUSTERING-ANALYSIS", "demo": null}, {"title": "Netflix Titles Dataset Exploratory Data Analysis", "category": "bi", "domain": "Media Analytics", "badge": "Content Strategy", "desc": ["In-depth exploratory data analysis on the complete Netflix Titles catalog to uncover content release trends and global expansion patterns.", "Visualized movie vs. TV show ratio transitions, top content-producing countries, and cast/director collaboration networks."], "metrics": "🎬 Dataset: Netflix Catalog | Visualizations: Seaborn & Plotly", "tech": ["Python", "Pandas", "Seaborn", "Plotly", "EDA"], "github": "https://github.com/Ankitiitk369/-Netflix-Titles-Dataset-Exploratory-data-Analysis-", "demo": null}, {"title": "Deloitte Australia Data Analytics Simulation", "category": "bi", "domain": "Consulting Analytics", "badge": "Forage Job Simulation", "desc": ["Completed the Deloitte Australia Data Analytics virtual experience program on Forage.", "Synthesized business client requirements, prepared raw data extracts, and designed forensic KPI analytics.", "Formulated strategic executive dashboards for operational decision makers."], "metrics": "💼 Deloitte Australia Simulation | Business Analysis & Reporting", "tech": ["Data Analytics", "Forensic Analysis", "Executive Dashboarding", "Excel"], "github": "https://github.com/Ankitiitk369/Deloitte-Australia-Data-Analytics-Job-Simulation", "demo": null}, {"title": "VitalSync AI: Intelligent Fitness & AQI Health Tracker", "category": "bi", "domain": "IoT & Health Analytics", "badge": "Full-Stack Health", "desc": ["Intelligent environmental and fitness tracking dashboard correlating outdoor Air Quality Index (AQI) data with physical activity metrics.", "Provides real-time aerobic training safety alerts based on hyperlocal particulate matter readings."], "metrics": "🏃 Health IoT | AQI Correlation Alerts | TypeScript & Analytics", "tech": ["TypeScript", "Health Analytics", "API Integration", "IoT"], "github": "https://github.com/Ankitiitk369/VitalSync-AI-Intelligent-", "demo": null}, {"title": "Vehicle CO₂ Emission Tracking Pipeline (TCS)", "category": "exp", "domain": "Corporate AI Internship", "badge": "Tata Consultancy Services", "desc": ["Engineered an automated vehicle CO2 emission tracking pipeline from real-time CCTV feeds to monitor urban carbon footprints for enterprise ESG reporting.", "Implemented YOLOv8 vehicle localization paired with OpenCV image preprocessing (Bilateral Filtering, CLAHE, Otsu) and EasyOCR with regex syntax correction.", "Trained dual-stage ensemble models: Gradient Boosting (R² = 0.996, RMSE = 3.12 g/km) and Random Forest; delivered interactive Streamlit dashboard with 17-test Pytest test suite."], "metrics": "📈 R²: 0.996 | RMSE: 3.12 g/km | Pytest: 17 Passed | TCS Remote", "tech": ["YOLOv8", "OpenCV", "EasyOCR", "Gradient Boosting", "Streamlit", "Pytest CI"], "github": null, "demo": null}, {"title": "Global Procurement System: Asset Receiving Module", "category": "exp", "domain": "Enterprise Software", "badge": "Software Engineering", "desc": ["Contributed to the Asset Receiving Automation module for an enterprise Global Procurement System, digitizing manual asset tracking across 100+ inventory categories.", "Engineered responsive Angular user interfaces for capturing asset metadata, PO numbers, quantities, and locations with real-time validation schemas.", "Integrated secure Role-Based Access Control (RBAC) and authentication, cutting asset ingestion latency by 40%."], "metrics": "⚡ Latency Reduction: 40% | Framework: Angular 16 | Security: RBAC", "tech": ["Angular 16", "TypeScript", "REST APIs", "RBAC Security", "Asset Tracking"], "github": null, "demo": null}];
+
+let currentCategory = 'all';
+let currentSearch = '';
+let currentTechFilter = null;
+let currentSort = 'default';
+let activeModalProject = null;
+
+// Initialize
+window.addEventListener('DOMContentLoaded', () => {
+  renderProjects();
+});
+
+function renderProjects() {
+  const grid = document.getElementById('projectsGrid');
+  grid.innerHTML = '';
+
+  let filtered = masterProjects.filter(p => {
+    // Category match
+    const matchesCat = (currentCategory === 'all') || (p.category === currentCategory);
+    
+    // Search match
+    const q = currentSearch.toLowerCase().trim();
+    const matchesSearch = !q || 
+      p.title.toLowerCase().includes(q) || 
+      p.domain.toLowerCase().includes(q) ||
+      p.tech.some(t => t.toLowerCase().includes(q)) ||
+      p.desc.some(d => d.toLowerCase().includes(q)) ||
+      p.metrics.toLowerCase().includes(q);
+
+    // Tech chip match
+    const matchesTech = !currentTechFilter || 
+      p.tech.some(t => t.toLowerCase() === currentTechFilter.toLowerCase());
+
+    return matchesCat && matchesSearch && matchesTech;
+  });
+
+  // Sort
+  if (currentSort === 'alpha') {
+    filtered.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (currentSort === 'domain') {
+    filtered.sort((a, b) => a.domain.localeCompare(b.domain));
+  }
+
+  // Update banner
+  updateFilterBanner(filtered.length);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1/-1; text-align:center; padding: 60px 20px; color: var(--text-muted);">
+        <h3 style="font-size: 18px; margin-bottom: 8px;">No matching projects found</h3>
+        <p style="font-size: 14px;">Try searching for different keywords or resetting filters.</p>
+        <button onclick="resetAllFilters()" style="margin-top: 14px; padding: 8px 16px; background: var(--accent); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Reset Filters</button>
+      </div>
+    `;
+    return;
+  }
+
+  filtered.forEach((p, idx) => {
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    card.onclick = (e) => {
+      // don't open modal if clicked on a link
+      if (e.target.tagName === 'A' || e.target.closest('a')) return;
+      openModal(p);
+    };
+
+    const techPillsHtml = p.tech.slice(0, 5).map(t => 
+      `<span class="card-tech-pill" onclick="event.stopPropagation(); filterBySpecificTech('${t}')">${t}</span>`
+    ).join('');
+
+    let actionBtnsHtml = '';
+    if (p.github) {
+      actionBtnsHtml += `<a href="${p.github}" target="_blank" class="action-btn btn-gh" onclick="event.stopPropagation()">GitHub ↗</a>`;
+    }
+    if (p.demo) {
+      actionBtnsHtml += `<a href="${p.demo}" target="_blank" class="action-btn btn-live" onclick="event.stopPropagation()">Live App ↗</a>`;
+    }
+    if (!p.github && !p.demo) {
+      actionBtnsHtml += `<span style="font-size:11px; color:#f472b6; font-weight:600;">Enterprise Module</span>`;
+    }
+
+    card.innerHTML = `
+      <div>
+        <div class="card-header-top">
+          <span class="domain-tag tag-${p.category}">${p.domain}</span>
+          <span class="academic-badge" title="${p.badge}">${p.badge}</span>
+        </div>
+        <h3 class="project-title">${p.title}</h3>
+        <p class="project-summary">${p.desc[0]}</p>
+        <div class="metrics-box">${p.metrics}</div>
+        <div class="tech-pills-row">
+          ${techPillsHtml}
+          ${p.tech.length > 5 ? `<span class="card-tech-pill">+${p.tech.length - 5}</span>` : ''}
+        </div>
+      </div>
+      <div class="card-actions-row">
+        <div style="display:flex; gap:6px;">${actionBtnsHtml}</div>
+        <button class="view-modal-link" onclick="event.stopPropagation(); openModal(masterProjects[${masterProjects.indexOf(p)}])">
+          Details &rarr;
+        </button>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+// Category Filtering
+function filterByCategory(cat) {
+  currentCategory = cat;
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-cat') === cat);
+  });
+  renderProjects();
+}
+
+// Search Input
+function handleSearch(val) {
+  currentSearch = val;
+  const clearBtn = document.getElementById('clearSearchBtn');
+  clearBtn.style.display = val ? 'block' : 'none';
+  renderProjects();
+}
+
+function clearSearch() {
+  document.getElementById('projectSearch').value = '';
+  handleSearch('');
+}
+
+// Sort
+function handleSort(val) {
+  currentSort = val;
+  renderProjects();
+}
+
+// Tech Chip Toggle
+function toggleTechChip(tech, chipEl) {
+  if (currentTechFilter === tech) {
+    currentTechFilter = null;
+    chipEl.classList.remove('active');
+  } else {
+    currentTechFilter = tech;
+    document.querySelectorAll('.tech-chip').forEach(c => c.classList.remove('active'));
+    chipEl.classList.add('active');
+  }
+  renderProjects();
+}
+
+function filterBySpecificTech(tech) {
+  currentTechFilter = tech;
+  document.querySelectorAll('.tech-chip').forEach(c => {
+    c.classList.toggle('active', c.innerText.toLowerCase() === tech.toLowerCase());
+  });
+  showToast(`Filtering by: ${tech}`);
+  renderProjects();
+}
+
+// Filter Banner Update
+function updateFilterBanner(count) {
+  const banner = document.getElementById('activeFilterBanner');
+  const bannerText = document.getElementById('activeFilterText');
+  const isFiltered = (currentCategory !== 'all') || (currentSearch !== '') || (currentTechFilter !== null);
+
+  if (isFiltered) {
+    banner.style.display = 'flex';
+    let parts = [];
+    if (currentCategory !== 'all') parts.push(`Domain: ${currentCategory.toUpperCase()}`);
+    if (currentSearch) parts.push(`Search: "${currentSearch}"`);
+    if (currentTechFilter) parts.push(`Tech: ${currentTechFilter}`);
+    bannerText.innerHTML = `Showing <strong>${count}</strong> matching projects (${parts.join(', ')})`;
+  } else {
+    banner.style.display = 'none';
+  }
+}
+
+function resetAllFilters() {
+  currentCategory = 'all';
+  currentSearch = '';
+  currentTechFilter = null;
+  document.getElementById('projectSearch').value = '';
+  document.getElementById('clearSearchBtn').style.display = 'none';
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-cat') === 'all'));
+  document.querySelectorAll('.tech-chip').forEach(c => c.classList.remove('active'));
+  renderProjects();
+  showToast('Reset all filters to show all 45 projects');
+}
+
+// Modal Controls
+function openModal(project) {
+  activeModalProject = project;
+  const modal = document.getElementById('detailModal');
+  
+  document.getElementById('modalTitle').innerText = project.title;
+  document.getElementById('modalBadges').innerHTML = `
+    <span class="domain-tag tag-${project.category}">${project.domain}</span>
+    <span class="academic-badge" style="font-size:12px;">${project.badge}</span>
+  `;
+  document.getElementById('modalMetrics').innerText = project.metrics;
+
+  const bulletsHtml = project.desc.map(b => `<li>${b}</li>`).join('');
+  document.getElementById('modalBullets').innerHTML = bulletsHtml;
+
+  const techHtml = project.tech.map(t => `<span class="card-tech-pill" style="font-size:12px; padding:4px 9px;">${t}</span>`).join('');
+  document.getElementById('modalTech').innerHTML = techHtml;
+
+  let linksHtml = '';
+  if (project.github) {
+    linksHtml += `<a href="${project.github}" target="_blank" class="action-btn btn-gh">View on GitHub ↗</a>`;
+  }
+  if (project.demo) {
+    linksHtml += `<a href="${project.demo}" target="_blank" class="action-btn btn-live">Launch Live App ↗</a>`;
+  }
+  document.getElementById('modalActionLinks').innerHTML = linksHtml;
+
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('detailModal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+function handleModalOverlayClick(e) {
+  if (e.target.id === 'detailModal') closeModal();
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Copy Share Info
+function copyProjectShareInfo() {
+  if (!activeModalProject) return;
+  const text = `${activeModalProject.title}
+Stack: ${activeModalProject.tech.join(', ')}
+Metrics: ${activeModalProject.metrics}
+${activeModalProject.github || 'IIT Kanpur / Enterprise Repository'}`;
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('✓ Project info copied to clipboard!');
+  });
+}
+
+// Toast
+function showToast(msg) {
+  const toast = document.getElementById('toastBox');
+  document.getElementById('toastMsg').innerText = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2500);
+}
+
+// Theme Toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  document.getElementById('themeToggleBtn').innerText = next === 'dark' ? '🌙' : '☀️';
+}
+</script>
+
+</body>
+</html>
